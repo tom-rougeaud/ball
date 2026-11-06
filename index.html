@@ -89,6 +89,7 @@ h2{margin:0;font-size:calc(var(--u)*7);font-weight:800;letter-spacing:.04em}
 /* Intro */
 #skip{position:fixed;z-index:10;right:calc(env(safe-area-inset-right,0px) + var(--u)*4);bottom:calc(env(safe-area-inset-bottom,0px) + var(--u)*3);display:none}
 body.intro #skip{display:block}
+#upd{z-index:20;background:rgba(27,34,54,.7)}
 #joy{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + var(--u)*4);width:calc(var(--u)*40);height:calc(var(--u)*1.2);margin-left:calc(var(--u)*-20);border-radius:99px;background:rgba(27,34,54,.18);z-index:8;display:none;pointer-events:none}
 #joy i{position:absolute;top:50%;left:50%;width:calc(var(--u)*3.6);height:calc(var(--u)*3.6);margin:calc(var(--u)*-1.8) 0 0 calc(var(--u)*-1.8);border-radius:50%;background:var(--ink)}
 #sndhint{position:fixed;z-index:10;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + var(--u)*14);text-align:center;color:var(--ivory);font-size:max(11px,calc(var(--u)*2.8));letter-spacing:.3em;text-transform:uppercase;opacity:0;pointer-events:none}
@@ -145,11 +146,12 @@ body.intro #sndhint{opacity:.7}
 <button class="fix" id="bmute" type="button" aria-label="Activer ou couper le son">♪ Son</button>
 <button class="fix" id="bpause" type="button">Pause</button>
 <button class="pill" id="skip" type="button">Passer</button>
+<div id="upd" class="screen" role="alertdialog" aria-live="assertive"><div class="card" style="text-align:center"><h2>Mise à jour</h2><p>Le jeu a été mis à jour. Appuie sur le bouton pour profiter de la nouvelle version.</p><p><button class="big" id="bupd" type="button">Mettre à jour le jeu</button></p></div></div>
 <div id="joy" aria-hidden="true"><i></i></div>
 <div id="sndhint">Touche l’écran pour le son</div>
 
 <script type="application/json" id="cfg">
-{"version":"2.0","prefix":"abelrun_v2_","ballR":0.5,"gravity":24,"keySpeed":13,
+{"version":"2.1","prefix":"abelrun_v2_","ballR":0.5,"gravity":24,"keySpeed":13,
  "levels":[{"n":"Balade","v":24},{"n":"Course","v":32},{"n":"Vertige","v":42}],
  "texts":{"tagline":"Glisse · Évite · Décolle"}}
 </script>
@@ -860,7 +862,18 @@ resize();
 window.addEventListener("resize",resize);
 if("ResizeObserver" in window){}
 if(isStandalone())$("binstall").style.display="none";
-try{if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(function(){});}catch(e){}
+try{if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol)){
+  var hadCtl=!!navigator.serviceWorker.controller,reloading=false;
+  var showUpd=function(w){var u=$("upd");u.classList.add("on");$("bupd").onclick=function(){$("bupd").textContent="Mise à jour…";try{w.postMessage("SKIP_WAITING");}catch(e){}setTimeout(function(){location.reload();},1500);};};
+  navigator.serviceWorker.addEventListener("controllerchange",function(){if(hadCtl&&!reloading){reloading=true;location.reload();}});
+  navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).then(function(reg){
+    var watch=function(w){w.addEventListener("statechange",function(){if(w.state==="installed"&&navigator.serviceWorker.controller)showUpd(w);});};
+    if(reg.waiting&&navigator.serviceWorker.controller)showUpd(reg.waiting);
+    reg.addEventListener("updatefound",function(){if(reg.installing)watch(reg.installing);});
+    document.addEventListener("visibilitychange",function(){if(!document.hidden)try{reg.update();}catch(e){}});
+    setInterval(function(){try{reg.update();}catch(e){}},600000);
+  }).catch(function(){});
+}}catch(e){}
 startDemo();setBody();
 if(window.__ABEL_TEST){window.__ABEL_TEST({
   newGame:function(l){lvl=l;resetWorld(false);newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;mode="play";ensureWorld();},
