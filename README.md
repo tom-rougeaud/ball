@@ -2,4 +2,4 @@
 
 # Abel Run v2
 
-Jeu de course minimaliste en pseudo-3D (canvas, fichier unique, sans bibliothèque). Doigt, pavé tactile (joystick) ou flèches. 3 niveaux, routes parallèles, rampes, vide, musique 8 bits, intro animée. Licence CC BY-NC 4.0 — Tom Rougeaud.
+Jeu de course minimaliste en pseudo-3D (canvas, fichier unique, sans bibliothèque). Doigt, pavé tactile (joystick) ou flèches. 5 niveaux (curseur vert › rouge), routes parallèles, rampes et ponts, tunnels, monolithes, boosts, ciel qui change, intro animée. Licence CC BY-NC 4.0 — Tom Rougeaud.
