@@ -279,7 +279,7 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"2.8","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"2.8.1","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":20,"levelBonus":[1,1.3,2,3.2,5],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",1000,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",1500,"Pins, clairières et lucioles."],["snow","Neige",2000,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",2500,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",3000,"Plages, palmiers et eau turquoise."],["lava","Lave",3500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",4000,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",5000,"Une piste aux sept couleurs au milieu des nuages."]],
@@ -466,7 +466,7 @@ function addRowOn(x0,x1,y,z,d,allowMover,force){
     }
   }else if(W>=3.6){
     addCube(cx+(Math.random()<0.5?-1:1)*(W/2-0.9),z,y,0.7);
-  }else{
+  }else if(W>=2.7){
     addCube(cx+(Math.random()<0.5?-1:1)*(W/2-0.55),z,y,0.5);
   }
 }
@@ -590,13 +590,10 @@ function secMulti(d){
   for(i=hs.length-1;i>0;i--){var j=(Math.random()*(i+1))|0,t=hs[i];hs[i]=hs[j];hs[j]=t;}
   function env(z){var u=(z-z0)/L;return smooth(u/0.35)*smooth((1-u)/0.35);}
   function ctr(k,z){var e=env(z),off=k-(n-1)/2,sp=(1-e)*6.4/n+e*(wk+gp);return cx+off*sp+e*Aw*Math.sin((z-z0)/lam*6.283+ph)+e*0.5*Math.sin((z-z0)/(lam*0.6)*6.283+k*1.7);}
-  for(k=0;k<n;k++)(function(k){emitTrack(z0,z0+L,function(z){return ctr(k,z);},function(z){return lerp(6.4/n,wk,env(z));},function(z){return hs[k]*env(z);});})(k);
+  for(k=0;k<n;k++)(function(k){emitTrack(z0,z0+L,function(z){return ctr(k,z);},function(z){return lerp(6.4/n,wk,env(z));},function(z){return hs[k]*env(z);},{mt:1});})(k);
   if(!G.demo){
-    /* une seule piste est libre ; les autres portent des blocs (la piste libre change d’un tronçon à l’autre) */
-    for(k=0;k<n;k++){if(k===safe)continue;
-      for(var zr=z0+L*0.3+rnd(0,10);zr<z0+L*0.82;zr+=rnd(24,36)){zr=Math.round(zr);addCube(ctr(k,zr),zr,hs[k]*env(zr),0.55,null,{});}
-    }
-    var kp=(safe+1)%n,zp=Math.round(z0+L*0.5);addPad(ctr(kp,zp),zp,hs[kp]*env(zp));
+    /* v2.8.1 : aucun obstacle sur les routes scindées (pistes étroites) : la difficulté vient du tracé, des dénivelés et de la largeur ; il reste un boost sur une piste */
+    var kp=(Math.random()*n)|0,zp=Math.round(z0+L*0.5);addPad(ctr(kp,zp),zp,hs[kp]*env(zp));
   }
   G.z+=L;G.last="multi";decorate(z0,G.z);
 }
@@ -889,19 +886,20 @@ function phys(dt,real){
     }
   }
 }
+function airGain(){return B.air?1+1.4*clamp((B.at-0.06)/0.18,0,1):1;}
 function updatePlay(dt){var n=Math.max(1,Math.ceil(speed*dt/1.4)),i;for(i=0;i<n;i++){updatePlay1(dt/n);if(mode!=="play")return;}}
 function updatePlay1(dt){
   tm+=dt;
-  if(ctl==="keys"){if(keys.l)tx-=CFG.keySpeed*dt;if(keys.r)tx+=CFG.keySpeed*dt;}
-  else if(joyOn){var j=Math.abs(joy)<0.05?0:(Math.abs(joy)-0.05)/0.95;tx+=Math.sign(joy)*Math.pow(j,1.25)*14*dt;}
-  tx=clamp(tx,B.x-7,B.x+7);
+  if(ctl==="keys"){if(keys.l)tx-=CFG.keySpeed*dt*airGain();if(keys.r)tx+=CFG.keySpeed*dt*airGain();}
+  else if(joyOn){var j=Math.abs(joy)<0.05?0:(Math.abs(joy)-0.05)/0.95;tx+=Math.sign(joy)*Math.pow(j,1.25)*14*dt*airGain();}
+  tx=clamp(tx,B.x-(B.air?10:7),B.x+(B.air?10:7));
   var v=vNom(B.z),onG=!B.air&&gnd,gv=onG&&(gnd.gov||gnd.sub);
   if(boostT>0)boostT-=dt;
   if(gv&&boostT>0)boostT=0;
   var tgt=v*(boostT>0?boostK:1);if(gv)tgt=Math.min(tgt,v*1.06);
   speed+=(tgt-speed)*Math.min(1,dt*(gv?4:(speed>tgt?1.6:2.5)));
   if(onG&&!gnd.sub){var sp0=speed;speed=clamp(speed-gr()*gnd.slope*dt*0.85,Math.min(sp0,v*0.7),Math.max(sp0,v*1.9));}
-  B.z+=speed*dt;var ox0=B.x;B.x+=(tx-B.x)*Math.min(1,dt*(B.air?7:11));B.lv+=((B.x-ox0)/dt-B.lv)*Math.min(1,dt*10);B.ph+=dt*(1.4+speed*0.025);emitTrail(dt);
+  B.z+=speed*dt;var ox0=B.x;B.x+=(tx-B.x)*Math.min(1,dt*(B.air?9:11));B.lv+=((B.x-ox0)/dt-B.lv)*Math.min(1,dt*10);B.ph+=dt*(1.4+speed*0.025);emitTrail(dt);
   if(B.sq>0)B.sq=Math.max(0,B.sq-dt*5);
   if(shake>0)shake=Math.max(0,shake-dt*2.5);
   var i,c,p;
@@ -1655,7 +1653,7 @@ function render(){
      vers le nouvel axe en restant près de la bille ; une fois posée, elle reste sur ce nouvel axe. Tout passe par un ressort amorti (aucun à-coup).
      Sur les sections larges (zigzags, multi-pistes) elle recule un peu au lieu de se décaler, pour garder la bille à l’écran. */
   var cdt=clamp(rdt,1/240,1/20),gc,ah,tgt,si,nsub=Math.max(1,Math.ceil(cdt*60-1e-6)),hh=cdt/nsub;
-  if(!B.air){gc=axInfo(B.z,B.x,B.y-R);if(gc){render.ax=gc.ax;render.ex=gc.ex||3.2;}
+  if(!B.air){gc=axInfo(B.z,B.x,B.y-R);if(gc){render.ax=gc.ax;render.ex=gc.ex||3.2;render.mt=gc.mt?1:0;}
     if(gc&&gc.sub){if(!render.fl){ah=axAhead(B.z,render.ax);if(ah){render.fl=true;render.axO=render.ax;render.axN=ah.ax;render.zL=ah.z0;render.zT=B.z;}}}
     else{render.fl=false;render.wa=false;}}
   if(render.ax===undefined){render.ax=B.x;render.ex=3.2;}
@@ -1665,16 +1663,16 @@ function render(){
   }
   if(!(render.fol>0))render.fol=0;
   render.fol+=((render.fl?1:0)-render.fol)*(1-Math.exp(-cdt*14));
-  tgt=render.ax;
+  tgt=render.ax;render.wm=(render.wm||0)+((render.mt?1:0)-(render.wm||0))*(1-Math.exp(-cdt*5));var wide=render.wm,dzx=B.x-render.ax,adz=Math.abs(dzx),egg=wide*smooth(clamp((adz-0.6)/1.0,0,1));if(wide>0.002&&adz>0.6)tgt+=wide*((dzx>0?1:-1)*(adz-0.6)*0.93+B.lv*0.25*egg);render.egg=egg;
   if(render.fol>0.002){
     var pp=clamp((B.z-render.zT)/Math.max(10,render.zL-render.zT),0,1);
     tgt=lerp(render.ax,lerp(B.x+B.lv*0.12,render.axN,0.28+0.72*smooth((pp-0.6)/0.4)),render.fol);
   }
   if(render.cx===undefined||Math.abs(tgt-render.cx)>40){render.cx=tgt;render.cv=0;}
-  var wn=4.2+6.3*render.fol;
+  var wn=4.2+6.3*render.fol+3.5*egg*(1-render.fol);
   for(si=0;si<nsub;si++){render.cv+=(wn*wn*(tgt-render.cx)-2*wn*render.cv)*hh;render.cx+=render.cv*hh;}
   camXs=render.cx;
-  var gf=axInfo(B.z+Math.max(26,speed*1.1),B.x,B.y-R),exn=Math.max(render.ex||3.2,gf&&gf.ex?gf.ex:3.2),ut=clamp(F/8.5*0.8*exn/(SW*0.4),1,2.25);
+  var gf=axInfo(B.z+Math.max(26,speed*1.1),B.x,B.y-R),exn=Math.max(render.ex||3.2,gf&&gf.ex?gf.ex:3.2),exe=exn-0.9*Math.max(0,exn-3.4)*wide,ut=clamp(F/8.5*0.8*exe/(SW*0.4),1,2.25);
   if(render.fol>0.002){var dl=Math.max(Math.abs(B.x-render.cx),Math.abs(render.axN-render.cx)*0.8);ut=clamp(Math.max(ut,F/8.5*1.0*dl/(SW*0.4)),1,2.25);}
   if(render.u===undefined){render.u=ut;render.uv=0;}
   var wu=2.6+3.4*clamp(render.fol*3,0,1);
@@ -1980,7 +1978,7 @@ function panelInstall(){
 /* ---------- entrées, boucle, démarrage ---------- */
 var dragging=false,lastX=0;
 cv.addEventListener("pointerdown",function(e){if(mode!=="play"||e.pointerType==="mouse")return;dragging=true;lastX=e.clientX;try{cv.setPointerCapture(e.pointerId);}catch(x){}});
-cv.addEventListener("pointermove",function(e){if(!dragging||mode!=="play")return;tx+=(e.clientX-lastX)*(7/(Math.min(SW,SH*0.5625)*0.5));lastX=e.clientX;tx=clamp(tx,B.x-7,B.x+7);});
+cv.addEventListener("pointermove",function(e){if(!dragging||mode!=="play")return;tx+=(e.clientX-lastX)*(7/(Math.min(SW,SH*0.5625)*0.5))*airGain();lastX=e.clientX;tx=clamp(tx,B.x-(B.air?10:7),B.x+(B.air?10:7));});
 window.addEventListener("pointermove",function(e){
   if(e.pointerType!=="mouse")return;
   joyOn=true;joy=clamp((e.clientX-SW/2)/(SW*0.09),-1,1);
