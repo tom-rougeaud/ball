@@ -225,7 +225,7 @@ body.pnl #bburger{display:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"2.6.1","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"2.6.2","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":28},{"n":"Balade","v":36},{"n":"Course","v":46},{"n":"Vertige","v":58},{"n":"Folie","v":72}],
  "texts":{"tagline":""}}
 </script>
@@ -341,33 +341,35 @@ function emitTrack(z0,z1,cf,wf,yf,o){
 }
 function emitRoad(x0,x1,z0,z1,y,o){emitTrack(z0,z1,K((x0+x1)/2),K(x1-x0),K(y),o);}
 function emitRamp(x0,x1,z0,z1,y0,y1){var L=z1-z0;emitTrack(z0,z1,K((x0+x1)/2),K(x1-x0),function(z){return y0+(y1-y0)*(z-z0)/L;},{sub:1});}
-var C_TALL=[128,86,200],C_SWEEP=[226,72,140],C_DROP=[236,238,250],C_LAVA=[236,84,30],C_MONO=[236,232,248];
+var C_TALL=[128,86,200],C_SWEEP=[226,72,140],C_DROP=[236,238,250],C_LAVA=[236,84,30],C_KICK=[240,122,36],C_MONO=[236,232,248];
 function addCube(x,z,y,hw,mv,o){var c={x:x,cx:x,z0:z,y:y,hw:hw,h:1.3,zl:1.8,dy:0,mv:mv||null,col:null,tp:G.tp||""};if(o)for(var k in o)c[k]=o[k];cubes.push(c);}
 function addPad(x,z,y,sup){pads.push({x:x,hw:sup?2.4:1,z0:z,z1:z+(sup?8:4),y:y,used:false,sup:!!sup});}
 /* une rangée d’obstacles : G.free = voie laissée libre, elle ne change que d’une voie à la fois (le parcours reste toujours faisable) */
-var ROWCF=null;
+var ROWCF=null,ROWEND=null;
+/* tremplin à bascule : l’avant de la plaque se soulève d’un coup et catapulte la bille (apex ≈ 4,6 m quel que soit le niveau) */
+function kickVy(){return Math.sqrt(2*gr()*4.6);}
+function kickD(z){return 2*kickVy()/gr()*vNom(z)*1.75+26;}
 function addRowOn(x0,x1,y,z,d,allowMover,force){
+  if(G.kickUntil){if(z<G.kickUntil)return;G.kickUntil=0;G.free=-1;}
   var W=x1-x0,cx=(x0+x1)/2,i,f;
   if(W>=5){
     var o=W>=7?W/2-1.2:2.2,lanes=[cx-o,cx,cx+o],fr=G.free;
-    var opts=[["cube1",20],["cube2",18],["lava",d>0.05?10:0],["tall",d>0.08?9:0],["chic",d>0.12?8:0],["rail",d>0.1?7:0],["drop",d>0.28?9:0],["mono",d>0.14?12:0],
+    var opts=[["cube1",20],["cube2",18],["kick",d>0.05?9:0],["tall",d>0.08?9:0],["chic",d>0.12?8:0],["rail",d>0.1?7:0],["drop",d>0.28?9:0],["mono",d>0.14?12:0],
       ["mover",allowMover&&d>0.18?10:0],["sweep",allowMover&&d>0.15?8:0],["corr",allowMover&&d>0.22?8:0]];
     var tot=0,pick="cube1",r;
     for(i=0;i<opts.length;i++)tot+=opts[i][1];
     r=Math.random()*tot;
     for(i=0;i<opts.length;i++){if(opts[i][1]>0){r-=opts[i][1];if(r<=0){pick=opts[i][0];break;}}}
     if(force)pick=force;
+    if(pick==="kick"&&!(ROWEND&&ROWEND-z>=kickD(z)+10))pick="cube1";
     /* obstacles longs (lave, rail) : sur une route qui dérive, la voie libre se refermerait en bout de rangée → blocs courts à la place */
-    if(ROWCF&&(pick==="lava"||pick==="rail")&&Math.abs(ROWCF(z+8)-ROWCF(z))>0.3)pick=pick==="lava"?"cube2":"cube1";
+    if(ROWCF&&pick==="rail"&&Math.abs(ROWCF(z+8)-ROWCF(z))>0.3)pick="cube1";
     G.tp=pick;
     var nf=function(){var c=[],k;if(fr<0)c=[0,1,2];else for(k=fr-1;k<=fr+1;k++)if(k>=0&&k<=2)c.push(k);fr=c[(Math.random()*c.length)|0];G.free=fr;return fr;};
     var oth=function(){if(fr<0){fr=(Math.random()*3)|0;G.free=fr;}var c=[0,1,2].filter(function(a){return a!==fr;});return c[(Math.random()*2)|0];};
     if(pick==="cube1"){addCube(lanes[oth()],z,y,0.9);}
     else if(pick==="cube2"){f=nf();for(i=0;i<3;i++)if(i!==f)addCube(lanes[i],z,y,0.9);}
-    else if(pick==="lava"){
-      if(d>0.2&&Math.random()<0.5){f=nf();for(i=0;i<3;i++)if(i!==f)addCube(lanes[i],z,y,1.15,null,{h:0.14,zl:6,col:C_LAVA,lava:true});}
-      else addCube(lanes[oth()],z,y,1.15,null,{h:0.14,zl:6,col:C_LAVA,lava:true});
-    }
+    else if(pick==="kick"){addCube(lanes[(Math.random()*3)|0],z,y,1.2,null,{h:0.14,zl:6,col:C_KICK,kick:true,kt:0});G.kickUntil=z+kickD(z);}
     else if(pick==="tall"){f=nf();for(i=0;i<3;i++)if(i!==f)addCube(lanes[i],z,y,0.7,null,{h:2.6,col:C_TALL});}
     else if(pick==="chic"){var a=oth(),b=oth();addCube(lanes[a],z,y,0.9);addCube(lanes[b],z+7,y,0.9);}
     else if(pick==="rail"){addCube(lanes[oth()],z,y,0.8,null,{zl:8,h:1.0,col:[96,70,170]});}
@@ -377,7 +379,7 @@ function addRowOn(x0,x1,y,z,d,allowMover,force){
     }
     else if(pick==="mono"){
       /* monolithe de deux cases de haut : il tangue, puis tombe vers le centre et devient un bloc de deux cases de large */
-      f=(fr===0||fr===2)?fr:(Math.random()<0.5?0:2);fr=f;G.free=f;
+      f=fr===0?2:(fr===2?0:(Math.random()<0.5?0:2));fr=f;G.free=f;
       var ai=2-f,m=lanes[ai],dr=ai===0?1:-1;
       addCube(m,z,y,0.4,null,{mono:true,dir:dr,H:2.4,w:0.8,pv:m+dr*0.4,h:2.4,zl:1.4,col:C_MONO,tt:1.35,mt:0});
     }
@@ -412,12 +414,19 @@ function secRows(sp,d,curved){
   var A=curved?Math.min(rnd(2.4,4.0),11*lam/(6.283*vv)):0;
   function e(z){var u=(z-z0)/len;return smooth(u/0.2)*smooth((1-u)/0.2);}
   function cf(z){return cx+e(z)*A*Math.sin((z-z0)/lam*6.283);}
-  emitTrack(z0,z0+len,cf,K(6.4),K(0));G.free=-1;
+  emitTrack(z0,z0+len,cf,K(6.4),K(0));G.free=-1;ROWEND=z0+len;
   for(var zr=G.z+sp*0.45;zr<G.z+len-sp*0.5;zr+=sp){
     var c=cf(zr);ROWCF=cf;addRowOn(c-3.2,c+3.2,0,Math.round(zr),d,true);ROWCF=null;
     if(Math.random()<0.2)addPad(cf(zr+sp/2)+[-2.2,0,2.2][(Math.random()*3)|0],Math.round(zr+sp/2),0);
   }
-  G.z+=len;G.last="rows";decorate(z0,G.z);
+  ROWEND=null;G.kickUntil=0;G.z+=len;G.last="rows";decorate(z0,G.z);
+}
+function secKick(d,sp){
+  var z0=G.z,cx=G.cx,lead=Math.max(30,sp*0.6),D=kickD(z0+lead),L=r6(lead+6+D);
+  emitRoad(cx-3.2,cx+3.2,z0,z0+L,0);G.free=-1;
+  addCube(lane(),Math.round(z0+lead),0,1.2,null,{h:0.14,zl:6,col:C_KICK,kick:true,kt:0});
+  if(Math.random()<0.5)addPad(lane(),z0+Math.round(lead*0.4),0);
+  G.z+=L;G.last="kick";decorate(z0,G.z);
 }
 function secBoost(sp,d){
   var z0=G.z,cx=G.cx,len=6*Math.ceil((sp*2.2+12)/6);emitRoad(cx-3.2,cx+3.2,G.z,G.z+len,0);
@@ -581,7 +590,7 @@ function secMono(d,sp){
   var n=3+((Math.random()*3)|0),z0=G.z,cx=G.cx,gz=Math.max(sp*1.05,38),pre=Math.max(36,sp*0.7),L=r6(pre+n*gz+36),Wm=8.0;
   function wf(z){var u=(z-z0)/L,a=26/L;return lerp(6.4,Wm,smooth(u/a)*smooth((1-u)/a));}
   emitTrack(z0,z0+L,K(cx),wf,K(0));G.free=-1;
-  for(var i=0;i<n;i++){var zr=Math.round(z0+pre+i*gz),w=wf(zr);addRowOn(cx-w/2,cx+w/2,0,zr,d,false,Math.random()<0.75?"mono":null);}
+  for(var i=0;i<n;i++){var zr=Math.round(z0+pre+i*gz),w=wf(zr);addRowOn(cx-w/2,cx+w/2,0,zr,d,false,"mono");}
   G.z+=L;G.last="mono";decorate(z0,G.z);
 }
 function nextSection(){
@@ -590,7 +599,7 @@ function nextSection(){
   G.n++;G.cur="";
   if(G.n<=2){G.cur="rows";secRows(sp,d,G.n===2);return;}
   if(G.n===3){G.cur="jump";secJump(d,"simple");return;}
-  var o=[["rows",11],["boost",5],["super",6],["jump",8],["jumpx",20],["chain",d>0.08?12:4],["winding",18],["zig",16],["hills",6],["dip",12],["tunnel",12],["frag",10],["multi",10+8*d],["mono",d>0.1?9:0]],last=G.last,i,tot=0,r,pick;
+  var o=[["rows",11],["boost",5],["super",6],["jump",8],["jumpx",20],["chain",d>0.08?12:4],["winding",18],["zig",16],["hills",6],["dip",12],["tunnel",12],["frag",10],["multi",10+8*d],["mono",d>0.1?9:0],["kick",d>0.03?7:0]],last=G.last,i,tot=0,r,pick;
   if(d>0.12)o.push(["bridge",8]);
   o=o.filter(function(a){return a[1]>0&&(a[0]===last?a[0]==="rows":true);});
   for(i=0;i<o.length;i++)tot+=o[i][1];
@@ -602,7 +611,7 @@ function nextSection(){
   else if(pick==="jumpx"){var q=Math.random();secJump(d,d<0.1?"shift":(q<0.3?"shift":(q<0.65?"upper":"low")));}
   else if(pick==="chain")secChain(d);
   else if(pick==="winding")secWinding(d);else if(pick==="zig")secZig(d);else if(pick==="hills")secHills(d);
-  else if(pick==="dip")secDip(d);else if(pick==="tunnel")secTunnel(d,sp);else if(pick==="mono")secMono(d,sp);
+  else if(pick==="dip")secDip(d);else if(pick==="tunnel")secTunnel(d,sp);else if(pick==="mono")secMono(d,sp);else if(pick==="kick")secKick(d,sp);
   else if(pick==="frag")secFrag(d);else if(pick==="multi")secMulti(d);else secBridge(sp,d);
 }
 function resetWorld(demo){
@@ -788,6 +797,7 @@ function updatePlay(dt){
   var i,c,p;
   for(i=0;i<cubes.length;i++){c=cubes[i];if(c.mv)c.cx=c.mv.base+c.mv.amp*Math.sin(tm*c.mv.w+c.mv.ph);
     if(c.mono){if(!c.fl&&c.z0>B.z-2&&(c.z0-B.z)/Math.max(speed,6)<c.tt)c.fl=true;if(c.fl&&!c.done){c.mt+=dt;if(c.mt>=1){c.mt=1;c.done=true;sfx(90,40,0.2,"square",0.2);shake=Math.max(shake,0.25);}}}
+    if(c.kick&&c.fl)c.kt+=dt;
     if(c.drop){if(!c.fl&&c.z0>B.z-2&&(c.z0-B.z)/Math.max(speed,6)<c.tt)c.fl=true;if(c.fl&&c.dy>0){c.vd=(c.vd||0)+60*dt;c.dy=Math.max(0,c.dy-c.vd*dt);if(c.dy===0){sfx(110,50,0.15,"square",0.15);}}}}
   for(i=0;i<chunks.length;i++){c=chunks[i];
     if(c.frag){
@@ -799,6 +809,7 @@ function updatePlay(dt){
   for(i=0;i<cubes.length;i++){c=cubes[i];
     if(c.mono){var mp=monoPts(c),mx0=1e9,mx1=-1e9,my1=-1e9,q2;for(q2=0;q2<4;q2++){mx0=Math.min(mx0,mp[q2][0]);mx1=Math.max(mx1,mp[q2][0]);my1=Math.max(my1,mp[q2][1]);}
       if(B.x>mx0-0.4&&B.x<mx1+0.4&&B.z+0.4>c.z0&&B.z-0.4<c.z0+c.zl&&B.y-R<my1-0.05){crash();return;}continue;}
+    if(c.kick){if(!c.fl&&!B.air&&gnd&&Math.abs(B.x-c.cx)<c.hw+0.05&&B.z>c.z0+1.2&&B.z<c.z0+c.zl){c.fl=true;c.kt=0;B.air=true;gnd=null;B.vy=kickVy();B.at=0;B.y+=0.05;sfx(150,900,0.4,"sawtooth",0.22);sfx(90,60,0.15,"square",0.2);shake=Math.max(shake,0.22);puffAt(B.x,B.y-R,14,true);said.up=1;say("Catapulte");}continue;}
     if(Math.abs(B.x-c.cx)<c.hw+0.8*R&&B.z+0.8*R>c.z0&&B.z-0.8*R<c.z0+c.zl&&B.y-R<c.y+c.dy+c.h-0.05&&B.y+R>c.y+c.dy+0.05){crash();return;}}
   for(i=0;i<pads.length;i++){p=pads[i];
     if(!p.used&&B.z>p.z0&&B.z<p.z1&&Math.abs(B.x-p.x)<p.hw+0.2&&!B.air){p.used=true;
@@ -886,8 +897,20 @@ function drawCubeShadow(c){
   if(c.drop&&c.dy>0)poly(q,"rgba(226,64,48,"+((0.35+0.2*Math.sin(tm*14))*(1-fogf(c.z0-camZ))).toFixed(3)+")");
   else poly(q,"rgba(6,12,34,"+(0.5*(1-fogf(c.z0-camZ))).toFixed(3)+")");
 }
+function drawKick(c){
+  var z1=c.z0+c.zl;if(z1<camZ+0.8)return;
+  var ang=c.fl?0.62*(1-Math.pow(1-Math.min(1,c.kt/0.14),3)):0,lift=c.zl*Math.sin(ang),zA=Math.max(c.z0,camZ+0.7),yb=c.y,hh=c.h,
+      pu=0.5+0.5*Math.sin(tm*5+c.z0),col=mix(C_KICK,[255,176,60],c.fl?0.2:pu*0.7);
+  function yAt(z){return yb+hh+lift*(z-c.z0)/c.zl;}
+  slab(c.cx-c.hw,c.cx+c.hw,c.cx-c.hw,c.cx+c.hw,zA,z1,yAt(zA),yAt(z1),yb,col,mix(col,[255,236,200],0.25));
+  var f=clamp(fogf(zA-camZ)*1.1,0,0.8),ch=mix([255,232,140],HAZE,f),w=c.hw*0.7,i,zz,a,b,d,e,g,h2;
+  for(i=0;i<2;i++){zz=c.z0+1.1+i*2.2;if(zz<camZ+0.9)continue;
+    a=P(c.cx-w,yAt(zz)+0.03,zz);b=P(c.cx,yAt(zz+0.9)+0.03,zz+0.9);d=P(c.cx+w,yAt(zz)+0.03,zz);e=P(c.cx+w,yAt(zz-0.5)+0.03,zz-0.5);g=P(c.cx,yAt(zz+0.4)+0.03,zz+0.4);h2=P(c.cx-w,yAt(zz-0.5)+0.03,zz-0.5);
+    if(a&&b&&d&&e&&g&&h2)poly([a,b,d,e,g,h2],ch);}
+}
 function drawCube(c){
-  var z1=c.z0+c.zl;if(z1<camZ+0.8)return;var col=c.col||(PAL?PAL.ob:TERRA),yb=c.y+c.dy;if(c.lava)col=mix([214,52,18],[255,176,48],0.5+0.5*Math.sin(tm*5+c.z0));
+  if(c.kick){drawKick(c);return;}
+  var z1=c.z0+c.zl;if(z1<camZ+0.8)return;var col=c.col||(PAL?PAL.ob:TERRA),yb=c.y+c.dy;
   slab(c.cx-c.hw,c.cx+c.hw,c.cx-c.hw,c.cx+c.hw,Math.max(c.z0,camZ+0.7),z1,yb+c.h,yb+c.h,yb,col,mix(col,[255,240,226],0.3));
 }
 function monoTh(c){var t=c.mt||0;if(!c.fl)return 0;if(t<0.7){var u=t/0.7;return 0.35*u*u+0.06*u*Math.sin(t*22);}var q=(t-0.7)/0.3;return 0.35+(1.5708-0.35)*q*q;}
@@ -1217,7 +1240,7 @@ function closePanel(){$("panel").classList.remove("on");document.body.classList.
 var CLOSE='<p style="text-align:center"><button class="pill" id="pclose" type="button">Fermer</button></p>';
 function panelAbout(){
   openPanel('<h2>À propos</h2><p><b>Abel Run</b> — version '+CFG.version+'.</p>'+
-  '<p>Une boule roule sur des routes suspendues dans le vide. Évite les blocs (parfois mobiles), prends les rampes pour sauter par-dessus les trous, choisis ta route quand elle se sépare, traverse des tunnels, dévale des pentes (la vitesse change avec la pente), attrape les boosts verts et les super boosts dorés, et attention aux bords, aux monolithes qui tombent et à la lave : on peut tomber.</p>'+
+  '<p>Une boule roule sur des routes suspendues dans le vide. Évite les blocs (parfois mobiles), prends les rampes pour sauter par-dessus les trous, choisis ta route quand elle se sépare, traverse des tunnels, dévale des pentes (la vitesse change avec la pente), attrape les boosts verts et les super boosts dorés, et attention aux bords et aux monolithes qui tombent (ils se renversent en alternance, à gauche puis à droite). Les plaques orange sont des tremplins à bascule : roule dessus et ton avant se soulève d’un coup, pour une grande catapulte.</p>'+
   '<p>Cinq niveaux de vitesse : Détente, Balade, Course, Vertige, Folie. Plus tu vas vite, plus une rampe te lance loin. Les scores sont gardés par niveau : meilleur du jour, de la semaine et record.</p>'+
   '<p><b>Commandes</b> : glisse le doigt à gauche ou à droite, ou touches ← → (ou Q / D). Sur PC, bouton « Commande PC » : souris / pavé tactile (le centre de l’écran est le point neutre, un petit mouvement suffit) ou flèches. Pause : Espace, P ou Échap sur PC ; trois doigts posés ensemble sur l’écran du téléphone.</p>'+
   '<p>Créé par Tom Rougeaud. Licence CC BY-NC 4.0 (partage et adaptation libres, usage non commercial, avec mention de l’auteur). Les sons sont générés dans la page, sans fichier audio.</p>'+
@@ -1363,8 +1386,9 @@ if(window.__ABEL_TEST){window.__ABEL_TEST({
   step:function(dt){updatePlay(dt);},render:render,introFrame:introFrame,
   setTx:function(v){tx=v;},world:function(){return {chunks:chunks,cubes:cubes,pads:pads,B:B,mode:mode,speed:speed,G:G,tm:tm,cause:cause,monoPts:monoPts};},
   pos:function(z){B.z=z;},genN:function(l,n){lvl=l;resetWorld(false);newBall();for(var q=0;q<n;q++)nextSection();return {chunks:chunks,cubes:cubes,G:G};},size:function(w,h){SW=w;SH=h;F=Math.min(1.12*SW,0.9*SH);CY=SH*0.36;layoutIntro();},
-  force:function(name,arg,d){resetWorld(false);newBall();tx=0;G.n=5;speed=LV[lvl].v;tm=0;puffs=[];mode="play";if(name==="jump")secJump(d,arg);else if(name==="multi")secMulti(d);else if(name==="frag")secFrag(d);else if(name==="winding")secWinding(d);else if(name==="zig")secZig(d);else if(name==="hills")secHills(d);else if(name==="bridge")secBridge(30,d);else if(name==="rows"){for(var q=0;q<6;q++)secRows(30,d,q%2===1);}else if(name==="chain")secChain(d);else if(name==="dip")secDip(d);else if(name==="tunnel")secTunnel(d,30);else if(name==="mono")secMono(d,30);else if(name==="super")secSuper(d);ensureWorld();},
+  force:function(name,arg,d){resetWorld(false);newBall();tx=0;G.n=5;speed=LV[lvl].v;tm=0;puffs=[];mode="play";if(name==="jump")secJump(d,arg);else if(name==="multi")secMulti(d);else if(name==="frag")secFrag(d);else if(name==="winding")secWinding(d);else if(name==="zig")secZig(d);else if(name==="hills")secHills(d);else if(name==="bridge")secBridge(30,d);else if(name==="rows"){for(var q=0;q<6;q++)secRows(30,d,q%2===1);}else if(name==="chain")secChain(d);else if(name==="dip")secDip(d);else if(name==="tunnel")secTunnel(d,30);else if(name==="mono")secMono(d,30);else if(name==="super")secSuper(d);else if(name==="kick")secKick(d,30);ensureWorld();},
   cam:function(){var q=P(B.x,B.y,B.z);return {camX:camX,camXs:camXs,bx:B.x,sx:q?q[0]/SW:-1,tc:render.tc};},
+  kickD:kickD,
   ballY:function(){var q=P(B.x,B.y,B.z);return q?q[1]/SH:-1;},
   groundAt:groundAt,demo:function(){startDemo();mode="menu";started=true;},stepDemo:updateDemo,burst:function(){return iParts.length;}
 });}
