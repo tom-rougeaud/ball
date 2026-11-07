@@ -1,4 +1,4 @@
-var CACHE = "abelrun-v2-7";
+var CACHE = "abelrun-v2-8";
 var ASSETS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", function (e) {
