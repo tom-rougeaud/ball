@@ -279,12 +279,12 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"2.8.1","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"2.9.0","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":20,"levelBonus":[1,1.3,2,3.2,5],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",1000,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",1500,"Pins, clairières et lucioles."],["snow","Neige",2000,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",2500,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",3000,"Plages, palmiers et eau turquoise."],["lava","Lave",3500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",4000,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",5000,"Une piste aux sept couleurs au milieu des nuages."]],
  "balls":[["white","Blanc",0,[244,240,230],0,"La bille d’origine."],["coral","Corail",200,[240,106,92]],["orange","Orange",200,[250,150,50]],["yellow","Jaune",200,[248,208,60]],["lime","Citron vert",200,[150,210,60]],["green","Vert",200,[50,170,100]],["turquoise","Turquoise",200,[40,190,190]],["blue","Bleu",200,[60,110,230]],["violet","Violet",200,[140,96,220]],["pink","Rose",200,[240,120,180]],["black","Noir",200,[40,42,52]],["silver","Argent",400,[196,200,210],1,"Reflets métalliques."],["gold","Or",400,[236,190,70],1,"Reflets métalliques."]],
- "patterns":[["none","Unie",0,"Pas de motif : la couleur seule."],["stripes","Rayures",400,"Des bandes qui tournent avec le roulement."],["dots","Pois",400,"Des pastilles réparties sur toute la bille."],["checker","Damier",500,"Un damier qui se déforme en roulant."],["spiral","Spirale",600,"Une spirale hypnotique."],["stars","Étoiles",700,"Des étoiles à cinq branches."],["football","Football",600,"Ballon blanc aux pentagones noirs. Garde ses propres couleurs."],["basket","Basket",600,"Orange, avec ses lignes noires. Garde ses propres couleurs."],["baseball","Baseball",600,"Blanche aux coutures rouges. Garde ses propres couleurs."],["golf","Golf",600,"Blanche et couverte d’alvéoles. Garde ses propres couleurs."]],
+ "patterns":[["none","Unie",0,"Pas de motif : la couleur seule."],["stripes","Rayures",400,"Des bandes qui tournent avec le roulement."],["dots","Pois",400,"Des pastilles réparties sur toute la bille."],["checker","Damier",500,"Un damier qui se déforme en roulant."],["spiral","Spirale",600,"Une spirale hypnotique."],["stars","Étoiles",700,"Des étoiles à cinq branches."],["football","Football",600,"Ballon blanc aux pentagones noirs. Garde ses propres couleurs."],["basket","Basket",600,"Orange, avec ses lignes noires. Garde ses propres couleurs."],["baseball","Baseball",600,"Blanche aux coutures rouges. Garde ses propres couleurs."],["golf","Golf",600,"Blanche et couverte d’alvéoles. Garde ses propres couleurs."],["comete","Comète",600,"Sable, large bande bleu nuit et petites étincelles. Garde ses propres couleurs."],["toile","Toile d’araignée",700,"Fils argentés sur fond nuit. Garde ses propres couleurs."],["eclair","Éclair",600,"Une frise en zigzag ambrée sur fond sarcelle. Garde ses propres couleurs."],["losange","Losanges",500,"Un habit d’arlequin crème et terre cuite. Garde ses propres couleurs."]],
  "trails":[["none","Aucune",0,"Pas de traînée."],["confetti","Confettis",400,"Une pluie de confettis colorés."],["sparks","Étincelles",500,"Des étincelles qui rebondissent sur la piste."],["fire","Feu",600,"Une traînée de flammes."],["ice","Glace",600,"Des cristaux de glace."],["bubbles","Bulles",700,"Des bulles qui montent doucement."],["stars","Étoiles filantes",800,"Des étoiles scintillantes."],["rainbow","Arc-en-ciel",800,"Une traînée aux couleurs de l’arc-en-ciel."]],
  "effects":[["none","Aucun",0,"Pas d’effet autour de la bille."],["halo","Halo",500,"Un halo lumineux qui prend la couleur de la bille."],["ring","Contour néon",600,"Un fin contour lumineux autour de la bille."],["red","Halo rouge",700,"Un halo rouge qui palpite."],["double","Double",800,"Un double fantôme de la bille qui la suit en écho."]],
  "tracks":[["auto","Selon l’univers",0,null,"La piste prend la couleur de l’univers choisi."],["asphalt","Bitume",600,[62,64,72]],["slate","Ardoise",600,[70,92,150]],["terracotta","Terre cuite",600,[188,98,70]],["sage","Sauge",600,[110,156,128]],["plum","Prune",600,[110,66,128]],["carbon","Carbone",600,[44,46,54]],["ivory","Ivoire",600,[226,220,204]]]},
@@ -1419,7 +1419,7 @@ var BTX=null,BTXC=null,BTXD=null,BTXS=0,BSPOTS=[],BFRAME=0;
 (function(){var N=14,i;for(i=0;i<N;i++){var y=1-2*(i+0.5)/N,r=Math.sqrt(1-y*y),th=i*2.399963,c=[Math.cos(th)*r,y,Math.sin(th)*r],t1=Math.abs(c[1])<0.9?[0,1,0]:[1,0,0],d=t1[0]*c[0]+t1[1]*c[1]+t1[2]*c[2],l;
   t1=[t1[0]-c[0]*d,t1[1]-c[1]*d,t1[2]-c[2]*d];l=Math.hypot(t1[0],t1[1],t1[2]);t1=[t1[0]/l,t1[1]/l,t1[2]/l];
   BSPOTS.push({c:c,t1:t1,t2:[c[1]*t1[2]-c[2]*t1[1],c[2]*t1[0]-c[0]*t1[2],c[0]*t1[1]-c[1]*t1[0]]});}})();
-var SPORTS={football:{c:[242,240,234],i:[26,28,36]},basket:{c:[224,118,46],i:[34,24,20]},baseball:{c:[246,243,236],i:[190,44,48]},golf:{c:[250,249,245],i:[192,198,208]}};
+var SPORTS={football:{c:[242,240,234],i:[26,28,36]},basket:{c:[224,118,46],i:[34,24,20]},baseball:{c:[246,243,236],i:[190,44,48]},golf:{c:[250,249,245],i:[192,198,208]},comete:{c:[240,228,204],i:[34,56,98]},toile:{c:[40,52,86],i:[212,220,236]},eclair:{c:[32,78,88],i:[238,192,84]},losange:{c:[238,228,208],i:[170,84,66]}};
 function ballCols(pat){var s=SPORTS[pat];return s?{c:s.c,ink:s.i,m:0}:{c:BC.c,ink:BC.ink,m:BC.m};}
 /* les 12 sommets de l’icosaèdre : centres des pentagones du ballon de football (t1 pointe vers un voisin) */
 var ICO=[];(function(){var p=1.618034,v=[[0,1,p],[0,-1,p],[0,1,-p],[0,-1,-p],[1,p,0],[-1,p,0],[1,-p,0],[-1,-p,0],[p,0,1],[-p,0,1],[p,0,-1],[-p,0,-1]],i,j,l,c,nb,d,t1,t2;
@@ -1427,6 +1427,8 @@ var ICO=[];(function(){var p=1.618034,v=[[0,1,p],[0,-1,p],[0,1,-p],[0,-1,-p],[1,
   for(i=0;i<12;i++){c=v[i];nb=null;for(j=0;j<12;j++){if(j===i)continue;d=c[0]*v[j][0]+c[1]*v[j][1]+c[2]*v[j][2];if(d>0.4&&d<0.5){nb=v[j];break;}}
     d=c[0]*nb[0]+c[1]*nb[1]+c[2]*nb[2];t1=[nb[0]-c[0]*d,nb[1]-c[1]*d,nb[2]-c[2]*d];l=Math.sqrt(t1[0]*t1[0]+t1[1]*t1[1]+t1[2]*t1[2]);t1=[t1[0]/l,t1[1]/l,t1[2]/l];
     t2=[c[1]*t1[2]-c[2]*t1[1],c[2]*t1[0]-c[0]*t1[2],c[0]*t1[1]-c[1]*t1[0]];ICO.push({c:c,t1:t1,t2:t2});}})();
+/* axe du centre de la toile : incliné vers l’avant pour qu’on voie le moyeu */
+var WP=[0.5,0.25,0.83],WT1=[0,0,0],WT2=[0,0,0];(function(){var l=Math.sqrt(WP[0]*WP[0]+WP[1]*WP[1]+WP[2]*WP[2]),d,t;WP=[WP[0]/l,WP[1]/l,WP[2]/l];t=[0,1,0];d=t[0]*WP[0]+t[1]*WP[1]+t[2]*WP[2];t=[t[0]-WP[0]*d,t[1]-WP[1]*d,t[2]-WP[2]*d];l=Math.sqrt(t[0]*t[0]+t[1]*t[1]+t[2]*t[2]);WT1=[t[0]/l,t[1]/l,t[2]/l];WT2=[WP[1]*WT1[2]-WP[2]*WT1[1],WP[2]*WT1[0]-WP[0]*WT1[2],WP[0]*WT1[1]-WP[1]*WT1[0]];})();
 function sqw(u,e){u-=Math.floor(u);var s=u<0.5?(u<0.5-u?u:0.5-u):-(u-0.5<1-u?u-0.5:1-u),c=0.5+s/e;return c<0?0:(c>1?1:c);}
 function sphereTex(S,col,ink,pat,ang,tilt,metal){
   if(BTXS!==S){BTX=document.createElement("canvas");BTX.width=BTX.height=S;BTXC=BTX.getContext("2d");BTXD=BTXC.createImageData(S,S);BTXS=S;}
@@ -1434,12 +1436,12 @@ function sphereTex(S,col,ink,pat,ang,tilt,metal){
       Lx=-0.45,Ly=0.62,Lz=0.64,ll=Math.sqrt(Lx*Lx+Ly*Ly+Lz*Lz),hx,hy,hz,hl,px1=1/S;
   Lx/=ll;Ly/=ll;Lz/=ll;hx=Lx;hy=Ly;hz=Lz+1;hl=Math.sqrt(hx*hx+hy*hy+hz*hz);hx/=hl;hy/=hl;hz/=hl;
   var cr=col[0],cg=col[1],cb=col[2],ir=ink[0],ig=ink[1],ib=ink[2],spw=metal?14:28,spk=metal?0.75:0.45,amb=metal?0.3:0.46,dif=metal?0.66:0.62,NS=BSPOTS.length,
-      eS=5*px1,eC=2.5*px1,eL=3.8*px1,eD=1.5*px1,PP=pat==="stripes"?1:(pat==="checker"?2:(pat==="spiral"?3:(pat==="dots"?4:(pat==="stars"?5:(pat==="football"?6:(pat==="basket"?7:(pat==="baseball"?8:(pat==="golf"?9:0))))))));
+      eS=5*px1,eC=2.5*px1,eL=3.8*px1,eD=1.5*px1,PP=pat==="stripes"?1:(pat==="checker"?2:(pat==="spiral"?3:(pat==="dots"?4:(pat==="stars"?5:(pat==="football"?6:(pat==="basket"?7:(pat==="baseball"?8:(pat==="golf"?9:(pat==="comete"?10:(pat==="toile"?11:(pat==="eclair"?12:(pat==="losange"?13:0))))))))))));
   for(y=0;y<S;y++){var sy=1-(y+0.5)/half;
     for(x=0;x<S;x++,n+=4){var sx=(x+0.5)/half-1,r2=sx*sx+sy*sy;
       if(r2>=1.08){d[n+3]=0;continue;}
       var rho=Math.sqrt(r2),sz=Math.sqrt(r2<1?1-r2:0),al=(1-rho)*half;al=al<0?0:(al>1?1:al);
-      var cov=0;
+      var cov=0,cov2=0;
       if(PP){
         var nx=sx,ny=0.9*sy+0.43*sz,nz=0.43*sy-0.9*sz,x1=nx*ct+ny*st,y1=-nx*st+ny*ct,y2=y1*ca+nz*sa,z2=-y1*sa+nz*ca,x2=x1>1?1:(x1<-1?-1:x1),lon,k,sp,dp;
         if(PP===1){lon=Math.atan2(z2,y2);cov=sqw((lon/6.2832+0.5)*8,eS);}
@@ -1452,11 +1454,15 @@ function sphereTex(S,col,ink,pat,ang,tilt,metal){
         else if(PP===7){var bl=Math.abs(x2),bm=Math.abs(y2),bn=Math.abs(bl-(0.6-0.38*y2*y2)),bq=Math.min(bl,bm,bn),bc=(0.04-bq)/(1.3*px1)+0.5;cov=bc<0?0:(bc>1?1:bc);}
         else if(PP===8){var bu=Math.atan2(z2,x2),bdd=Math.abs(y2-0.55*Math.sin(2*bu)),bl8=(0.02-bdd)/(1.2*px1)+0.5,bt8=bdd<0.075?(0.22-Math.abs(Math.sin(bu*14)))/0.07*0.5+0.5:0;bl8=bl8<0?0:(bl8>1?1:bl8);bt8=bt8<0?0:(bt8>1?1:bt8);cov=bl8>bt8?bl8:bt8;}
         else if(PP===9){var ga=Math.asin(x2),gi=Math.round(ga/0.3),gl=gi*0.3,gc=Math.cos(gl),gn=Math.max(1,Math.round(6.2832*(gc<0.05?0.05:gc)/0.3)),go=Math.atan2(z2,y2)/6.2832*gn+((gi&1)?0.5:0),gj=Math.round(go),gdl=ga-gl,gdn=(go-gj)*6.2832/gn*Math.cos(ga),gs=Math.sqrt(gdl*gdl+gdn*gdn),gq=(0.125-gs)/(1.6*px1)+0.5;cov=gq<0?0:(gq>1?1:gq);}
+        else if(PP===10){var cd=x2*0.55+y2*0.83,cb1=(0.36-Math.abs(cd))/(1.6*px1)+0.5;cov=cb1<0?0:(cb1>1?1:cb1);for(k=0;k<NS;k+=2){sp=BSPOTS[k];dp=x2*sp.c[0]+y2*sp.c[1]+z2*sp.c[2];if(dp>0.9){var kx=x2-sp.c[0]*dp,ky=y2-sp.c[1]*dp,kz=z2-sp.c[2]*dp,k1=kx*sp.t1[0]+ky*sp.t1[1]+kz*sp.t1[2],k2=kx*sp.t2[0]+ky*sp.t2[1]+kz*sp.t2[2],kr=Math.sqrt(k1*k1+k2*k2),kc=Math.abs(Math.cos(2*Math.atan2(k2,k1))),ks=(0.05+0.2*kc*kc*kc-kr)/(1.6*px1)+0.5;cov2=ks<0?0:(ks>1?1:ks);break;}}}
+        else if(PP===11){var wd0=x2*WP[0]+y2*WP[1]+z2*WP[2],wa=wd0<0?-wd0:wd0,wth=Math.acos(wa>1?1:wa),wph=Math.atan2(x2*WT2[0]+y2*WT2[1]+z2*WT2[2],x2*WT1[0]+y2*WT1[1]+z2*WT1[2])/6.2832*10,wd=Math.abs(wph-Math.round(wph))*0.62832*Math.sin(wth),wr=(0.016-wd)/(1.5*px1)+0.5,wt=wth/0.4,wk=Math.round(wt),wq=(0.016-Math.abs(wt-wk)*0.4)/(1.5*px1)+0.5;wr=wr<0?0:(wr>1?1:wr);if(wth<0.18||wth>1.25)wr=0;wq=(wk<1||wk>3)?0:(wq<0?0:(wq>1?1:wq));cov=wr>wq?wr:wq;}
+        else if(PP===12){var zl=Math.atan2(z2,y2)/6.2832*4,zt=Math.abs(zl-Math.floor(zl)-0.5)*2,zz=(zt-0.5)*0.7,ze=(0.17-Math.abs(x2-zz))/(1.6*px1)+0.5;cov=ze<0?0:(ze>1?1:ze);}
+        else if(PP===13){lon=Math.atan2(z2,y2);var la=Math.asin(x2)/PI,lb=lon/6.2832,d1=sqw(lb*4+la*4,eC),d2=sqw(lb*4-la*4,eC);cov=0.5+0.5*(2*d1-1)*(2*d2-1);}
       }
       var diff=sx*Lx+sy*Ly+sz*Lz;if(diff<0)diff=0;
       var shd=(amb+dif*diff)*(0.8+0.2*sz);if(sy<-0.15)shd*=1-0.3*(-sy-0.15);
       var spc=sx*hx+sy*hy+sz*hz;spc=spc>0.6?Math.pow(spc,spw)*spk*255:0;
-      var rc=(cr+(ir-cr)*cov)*shd+spc,gc=(cg+(ig-cg)*cov)*shd+spc,bc=(cb+(ib-cb)*cov)*shd+spc;
+      var mr=cr+(ir-cr)*cov,mg=cg+(ig-cg)*cov,mb=cb+(ib-cb)*cov;if(cov2>0){mr+=(210-mr)*cov2;mg+=(102-mg)*cov2;mb+=(72-mb)*cov2;}var rc=mr*shd+spc,gc=mg*shd+spc,bc=mb*shd+spc;
       d[n]=rc>255?255:rc;d[n+1]=gc>255?255:gc;d[n+2]=bc>255?255:bc;d[n+3]=al*255;
     }}
   BTXC.putImageData(BTXD,0,0);
