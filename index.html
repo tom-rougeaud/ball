@@ -283,6 +283,85 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
 .shbtns{display:flex;flex-direction:column;gap:calc(var(--u)*1.2);align-items:stretch}
 .shbuy.sec{display:none;justify-content:center;min-height:38px;padding:0 calc(var(--u)*4);background:rgba(255,255,255,.16);box-shadow:none;font-size:max(11px,calc(var(--u)*2.9))}
 .shbuy.sec:disabled{background:rgba(255,255,255,.08)}
+/* ---------- guide d’installation animé (v3.12) ---------- */
+.gz{margin:calc(var(--u)*1.4) 0}
+.gchips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.gchips b{flex-basis:100%;font-size:max(10px,calc(var(--u)*2.4));letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-top:4px}
+.gchip{font-size:max(11px,calc(var(--u)*2.8));font-weight:700;padding:6px 11px;border-radius:999px;border:1.5px solid rgba(27,34,54,.3);background:rgba(255,255,255,.5);color:#1B2236}
+.gchip.on{background:#1B2236;color:#F4EFE6;border-color:#1B2236}
+.gwrap{display:flex;justify-content:center;margin:8px 0;overflow:hidden}
+.gbox{position:relative;transform-origin:top left}
+.gm{position:relative;overflow:hidden;background:#fff;font:11px/1.25 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1B2236;display:flex;flex-direction:column;box-sizing:border-box;text-align:left}
+.gph{width:230px;height:440px;border-radius:28px;border:6px solid #1B2236}
+.gpc{width:340px;height:230px;border-radius:8px;border:1px solid #6B7389;background:#E6E9F0}
+.gs{height:18px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 14px;font-size:9px;background:#F2F3F6}
+.gpg{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#F7F7F9}
+.gpg b{font-size:15px;letter-spacing:.04em}
+.gpg i{display:block;width:60%;height:7px;border-radius:4px;background:#DADDE6}.gpg i.s{width:44%}
+.gball{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#C9CEDA 55%,#7C8498);box-shadow:0 3px 6px rgba(27,34,54,.25)}
+.gtb,.gbb{flex:none;height:38px;display:flex;align-items:center;gap:6px;padding:0 8px;background:#F2F3F6}
+.gtb{border-bottom:1px solid #D5D8E0}.gbb{border-top:1px solid #D5D8E0;height:44px}
+.gad{flex:1;background:#E3E6ED;border-radius:14px;padding:5px 9px;font-size:9.5px;white-space:nowrap;overflow:hidden;position:relative}
+.gbt{min-width:22px;text-align:center;font-size:17px;font-weight:700;line-height:1;padding:4px 2px;border-radius:8px}
+.gov{position:absolute;inset:0;background:rgba(27,34,54,.28)}
+.gmn{position:absolute;background:#fff;border-radius:12px;box-shadow:0 6px 22px rgba(27,34,54,.35);padding:4px;min-width:140px;z-index:2}
+.gmn.tr{top:56px;right:8px}.gmn.bm{bottom:52px;right:8px}.gmn.mf{top:30px;left:96px;min-width:150px}
+.gmi{padding:8px 10px;border-radius:7px;font-size:10.5px;white-space:nowrap}
+.gmi.dim{opacity:.55}
+.gsh{position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:16px 16px 0 0;padding:10px 8px 14px;z-index:2;box-shadow:0 -6px 22px rgba(27,34,54,.3)}
+.gsh>b{display:block;text-align:center;font-size:11px;margin-bottom:6px}
+.gdl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:78%;background:#fff;border-radius:14px;padding:14px 12px 10px;box-shadow:0 8px 28px rgba(27,34,54,.4);z-index:2;text-align:center}
+.gdl>b{font-size:11.5px;display:block;margin-bottom:6px}.gdl>p{margin:0 0 8px;font-size:10px;opacity:.75}
+.gdb{display:flex;gap:6px;justify-content:center;margin-top:8px}
+.gdb span{flex:1;padding:7px 4px;border-radius:9px;background:#E3E6ED;font-weight:700;font-size:10.5px}
+.gdb span:last-child{background:#1B2236;color:#fff}
+.gfd{background:#EEF0F5;border-radius:8px;padding:7px;font-size:10.5px;margin-bottom:6px}
+.gtg2{display:flex;justify-content:space-between;align-items:center;font-size:10px;padding:4px 2px}
+.gsw{width:30px;height:17px;border-radius:9px;background:#2F7A5A;position:relative}.gsw:after{content:"";position:absolute;right:2px;top:2px;width:13px;height:13px;border-radius:50%;background:#fff}
+.ghm{flex:1;background:linear-gradient(160deg,#3A4A78,#1B2236 70%);padding:34px 14px 14px}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 8px}
+.gic{display:flex;flex-direction:column;align-items:center;gap:3px;color:#fff;font-size:8.5px}
+.gic:before{content:"";width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.18)}
+.gic.app:before{background:#F4EFE6 radial-gradient(circle at 38% 34%,#fff,#C9CEDA 50%,#566079 100%)}
+.gic em{font-style:normal}
+.gw{flex:1;display:flex;flex-direction:column;background:#fff;position:relative}
+.gwt{height:26px;flex:none;background:#CBD0DB;display:flex;align-items:flex-end;padding:0 8px}
+.gtab{background:#F2F3F6;border-radius:8px 8px 0 0;padding:5px 14px;font-size:9.5px}
+.gwb{height:30px;flex:none;display:flex;align-items:center;gap:8px;padding:0 8px;background:#F2F3F6;font-size:12px}
+.gwb .gad{padding:4px 9px}
+.gic2{position:absolute;right:6px;top:2px;font-style:normal;font-size:13px;font-weight:700;padding:0 4px;border-radius:5px}
+.gpo{position:absolute;right:30px;top:62px;width:170px;background:#fff;border-radius:10px;box-shadow:0 6px 22px rgba(27,34,54,.4);padding:10px;z-index:2;text-align:left}
+.gpo p{margin:3px 0 4px;font-size:10px;opacity:.75}
+.gmb{height:20px;flex:none;background:#E9EBF0;display:flex;gap:16px;align-items:center;padding:0 12px;font-size:10px}
+.gmb span,.gmb b{padding:2px 4px;border-radius:4px}
+.gdk{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);display:flex;gap:8px;align-items:flex-end;padding:6px 10px;background:rgba(255,255,255,.35);border-radius:14px}
+.gdk u{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,.6)}.gdk .gic:before{width:28px;height:28px;border-radius:7px}
+.gdesk{flex:1;background:linear-gradient(160deg,#3A4A78,#1B2236 70%);position:relative}
+.gtgt{outline:2px solid #E1A93A;outline-offset:2px;animation:gpl 1s ease-in-out infinite}
+@keyframes gpl{50%{outline-color:rgba(225,169,58,.2)}}
+.gpress{background:rgba(225,169,58,.4)!important}
+.gfg{position:absolute;left:0;top:0;width:30px;height:30px;margin:-15px 0 0 -15px;z-index:9;pointer-events:none;transition:transform .8s cubic-bezier(.5,0,.2,1)}
+.gfg i{position:absolute;inset:0;border-radius:50%;background:rgba(27,34,54,.45);border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.gfg.tap i{animation:gtap .45s ease-out}
+@keyframes gtap{0%{transform:scale(1)}40%{transform:scale(.7)}100%{transform:scale(1)}}
+.gfg.cur{width:18px;height:24px;margin:0}
+.gfg.cur i{background:none;border:0;box-shadow:none;border-radius:0;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 24'><path d='M1 1v18l4.5-4.2 3.2 7.2 3-1.4-3.2-7H15z' fill='%231B2236' stroke='white' stroke-width='1.4'/></svg>") no-repeat}
+.gcap{min-height:3.2em;font-size:max(12px,calc(var(--u)*3.2));font-weight:600;margin:6px 0 2px;text-align:center}
+.gctl{display:flex;justify-content:center;align-items:center;gap:10px;margin:4px 0}
+.gdots{display:flex;gap:5px}.gdots i{width:7px;height:7px;border-radius:50%;background:rgba(27,34,54,.25)}.gdots i.on{background:#1B2236}
+.gbtn{font-size:15px;min-width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(27,34,54,.35);background:rgba(255,255,255,.6);color:#1B2236}
+.gins{display:block;width:100%;margin:6px 0;font-size:max(14px,calc(var(--u)*3.8));font-weight:800;padding:12px;border-radius:14px;background:#1B2236;color:#F4EFE6;border:0}
+.gok{margin:6px 0;padding:10px;border-radius:12px;background:#DCE9E1;font-weight:700;text-align:center}
+#nudge{position:fixed;z-index:12;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 70px);transform:translate(-50%,30px);width:min(92vw,380px);background:#F4EFE6;color:#1B2236;border-radius:18px;padding:14px 16px;box-shadow:0 10px 34px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .5s,transform .5s}
+#nudge.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+#nudge b{display:block;font-size:15px;margin-bottom:3px}#nudge p{margin:0 0 10px;font-size:12.5px;opacity:.8}
+#nudge .row{display:flex;gap:8px}#nudge button{flex:1;padding:11px;border-radius:12px;font-weight:800;font-size:13.5px;border:1.5px solid rgba(27,34,54,.35);background:rgba(255,255,255,.6);color:#1B2236}
+#nudge button.pri{background:#1B2236;color:#F4EFE6;border-color:#1B2236}
+#bshare.pulse{animation:bpl 1.8s ease-in-out infinite}
+@keyframes bpl{50%{box-shadow:0 0 0 6px rgba(225,169,58,.45)}}
+@media (prefers-reduced-motion:reduce){.gtgt,#bshare.pulse{animation:none}.gfg{transition:none}}
+body.playing #nudge,body.pnl #nudge{display:none}
+body.pnl #brand{opacity:0!important;pointer-events:none}
 </style>
 </head>
 <body class="intro">
@@ -325,7 +404,7 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
       <button id="bdata" type="button">Mes scores</button>
       <button id="babout" type="button">À propos</button>
       <button id="bpriv" type="button">Confidentialité</button>
-      <button id="bshare" type="button">Partager</button>
+      <button id="bshare" type="button">Partager / Installer</button>
       <button id="bcode" type="button">Codes</button>
       <button id="bgeo" type="button">Obstacles : simples</button>
       <button id="bq" type="button">Qualité : Auto</button>
@@ -375,7 +454,7 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.11","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.12","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -385,6 +464,56 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
  "effects":[["none","Aucun",0,"Pas d’effet autour de la bille."],["halo","Halo",800,"Un halo lumineux qui prend la couleur de la bille."],["ring","Contour néon",1000,"Un fin contour lumineux autour de la bille."],["red","Halo rouge",1100,"Un halo rouge qui palpite."],["double","Double",1300,"Un double fantôme de la bille qui la suit en écho."],["halo_az","Halo azur",500,"Un halo bleu clair."],["halo_mt","Halo menthe",500,"Un halo vert d’eau."],["halo_ro","Halo rose",500,"Un halo rose."],["halo_am","Halo ambre",650,"Un halo orange doré."],["halo_vi","Halo violet",650,"Un halo violet."],["halo_gl","Halo glacé",650,"Un halo blanc bleuté."],["ring_cy","Contour cyan",650,"Un fin contour cyan."],["ring_ro","Contour rose",650,"Un fin contour rose."],["ring_ve","Contour vert",800,"Un fin contour vert."],["ring_am","Contour ambre",800,"Un fin contour ambre."],["etincelles","Étincelles",1000,"De petites étoiles qui scintillent autour de la bille."],["orbite","Orbite",1100,"Trois billes minuscules tournent autour."],["pulsation","Pulsation",1300,"Des ondes qui s’éloignent de la bille."],["savon","Bulle de savon",1400,"Une bulle irisée qui entoure la bille."],["triple","Triple écho",1600,"Trois fantômes de la bille la suivent."],["saturne","Anneau",1600,"Un anneau incliné, comme une planète."],["coeurs_o","Cœurs",2100,"Des cœurs qui tournent autour."],["feuaura","Aura de feu",1900,"Des flammes qui lèchent la bille."],["glaceaura","Aura de glace",1900,"Des cristaux de givre qui l’entourent."],["eclairs","Arcs électriques",2200,"Des éclairs qui crépitent."],["lunes","Trois lunes",3200,"Trois lunes aux orbites différentes."],["atome","Atome",3500,"Des électrons sur des orbites croisées."],["petalesfx","Pétales",4000,"Une ronde de pétales."],["soleil","Rayons de soleil",4000,"Des rayons dorés qui tournent derrière."],["arcecho","Écho arc-en-ciel",4800,"Des fantômes de toutes les couleurs."],["glitch","Glitch",4800,"Le rouge, le vert et le bleu se décalent."],["cyclone","Cyclone",5600,"Un tourbillon de lumière."],["eclipse","Éclipse",5600,"Un disque sombre et sa couronne de lumière."],["constel","Constellation",6400,"Des étoiles reliées par des fils de lumière."],["ailes_a","Ailes d’ange",8000,"De grandes ailes blanches qui battent doucement."],["couronne","Papillons",9600,"Des papillons lumineux voltigent autour de la bille."],["ailes_d","Ailes sombres",9600,"Des ailes de chauve-souris aux reflets violets."],["ailes_f","Ailes de feu",12800,"Des ailes de flammes."],["systeme","Système solaire",12800,"Des planètes tournent autour de la bille."],["singul","Singularité",16000,"Un disque d’accrétion et une lumière qui se courbe."],["halo_co","Halo corail",500,"Un halo corail."],["halo_bl","Halo blanc",500,"Un halo blanc pur."],["halo_ru","Halo rubis",650,"Un halo rouge profond."],["halo_em","Halo émeraude",650,"Un halo vert vif."],["halo_nu","Halo nuit",650,"Un halo bleu nuit."],["halo_or","Halo or",800,"Un halo doré."],["ring_ru","Contour rouge",650,"Un fin contour rouge."],["ring_bl","Contour bleu",650,"Un fin contour bleu."],["ring_bc","Contour blanc",650,"Un fin contour blanc."],["ring_mt","Contour menthe",650,"Un fin contour vert d’eau."],["ring_vi","Contour violet",800,"Un fin contour violet."],["ring_or","Contour or",800,"Un fin contour doré."],["couronnefl","Couronne de fleurs",5200,"Des fleurs en orbite autour de la bille."],["blocsorb","Blocs en orbite",5000,"Cinq petits cubes qui tournent autour de la bille."],["bancpoissons","Banc de poissons",5400,"Des poissons qui nagent en rond autour de toi."],["croissantsorb","Croissants de lune",4800,"Cinq croissants pâles en rotation."],["formesbauhaus","Formes Bauhaus",5200,"Triangle, carré et rond, en couleurs primaires."],["feuillesor","Feuilles dorées",4800,"Des feuilles d’automne qui tournent autour de la bille."],["cartesorb","Jeu de cartes",5000,"Cœur, carreau, pique et trèfle en orbite."],["vitrail","Vitrail",7200,"Des éclats de verre coloré cerclés de noir."],["mandala","Mandala",7600,"Des rosaces dorées qui tournent en sens inverse."],["ondes","Ondes",4200,"Des cercles d’eau qui s’étendent sous la bille."],["pixelfx","Pixels",5000,"De petits carrés qui s’envolent en tournant."],["rubanfx","Ruban",6200,"Un ruban rouge et or enroulé autour de la bille."],["croquis","Croquis",5600,"Des traits de crayon dessinés autour de la bille."],["neigeorb","Tempête de flocons",5400,"Des flocons blancs qui tourbillonnent autour de toi."]],
  "tracks":[["auto","Selon l’univers",0,null,"La piste prend la couleur de l’univers choisi."],["asphalt","Bitume",1000,[62,64,72]],["slate","Ardoise",1000,[70,92,150]],["terracotta","Terre cuite",1000,[188,98,70]],["sage","Sauge",1000,[110,156,128]],["plum","Prune",1000,[110,66,128]],["carbon","Carbone",1000,[44,46,54]],["ivory","Ivoire",1000,[226,220,204]],["sable","Sable",500,[214,190,140],"Une piste couleur de dune."],["menthe","Menthe",500,[140,210,184],"Un vert d’eau."],["rosebonbon","Rose bonbon",500,[236,150,176],"Tout en rose."],["brique","Brique",650,[160,70,60],"Rouge brique."],["marine","Marine",650,[34,52,104],"Bleu nuit."],["moutarde","Moutarde",650,[214,166,48],"Jaune moutarde."],["lilas","Lilas",650,[170,150,214],"Un violet pâle."],["petrole","Pétrole",800,[24,110,120],"Bleu-vert profond."],["olive","Olive",800,[112,122,58],"Vert olive."],["craie","Craie",800,[200,206,214],"Gris clair, très lumineux."],["ruban","Ruban",1000,[62,64,86],"Une large bande claire au milieu.",{"s":"stripe","c2":[232,230,236]}],["bordures","Bordures",1100,[70,74,92],"Deux bandes de couleur sur les bords.",{"s":"edge","c2":[226,110,76]}],["damier","Damier",1400,[236,236,240],"Cases noires et blanches, comme une ligne d’arrivée.",{"s":"check","c2":[40,42,50]}],["zebra","Passage piéton",1100,[66,68,76],"De larges bandes blanches en travers.",{"s":"zebra","c2":[240,240,244]}],["couchant","Couchant",1600,[255,150,70],"Un dégradé du orange au rose.",{"s":"grad","c2":[210,70,150]}],["lagon","Lagon",1600,[40,200,200],"Un dégradé du turquoise au bleu.",{"s":"grad","c2":[36,70,180]}],["briques","Briques",1300,[176,86,66],"Un mur de briques posé à plat.",{"tx":"brick"}],["planches","Planches",1300,[170,120,70],"Des planches de bois comme un ponton.",{"tx":"plank"}],["paves","Pavés",1400,[130,130,138],"De vieux pavés de pierre.",{"tx":"cobble"}],["herbe","Herbe",1100,[84,150,70],"Un chemin d’herbe.",{"tx":"grasstop"}],["carrelage","Carrelage",3200,[226,230,236],"De grands carreaux bien alignés.",{"tx":"tile"}],["carbfib","Fibre de carbone",3200,[36,38,46],"Le tissage des voitures de course.",{"tx":"carbon"}],["marbrepiste","Marbre",4000,[236,234,230],"Du marbre blanc veiné de gris.",{"tx":"marble"}],["glacepiste","Glace",4800,[170,214,242],"Une glace transparente et fendue.",{"tx":"ice"}],["lavecool","Lave refroidie",5600,[50,34,34],"Une croûte noire parcourue de braises.",{"tx":"lava","ta":0.9}],["jadepiste","Jade",5600,[60,160,120],"Une pierre verte veinée.",{"tx":"jade"}],["cuivre","Cuivre",6400,[196,112,74],"Des bandes de métal poli.",{"s":"sheen"}],["arcenciel","Arc-en-ciel",8000,[255,255,255],"Sept bandes de couleur.",{"s":"rb"}],["galaxiepiste","Galaxie",9600,[18,14,50],"Une piste semée d’étoiles.",{"tx":"stars"}],["diamantpiste","Diamant",11200,[206,230,250],"Des facettes qui scintillent.",{"tx":"facets","s":"sheen2"}],["ormassif","Or massif",12800,[236,190,70],"De l’or poli, bande après bande.",{"s":"sheen"}],["aurorepiste","Aurore",16000,[40,180,150],"Un dégradé vert et violet qui ondule.",{"s":"aurora","c2":[150,70,220]}],["bordneonrose","Bords néon rose",1300,[28,22,46],"Une piste de nuit bordée de rose.",{"s":"edge","c2":[255,70,170]}],["bordneoncyan","Bords néon cyan",1300,[20,28,48],"Une piste de nuit bordée de cyan.",{"s":"edge","c2":[40,230,255]}],["bordor","Bords dorés",1400,[40,40,52],"Deux filets d’or sur les bords.",{"s":"edge","c2":[236,190,70]}],["rubanor","Ruban doré",1400,[44,44,60],"Une bande dorée au centre.",{"s":"stripe","c2":[236,190,70]}],["boissombre","Bois sombre",1500,[96,66,40],"Des planches de chêne foncé.",{"tx":"plank"}],["briquenoire","Briques noires",1500,[60,50,52],"Un mur de briques sombres.",{"tx":"brick"}],["damierrouge","Damier rouge",1500,[240,236,230],"Cases rouges et blanches.",{"s":"check","c2":[200,40,50]}],["damierbleu","Damier bleu",1500,[240,240,246],"Cases bleues et blanches.",{"s":"check","c2":[40,84,200]}],["aube","Aube",1700,[255,206,128],"Du jaune pâle au rose.",{"s":"grad","c2":[255,130,170]}],["minuit","Minuit",1700,[20,24,70],"Du bleu nuit au violet.",{"s":"grad","c2":[96,56,170]}],["emeraudepiste","Dégradé émeraude",1700,[20,140,100],"Du vert profond au vert tendre.",{"s":"grad","c2":[196,240,130]}],["braisepiste","Dégradé braise",1900,[255,220,70],"Du jaune vif au rouge.",{"s":"grad","c2":[210,40,30]}],["pavedore","Pavés dorés",2400,[190,160,90],"De vieux pavés couleur de miel.",{"tx":"cobble"}],["argent","Argent poli",3200,[196,200,212],"Du métal brossé qui brille.",{"s":"sheen"}],["carreaunoir","Carrelage noir",3400,[40,42,50],"De grands carreaux noirs.",{"tx":"tile"}],["obsipiste","Obsidienne polie",3600,[24,22,34],"Noire et luisante comme du verre.",{"s":"sheen2"}],["lunepiste","Pierre de lune",4000,[190,196,214],"Un marbre pâle aux reflets bleutés.",{"tx":"marble"}],["rubispiste","Rubis",4800,[190,30,60],"Une gemme rouge polie.",{"s":"sheen2"}],["saphirpiste","Saphir",4800,[40,80,200],"Une gemme bleue polie.",{"s":"sheen2"}],["glacenoire","Glace profonde",5200,[60,100,150],"Une glace bleu sombre, fendue.",{"tx":"ice"}],["jadeimp","Jade impérial",6000,[30,120,80],"Une pierre verte profonde.",{"tx":"jade"}],["ameth","Améthyste",6400,[150,100,220],"Des facettes violettes qui brillent.",{"tx":"facets","s":"sheen2"}],["etoilespourpre","Étoiles pourpres",10400,[40,12,64],"Une piste violette semée d’étoiles.",{"tx":"stars"}]],"wtrk":{"lava":{"tx":"lava","ta":0.9},"banquise":{"tx":"ice"},"snow":{"tx":"ice","ta":0.5},"chateau":{"tx":"cobble"},"temple":{"tx":"cobble"},"village":{"tx":"plank"},"pirates":{"tx":"plank"},"ninja":{"tx":"plank"},"bambou":{"tx":"plank"},"prairie":{"tx":"grasstop"},"cristal":{"tx":"facets"},"space":{"tx":"stars"},"cosmos":{"tx":"stars"},"galaxie":{"tx":"stars"},"atlantide":{"tx":"marble"},"nuages":{"tx":"marble","ta":0.6},"usine":{"tx":"tile"},"blocs":{"tx":"tile"},"salar":{"tx":"tile","ta":0.6},"bauhaus":{"s":"edge","c2":[208,60,48]},"sumi":{"s":"stripe","c2":[236,230,214]},"pixel":{"tx":"cobble","ta":0.8},"azulejo":{"s":"check","c2":[244,244,238]},"blueprint":{"s":"edge","c2":[214,234,255]},"vitrail":{"s":"edge","c2":[236,190,90]},"deco":{"s":"stripe","c2":[226,180,84]},"opart":{"s":"check","c2":[244,244,244]}}},
  "texts":{"tagline":"","quote":"« Papa, tu viens on geeke tous les deux ? »"}}
+</script>
+<script type="application/json" id="guide">
+{"ver":"11 novembre 2026","b":[
+{"id":"ios","g":"p","n":"iPhone · Safari","st":[
+ {"sc":"page","tg":"#more","tx":"Ouvre le lien dans Safari, puis touche le bouton ⋯ en bas à droite."},
+ {"sc":"menu","tg":"#sh","tx":"Dans le menu, choisis Partager."},
+ {"sc":"share","tg":"#add","tx":"Fais défiler la feuille et choisis Sur l’écran d’accueil."},
+ {"sc":"add","tg":"#ok","tx":"Laisse « Ouvrir comme app web » activé (iOS 26 et plus), puis touche Ajouter."},
+ {"sc":"home","tg":"#gapp","tx":"Abel Run est sur ton écran d’accueil : touche l’icône pour jouer."}],
+ "alt":"Chrome, Edge et Firefox le permettent aussi depuis iOS 16.4."},
+{"id":"chr","g":"p","n":"Android · Chrome","st":[
+ {"sc":"page","tg":"#more","tx":"Ouvre le lien dans Chrome, puis touche le menu ⋮ en haut à droite."},
+ {"sc":"menu","tg":"#ins","tx":"Choisis Installer l’application (ou Ajouter à l’écran d’accueil)."},
+ {"sc":"add","tg":"#ok","tx":"Touche Installer."},
+ {"sc":"home","tg":"#gapp","tx":"Abel Run est sur ton écran d’accueil."}],
+ "alt":"Une bannière d’installation peut aussi apparaître toute seule."},
+{"id":"sam","g":"p","n":"Android · Samsung Internet","st":[
+ {"sc":"page","tg":"#more","tx":"Ouvre le lien dans Samsung Internet, puis touche le menu ≡ en bas à droite."},
+ {"sc":"menu","tg":"#add","tx":"Choisis Ajouter la page à."},
+ {"sc":"sub","tg":"#home","tx":"Choisis Écran d’accueil."},
+ {"sc":"add","tg":"#ok","tx":"Touche Ajouter."},
+ {"sc":"home","tg":"#gapp","tx":"Abel Run est sur ton écran d’accueil."}]},
+{"id":"fxa","g":"p","n":"Android · Firefox","st":[
+ {"sc":"page","tg":"#more","tx":"Ouvre le lien dans Firefox, puis touche le menu ⋮."},
+ {"sc":"menu","tg":"#ins","tx":"Choisis Installer."},
+ {"sc":"add","tg":"#ok","tx":"Touche Ajouter."},
+ {"sc":"home","tg":"#gapp","tx":"Abel Run est sur ton écran d’accueil."}]},
+{"id":"opr","g":"p","n":"Android · Opera","st":[
+ {"sc":"page","tg":"#more","tx":"Ouvre le lien dans Opera, puis touche le menu ⋮ au bout de la barre d’adresse."},
+ {"sc":"menu","tg":"#add","tx":"Choisis Ajouter à…"},
+ {"sc":"sub","tg":"#home","tx":"Choisis Écran d’accueil."},
+ {"sc":"add","tg":"#ok","tx":"Touche Ajouter."},
+ {"sc":"home","tg":"#gapp","tx":"Abel Run est sur ton écran d’accueil."}]},
+{"id":"pcc","g":"c","n":"PC · Chrome","st":[
+ {"sc":"page","tg":"#ic","tx":"Ouvre le lien dans Chrome, puis clique sur l’icône d’installation (un écran avec une flèche) à droite de la barre d’adresse."},
+ {"sc":"pop","tg":"#ok","tx":"Clique sur Installer."},
+ {"sc":"app","tg":"#appw","tx":"Abel Run s’ouvre dans sa propre fenêtre, et apparaît dans le menu Démarrer ou la liste des applications."}],
+ "alt":"Sinon : menu ⋮ › Diffuser, enregistrer et partager › Installer la page en tant qu’application."},
+{"id":"pce","g":"c","n":"PC · Edge","st":[
+ {"sc":"page","tg":"#ic","tx":"Ouvre le lien dans Edge, puis clique sur l’icône d’application à droite de la barre d’adresse."},
+ {"sc":"pop","tg":"#ok","tx":"Clique sur Installer."},
+ {"sc":"app","tg":"#appw","tx":"Abel Run s’ouvre dans sa propre fenêtre."}],
+ "alt":"Sinon : menu … › Applications › Installer ce site en tant qu’application."},
+{"id":"mac","g":"c","n":"Mac · Safari","st":[
+ {"sc":"page","tg":"#file","tx":"Ouvre le lien dans Safari (macOS Sonoma 14 ou plus récent), puis clique sur le menu Fichier."},
+ {"sc":"menu","tg":"#add","tx":"Choisis Ajouter au Dock."},
+ {"sc":"add","tg":"#ok","tx":"Clique sur Ajouter."},
+ {"sc":"dock","tg":"#gapp","tx":"Abel Run est dans ton Dock : clique sur l’icône pour jouer."}]}
+],
+"nb":"Firefox sur ordinateur ne sait pas installer une application web : ouvre plutôt le lien dans Chrome ou Edge, ou ajoute-le à tes favoris."}
 </script>
 
 <script>
@@ -4693,22 +4822,22 @@ function qrPNG(cb){
   img.onerror=function(){cb(null);};img.src=u;
 }
 function panelShare(){
-  var dts=[
-   ["iPhone et iPad",'<ol><li>Ouvre le lien dans <b>Safari</b> (Chrome, Edge et Firefox le permettent aussi depuis iOS 16.4).</li><li>Touche <b>⋯</b> en bas à droite (ou le bouton <b>Partager</b>), puis <b>Partager</b>.</li><li>Fais défiler et choisis <b>Sur l’écran d’accueil</b>.</li><li>Sous iOS 26 et plus : laisse <b>Ouvrir comme app web</b> activé, puis touche <b>Ajouter</b>.</li></ol>'],
-   ["Android · Chrome",'<ol><li>Ouvre le lien dans <b>Chrome</b>.</li><li>Touche le menu <b>⋮</b> en haut à droite.</li><li>Choisis <b>Installer l’application</b> ou <b>Ajouter à l’écran d’accueil</b>, puis <b>Installer</b>.</li></ol><p class="shnote">Une bannière d’installation peut aussi apparaître toute seule. Le bouton « Installer » du menu du jeu fait la même chose.</p>'],
-   ["Android · Samsung Internet",'<ol><li>Ouvre le lien dans <b>Samsung Internet</b>.</li><li>Touche le menu <b>≡</b> en bas à droite.</li><li>Choisis <b>Ajouter la page à</b>, puis <b>Écran d’accueil</b>.</li></ol>'],
-   ["Android · Firefox",'<ol><li>Ouvre le lien dans <b>Firefox</b>.</li><li>Touche le menu <b>⋮</b>.</li><li>Choisis <b>Installer</b>.</li></ol>'],
-   ["Windows, Mac, Linux · Chrome ou Edge",'<ol><li>Ouvre le lien dans <b>Chrome</b> ou <b>Edge</b>.</li><li>Clique sur l’icône d’installation (un écran avec une flèche) à droite de la barre d’adresse, puis <b>Installer</b>.</li><li>Sinon : menu <b>⋮</b> de Chrome › <b>Diffuser, enregistrer et partager</b> › <b>Installer la page en tant qu’application</b> ; dans Edge, menu <b>…</b> › <b>Applications</b> › <b>Installer ce site en tant qu’application</b>.</li></ol><p class="shnote">Le jeu apparaît ensuite dans le menu Démarrer (Windows), le Launchpad (Mac) ou la liste des applications, et peut être épinglé.</p>'],
-   ["Mac · Safari",'<ol><li>Ouvre le lien dans <b>Safari</b> (macOS Sonoma 14 ou plus récent).</li><li>Menu <b>Fichier</b> › <b>Ajouter au Dock</b> (ou bouton <b>Partager</b> › <b>Ajouter au Dock</b>).</li></ol>'],
-   ["Firefox sur ordinateur",'<p>Firefox ne sait pas installer une application web sur ordinateur. Ouvre plutôt le lien dans Chrome ou Edge, ou ajoute-le simplement à tes favoris.</p>'],
-   ["Ça ne marche pas ?",'<ul><li>Ouvre le lien <b>directement dans le navigateur</b> : depuis une application de messagerie ou un réseau social, choisis « Ouvrir dans Safari » ou « Ouvrir dans Chrome ».</li><li>Mets ton navigateur et ton système à jour.</li><li>Pour retirer l’application : appui long sur l’icône (téléphone) ou « Désinstaller » dans le menu de la fenêtre (ordinateur).</li></ul>']];
-  var dh="";dts.forEach(function(x,i){dh+='<details'+(i===0?'':'')+'><summary>'+x[0]+'</summary>'+x[1]+'</details>';});
-  openPanel('<h2>Partager Abel Run</h2><p>Scanne le QR code ou envoie le lien : le jeu est gratuit, sans compte, et fonctionne ensuite sans connexion une fois installé.</p>'+
+  try{sSet("shvis","1");$("bshare").classList.remove("pulse");}catch(e){}
+  var inst=isStandalone()?'<div class="gok">Abel Run est déjà installé sur cet appareil ✓</div>':
+   '<h3>Installer le jeu</h3><p>Une fois installé, le jeu s’ouvre en plein écran, comme une application, et fonctionne sans connexion.</p><button class="gins" id="ginst" type="button">Installer maintenant</button><p class="shnote" id="ginote"></p>'+guideHTML();
+  openPanel('<h2>Partager / Installer</h2>'+inst+
+   '<h3>Partager Abel Run</h3><p>Scanne le QR code ou envoie le lien : le jeu est gratuit et sans compte.</p>'+
    '<div class="shlink"><input id="shurl" type="text" readonly value="'+SHARE_URL+'" aria-label="Lien du jeu"><button class="pill" id="shcopy" type="button">Copier</button>'+(navigator.share?'<button class="pill" id="shsend" type="button">Envoyer…</button>':'')+'</div>'+
    '<div class="shqr" id="shqr">'+qrSVG()+'</div>'+
    '<p class="row"><button class="pill" id="shpng" type="button">Enregistrer le QR code (PNG)</button></p><p id="shmsg" class="cmsg" aria-live="polite">&nbsp;</p>'+
-   '<h3>Installer le jeu sur ton appareil</h3>'+dh+
-   '<p class="shnote">Conseils vérifiés le 11 novembre 2026. Les noms des menus peuvent varier un peu selon la version et la langue de ton appareil.</p>'+CLOSE);
+   '<details><summary>Ça ne marche pas ?</summary><ul><li>Ouvre le lien <b>directement dans le navigateur</b> : depuis une application de messagerie ou un réseau social, choisis « Ouvrir dans Safari » ou « Ouvrir dans Chrome ».</li><li>Mets ton navigateur et ton système à jour.</li><li>Pour retirer l’application : appui long sur l’icône (téléphone) ou « Désinstaller » dans le menu de la fenêtre (ordinateur).</li></ul></details>'+
+   '<p class="shnote">Conseils vérifiés le '+GD.ver+'. Les noms des menus peuvent varier un peu selon la version et la langue de ton appareil.</p>'+CLOSE);
+  if($("ginst")){
+    guideInit();
+    $("ginote").textContent=deferred?"Ton navigateur peut installer le jeu en un seul geste : touche le bouton ci-dessus.":"Ton navigateur n’autorise pas l’installation automatique : suis l’animation ci-dessous.";
+    $("ginst").onclick=function(){if(!doInstall()){var w=$("gwrap");if(w&&w.scrollIntoView)w.scrollIntoView({behavior:"smooth",block:"center"});gdShow(0);}};
+    window.addEventListener("resize",gdFit);
+  }
   var msg=function(t){var e=$("shmsg");if(e)e.textContent=t;};
   $("shcopy").onclick=function(){
     var ok=function(){msg("Lien copié.");},ko=function(){var i=$("shurl");i.focus();i.select();msg("Sélectionné : copie-le avec Ctrl + C (ou appui long sur mobile).");};
@@ -4770,12 +4899,135 @@ var deferred=null;
 window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();deferred=e;});
 function isStandalone(){try{return window.matchMedia("(display-mode: standalone)").matches||window.navigator.standalone===true;}catch(e){return false;}}
 function isIOS(){return /iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);}
-function panelInstall(){
-  if(deferred){var d=deferred;deferred=null;try{d.prompt();}catch(e){}return;}
-  var b;
-  if(isIOS())b='<p><b>iPhone / iPad (Safari)</b></p><ol><li>Touche le bouton <b>Partager</b> (carré avec une flèche vers le haut).</li><li>Fais défiler et choisis <b>Sur l’écran d’accueil</b>.</li><li>Touche <b>Ajouter</b>.</li></ol>';
-  else b='<p><b>Android (Chrome)</b> : bouton « Installer » du menu, ou menu ⋮ puis <b>Installer l’application</b>.</p><p><b>PC (Chrome / Edge)</b> : icône d’installation à droite de la barre d’adresse.</p><p><b>iPhone / iPad</b> : Safari, bouton Partager puis <b>Sur l’écran d’accueil</b>.</p>';
-  openPanel('<h2>Installer Abel Run</h2>'+b+'<p>Une fois installé, le jeu s’ouvre en plein écran et fonctionne sans connexion.</p>'+CLOSE);
+function panelInstall(){if(doInstall())return;panelShare();}
+
+/* ---------- guide d’installation animé (v3.12) : maquettes de navigateurs dessinées en HTML, doigt ou souris qui montre où toucher ; le texte vient du même bloc JSON ---------- */
+var GD=null,GU={bi:0,i:0,tk:0,play:true,fx:0,fy:0,sc:1};
+try{GD=JSON.parse($("guide").textContent);}catch(e){GD={b:[],nb:"",ver:""};}
+try{if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)GU.play=false;}catch(e){}
+var G_S='<div class="gs"><b>9:41</b><span>▂▄▆ ▮</span></div>',
+ G_PG='<div class="gpg"><div class="gball"></div><b>Abel Run</b><i></i><i class="s"></i><i></i></div>',
+ G_TB='<div class="gtb"><span class="gad">tom-rougeaud.github.io</span><span class="gbt" id="more">⋮</span></div>',
+ G_BB='<div class="gbb"><span class="gbt">‹</span><span class="gad">tom-rougeaud.github.io</span><span class="gbt" id="more">⋯</span></div>',
+ G_BS='<div class="gbb"><span class="gbt">‹</span><span class="gad">tom-rougeaud.github.io</span><span class="gbt" id="more">≡</span></div>',
+ G_OV='<div class="gov"></div>';
+function gMN(pos,a){return '<div class="gmn '+pos+'">'+a.map(function(x){return '<div class="gmi'+(x[2]?' dim':'')+'"'+(x[1]?' id="'+x[1]+'"':'')+'>'+x[0]+'</div>';}).join('')+'</div>';}
+function gDL(t,p,ok,ex){return G_OV+'<div class="gdl"><b>'+t+'</b>'+(p?'<p>'+p+'</p>':'')+(ex||'')+'<div class="gdb"><span>Annuler</span><span id="ok">'+ok+'</span></div></div>';}
+function gHOME(){var a='',i;for(i=0;i<7;i++)a+='<div class="gic"></div>';return '<div class="ghm"><div class="gg">'+a+'<div class="gic app" id="gapp"><em>Abel Run</em></div></div></div>';}
+function gWin(ic,mn){return '<div class="gw"><div class="gwt"><span class="gtab">Abel Run</span></div><div class="gwb"><span>←</span><span>→</span><span class="gad">tom-rougeaud.github.io<i class="gic2" id="ic">'+ic+'</i></span><span class="gbt" id="more">'+mn+'</span></div>'+G_PG+'</div>';}
+function gAppWin(){return '<div class="gdesk"><div class="gw" id="appw" style="position:absolute;left:34px;top:18px;right:34px;bottom:18px;border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.5)"><div class="gwt"><span class="gtab">Abel Run</span></div>'+G_PG+'</div></div>';}
+function gPop(t){return '<div class="gpo"><b>'+t+'</b><p>Abel Run · tom-rougeaud.github.io</p><div class="gdb"><span>Annuler</span><span id="ok">Installer</span></div></div>';}
+var GSC={
+ ios:function(s){var b=G_S+G_PG+G_BB;
+  if(s==="page")return b;
+  if(s==="menu")return b+G_OV+gMN('bm',[['Nouvel onglet privé'],['Partager','sh'],['Ajouter un favori'],['Rechercher dans la page']]);
+  if(s==="share")return b+G_OV+'<div class="gsh"><b>Abel Run</b><div class="gmi">Copier</div><div class="gmi">Ajouter aux favoris</div><div class="gmi" id="add">Sur l’écran d’accueil</div><div class="gmi dim">Imprimer</div></div>';
+  if(s==="add")return b+gDL('Sur l’écran d’accueil','','Ajouter','<div class="gfd">Abel Run</div><div class="gtg2"><span>Ouvrir comme app web</span><span class="gsw"></span></div>');
+  return gHOME();},
+ chr:function(s){var b=G_S+G_TB+G_PG;
+  if(s==="page")return b;
+  if(s==="menu")return b+G_OV+gMN('tr',[['Nouvel onglet'],['Nouvel onglet de navigation privée'],['Historique'],['Installer l’application','ins'],['Partager…'],['Paramètres']]);
+  if(s==="add")return b+gDL('Installer l’application ?','Abel Run · tom-rougeaud.github.io','Installer');
+  return gHOME();},
+ sam:function(s){var b=G_S+G_PG+G_BS;
+  if(s==="page")return b;
+  if(s==="menu")return b+G_OV+gMN('bm',[['Ajouter la page à','add'],['Téléchargements'],['Historique'],['Paramètres']]);
+  if(s==="sub")return b+G_OV+gMN('bm',[['Signets'],['Page d’accueil'],['Écran d’accueil','home'],['Liste de lecture']]);
+  if(s==="add")return b+gDL('Ajouter à l’écran d’accueil','Abel Run','Ajouter');
+  return gHOME();},
+ fxa:function(s){var b=G_S+G_TB+G_PG;
+  if(s==="page")return b;
+  if(s==="menu")return b+G_OV+gMN('tr',[['Nouvel onglet'],['Favoris'],['Historique'],['Installer','ins'],['Partager']]);
+  if(s==="add")return b+gDL('Ajouter à l’écran d’accueil','Abel Run','Ajouter');
+  return gHOME();},
+ opr:function(s){var b=G_S+G_TB+G_PG;
+  if(s==="page")return b;
+  if(s==="menu")return b+G_OV+gMN('tr',[['Ajouter un favori'],['Ajouter à…','add'],['Partager'],['Paramètres']]);
+  if(s==="sub")return b+G_OV+gMN('tr',[['Accès rapide'],['Page hors ligne'],['Écran d’accueil','home']]);
+  if(s==="add")return b+gDL('Ajouter à l’écran d’accueil','Abel Run','Ajouter');
+  return gHOME();},
+ pcc:function(s){if(s==="page")return gWin('⤓','⋮');if(s==="pop")return gWin('⤓','⋮')+gPop('Installer l’application ?');return gAppWin();},
+ pce:function(s){if(s==="page")return gWin('⊞','…');if(s==="pop")return gWin('⊞','…')+gPop('Application disponible');return gAppWin();},
+ mac:function(s){var m='<div class="gmb"><span>●</span><b>Safari</b><span id="file">Fichier</span><span>Édition</span><span>Présentation</span></div>',w='<div class="gw"><div class="gwb"><span>←</span><span>→</span><span class="gad">tom-rougeaud.github.io</span></div>'+G_PG+'</div>';
+  if(s==="page")return m+w;
+  if(s==="menu")return m+w+gMN('mf',[['Nouvelle fenêtre'],['Nouvel onglet'],['Ajouter au Dock…','add'],['Imprimer…']]);
+  if(s==="add")return m+w+gDL('Ajouter au Dock','Abel Run','Ajouter');
+  return '<div class="gdesk"><div class="gdk"><u></u><u></u><div class="gic app" id="gapp"></div></div></div>';}
+};
+function gdDetect(){
+  var u=navigator.userAgent||"",id="pcc",i;
+  if(isIOS())id="ios";
+  else if(/android/i.test(u))id=/samsungbrowser/i.test(u)?"sam":(/firefox/i.test(u)?"fxa":(/opr\/|opera/i.test(u)?"opr":"chr"));
+  else if(/edg\//i.test(u))id="pce";
+  else if(/macintosh/i.test(u)&&/safari/i.test(u)&&!/chrome|chromium|crios|fxios/i.test(u))id="mac";
+  for(i=0;i<GD.b.length;i++)if(GD.b[i].id===id)return i;
+  return 0;
+}
+function gdFit(){
+  var w=$("gwrap"),g=$("gm"),sz=$("gsz"),bx=$("gbox");if(!w||!g||!sz)return;
+  var dw=g.offsetWidth,dh=g.offsetHeight,s=Math.min(1,(w.clientWidth||dw)/dw);
+  GU.sc=s;bx.style.transform="scale("+s+")";sz.style.width=Math.round(dw*s)+"px";sz.style.height=Math.round(dh*s)+"px";
+}
+function gdPos(sel){
+  var g=$("gm"),t=g&&g.querySelector(sel);if(!t)return null;
+  var a=t.getBoundingClientRect(),b=g.getBoundingClientRect(),s=GU.sc||1;
+  return [(a.left+a.width/2-b.left)/s-g.clientLeft,(a.top+a.height/2-b.top)/s-g.clientTop];
+}
+function gdShow(i){
+  var b=GD.b[GU.bi],n=b.st.length,st,tk=++GU.tk,pc=b.g==="c",box=$("gbox"),g,f,tg,p;
+  if(!box)return;
+  i=Math.max(0,Math.min(n-1,i));st=b.st[i];GU.i=i;
+  box.innerHTML='<div class="gm '+(pc?'gpc':'gph')+'" id="gm">'+GSC[b.id](st.sc)+'<div class="gfg'+(pc?' cur':'')+'" id="gfg"><i></i></div></div>';
+  gdFit();g=$("gm");f=$("gfg");tg=g.querySelector(st.tg);if(tg)tg.classList.add("gtgt");
+  p=gdPos(st.tg)||[g.clientWidth/2,g.clientHeight/2];
+  if(i===0||!GU.fx){GU.fx=g.clientWidth*0.78;GU.fy=g.clientHeight*0.78;}
+  f.style.transition="none";f.style.transform="translate("+GU.fx+"px,"+GU.fy+"px)";void f.offsetWidth;
+  f.style.transition="";f.style.transform="translate("+p[0]+"px,"+p[1]+"px)";GU.fx=p[0];GU.fy=p[1];
+  $("gcap").textContent=(i+1)+". "+st.tx;
+  var d=$("gdots");if(d){var k=d.children,j;for(j=0;j<k.length;j++)k[j].className=j===i?"on":"";}
+  var pl=$("gplay");if(pl)pl.textContent=GU.play?"❚❚":"▶";
+  setTimeout(function(){if(GU.tk!==tk||!$("gm"))return;f.classList.add("tap");if(tg)tg.classList.add("gpress");},1100);
+  setTimeout(function(){if(GU.tk!==tk||!$("gm")||!GU.play)return;if(i+1<n)gdShow(i+1);},i+1<n?2000:3600);
+  if(i+1>=n)setTimeout(function(){if(GU.tk!==tk||!$("gm")||!GU.play)return;GU.fx=0;gdShow(0);},3600);
+}
+function gdSelect(bi){
+  var b=GD.b[bi],h="",j,chips=$("gchips");GU.bi=bi;GU.fx=0;
+  if(chips){var c=chips.querySelectorAll(".gchip");for(j=0;j<c.length;j++)c[j].className="gchip"+(+c[j].getAttribute("data-i")===bi?" on":"");}
+  for(j=0;j<b.st.length;j++)h+='<i></i>';$("gdots").innerHTML=h;
+  h='<ol>';b.st.forEach(function(s){h+='<li>'+s.tx+'</li>';});h+='</ol>';if(b.alt)h+='<p class="shnote">'+b.alt+'</p>';
+  $("gtxt").innerHTML='<p><b>'+b.n+'</b></p>'+h;
+  gdShow(0);
+}
+function guideHTML(){
+  var h='<div class="gchips" id="gchips">',g=["p","c"],lab=["Téléphone et tablette","Ordinateur"];
+  g.forEach(function(k,gi){h+='<b>'+lab[gi]+'</b>';GD.b.forEach(function(b,i){if(b.g===k)h+='<button type="button" class="gchip" data-i="'+i+'">'+b.n+'</button>';});});
+  h+='</div><div class="gwrap" id="gwrap"><div id="gsz" style="position:relative"><div class="gbox" id="gbox" style="position:absolute;left:0;top:0"></div></div></div>'+
+   '<div class="gcap" id="gcap" aria-live="polite"></div><div class="gctl"><button type="button" class="gbtn" id="gprev" aria-label="Étape précédente">‹</button><button type="button" class="gbtn" id="gplay" aria-label="Lecture ou pause">❚❚</button><button type="button" class="gbtn" id="gnext" aria-label="Étape suivante">›</button><button type="button" class="gbtn" id="grep" aria-label="Rejouer">↺</button><span class="gdots" id="gdots"></span></div>'+
+   '<details class="gtx"><summary>Version texte</summary><div id="gtxt"></div></details><p class="shnote">'+GD.nb+'</p>';
+  return h;
+}
+function guideInit(){
+  var c=document.querySelectorAll("#gchips .gchip"),j;
+  for(j=0;j<c.length;j++)c[j].onclick=function(){gdSelect(+this.getAttribute("data-i"));};
+  $("gprev").onclick=function(){gdShow(GU.i-1);};$("gnext").onclick=function(){gdShow(GU.i+1);};
+  $("gplay").onclick=function(){GU.play=!GU.play;gdShow(GU.i);};$("grep").onclick=function(){GU.fx=0;GU.play=true;gdShow(0);};
+  gdSelect(gdDetect());
+}
+function doInstall(){
+  if(deferred){var d=deferred;deferred=null;try{d.prompt();if(d.userChoice)d.userChoice.then(function(r){if(r&&r.outcome==="accepted")sSet("nud","9");});}catch(e){}return true;}
+  return false;
+}
+window.addEventListener("appinstalled",function(){try{sSet("nud","9");}catch(e){}var n=$("nudge");if(n)n.remove();});
+var NUD={done:0};
+function instNudge(){
+  if(isStandalone()||$("nudge"))return;
+  var n=0;try{n=parseInt(sGet("nud")||"0",10)||0;}catch(e){}
+  if(n>=3)return;try{sSet("nud",String(n+1));}catch(e){}
+  var d=document.createElement("div");d.id="nudge";
+  d.innerHTML='<b>Installe Abel Run sur ton écran d’accueil</b><p>Plein écran, sans connexion, comme une vraie application. C’est gratuit.</p><div class="row"><button type="button" class="pri" id="nuin">Installer</button><button type="button" id="nulat">Plus tard</button></div>';
+  document.body.appendChild(d);setTimeout(function(){d.classList.add("on");},60);
+  var off=function(){d.classList.remove("on");setTimeout(function(){if(d.parentNode)d.parentNode.removeChild(d);},600);};
+  $("nulat").onclick=off;$("nuin").onclick=function(){off();if(!doInstall())panelShare();};
 }
 
 /* ---------- entrées, boucle, démarrage ---------- */
@@ -4835,6 +5087,7 @@ function frame(now){
   }
   if(n>=6)acc=0;
   if(mode==="menu")faceTick(dt);
+  if(mode==="menu"&&!NUD.done){NUD.done=1;setTimeout(function(){if(mode==="menu")instNudge();},1500);}
   if(mode==="play"&&WORLD===WORLDS.paradis){if(FIN.gen)finTick(dt);if(!FIN.ph&&Math.floor(B.z*0.5)+bonus>=33333+700)startParadise(true);}
   rdt=dt;if(mode!=="cine"&&(started||mode!=="intro"))render();
 }
@@ -4842,7 +5095,7 @@ makeSprites();buildBrand();buildSlider();setLvlUI(true);updMute();updQual();updC
 resize();
 window.addEventListener("resize",resize);
 if("ResizeObserver" in window){}
-if(isStandalone())$("binstall").style.display="none";
+$("binstall").style.display="none";try{if(!isStandalone()&&sGet("shvis")!=="1")$("bshare").classList.add("pulse");}catch(e){}
 /* ---------- mises à jour (v2.9.2) ----------
    Le service worker installe la nouvelle version complète dès sa publication (fichiers relus sans passer par le cache HTTP).
    La page se recharge toute seule dès qu’aucune partie, aucune boutique n’est ouverte ; sinon une pastille propose de le faire. */
