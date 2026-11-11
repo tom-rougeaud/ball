@@ -24,6 +24,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 #icv{z-index:7;pointer-events:none;transition:opacity .5s ease}
 #veil{position:absolute;inset:0;background:var(--ivory);opacity:0;pointer-events:none;z-index:2}
 button{font:inherit;color:inherit;cursor:pointer}
+body.nocur,body.nocur *{cursor:none!important}
 button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
 /* Logo permanent */
@@ -468,7 +469,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.31","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.32","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -736,8 +737,9 @@ var chunks=[],cubes=[],pads=[],G={z:0,n:0,last:"",demo:true,cx:0};
 function smooth(t){t=clamp(t,0,1);return t*t*(3-2*t);}
 function K(v){return function(){return v;};}
 function r6(v){return Math.max(CH,Math.round(v/CH)*CH);}
+var CID=0;
 function pushChunk(x0,x1,x0b,x1b,z0,z1,ya,yb,o){
-  var c={x0:x0,x1:x1,x0b:x0b,x1b:x1b,z0:z0,z1:z1,ya:ya,yb:yb,sub:0,ax:G.cx,par:Math.floor(z0/CH+1e-6)&1,sec:G.cur||""};
+  var c={id:++CID,x0:x0,x1:x1,x0b:x0b,x1b:x1b,z0:z0,z1:z1,ya:ya,yb:yb,sub:0,ax:G.cx,par:Math.floor(z0/CH+1e-6)&1,sec:G.cur||""};
   if(o)for(var k in o)c[k]=o[k];chunks.push(c);return c;
 }
 function emitTrack(z0,z1,cf,wf,yf,o){
@@ -1374,25 +1376,25 @@ function groundAt(x,z,maxTop){
    En jeu : flèche ↑ (PC) ou bouton rond (téléphone) lance le suivant. Bouclier et Seconde chance s’activent tout seuls. */
 var BCAP=9,BSLOTS=5;
 var BONS=[
- {id:"boost",n:"Super boost",p:1500,a:1,t:15,c:[214,140,44],d:"Vitesse ×2 pendant 15 s. Les mètres parcourus comptent dans ton score.",f:"M13 2 5 14h6l-1 8 9-13h-6z"},
+ {id:"boost",n:"Super boost",p:1500,a:1,t:20,c:[214,140,44],d:"Vitesse ×2,6 pendant 20 s. Les mètres parcourus comptent dans ton score.",f:"M13 2 5 14h6l-1 8 9-13h-6z"},
  {id:"rocket",n:"Rocket",p:3000,a:1,t:0,c:[204,84,64],d:"Un bond de 750 m d’un coup, très haut dans le ciel, sans toucher un seul obstacle. Tu retombes sur une route dégagée.",f:"M12 2c3 3 4 7 4 10v4H8v-4c0-3 1-7 4-10zM8 14l-3 4 3-1zM16 14l3 4-3-1zM10 17l2 5 2-5zM12 7.6a1.7 1.7 0 1 0 .001 0z"},
  {id:"mega",n:"Méga rocket",p:6000,a:1,t:0,c:[160,56,96],d:"Un bond de 1 500 m d’un coup, tout là-haut, sans toucher un seul obstacle. Tu retombes sur une route dégagée.",f:"M12 1c3.4 3.6 4.6 7.6 4.6 11.4V17H7.4v-4.6C7.4 8.6 8.6 4.6 12 1zM7.4 15L3 21l4.4-1.6zM16.6 15L21 21l-4.4-1.6zM9.6 18l2.4 5 2.4-5zM12 5.6a1.5 1.5 0 1 0 .001 0zM12 9.6a1.5 1.5 0 1 0 .001 0z"},
- {id:"hop",n:"Saut continu",p:1200,a:1,t:30,c:[82,150,106],d:"La bille rebondit toute seule pendant 30 s : elle passe au-dessus des petits obstacles (pas des grands, ni des trous).",s:"M3 19l4-10 4 8 4-12 4 10"},
+ {id:"hop",n:"Saut continu",p:1200,a:1,t:40,c:[82,150,106],d:"La bille rebondit toute seule, haut, pendant 40 s : elle passe au-dessus des petits obstacles (pas des grands, ni des trous).",s:"M3 19l4-10 4 8 4-12 4 10"},
  {id:"shield",n:"Bouclier",p:1200,a:0,t:0,c:[66,124,196],d:"Absorbe un choc, puis disparaît. S’active tout seul : il suffit de l’avoir dans son équipement.",f:"M12 2.5l8 3v6c0 5-3.6 8.4-8 10-4.4-1.6-8-5-8-10v-6z"},
  {id:"second",n:"Seconde chance",p:2200,a:0,t:0,c:[200,78,106],d:"Si tu perds, le jeu marque une pause de 2 s, puis tu repars en douceur sur une route dégagée. S’active tout seul.",f:"M12 21C5 15.5 3 11.5 3 8.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 9 1.4C21 11.5 19 15.5 12 21z"},
- {id:"ghost",n:"Fantôme",p:1800,a:1,t:10,c:[132,134,192],d:"Tu traverses tous les obstacles pendant 10 s. Attention : les trous restent des trous.",f:"M12 3a7 7 0 0 0-7 7v11l3.5-2.4L12 21l3.5-2.4L19 21V10a7 7 0 0 0-7-7zM9.3 9.5a1.3 1.3 0 1 0 .001 0zM14.7 9.5a1.3 1.3 0 1 0 .001 0z"},
- {id:"ram",n:"Bélier",p:1500,a:1,t:14,c:[176,98,58],d:"Tu pulvérises les obstacles sur ton passage pendant 14 s.",f:"M12 2l2.2 5.4 5.8-.9-3.4 4.8 4.4 3.9-5.8.2-1.2 5.7L12 16.5l-4 4.6-1.2-5.7-5.8-.2 4.4-3.9L4 6.5l5.8.9z"},
- {id:"slow",n:"Ralenti",p:900,a:1,t:14,c:[88,142,184],d:"Le temps passe deux fois moins vite pendant 14 s : tout est plus facile à lire (les mètres aussi avancent moins vite).",s:"M12 3a9 9 0 1 0 .001 0zM12 7v5.2l3.6 2"},
- {id:"auto",n:"Pilote automatique",p:1400,a:1,t:25,c:[96,112,190],d:"La bille se pilote toute seule pendant 25 s, comme un bon joueur.",s:"M12 3a9 9 0 1 0 .001 0zM12 12V3M12 12l-8 4M12 12l8 4",f:"M12 10.4a1.6 1.6 0 1 0 .001 0z"},
- {id:"moon",n:"Gravité lunaire",p:1000,a:1,t:20,c:[170,160,204],d:"Gravité divisée par deux pendant 20 s : sauts plus hauts et plus longs. Utile pour franchir un gros trou, à lancer en l’air.",f:"M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"},
+ {id:"ghost",n:"Fantôme",p:1800,a:1,t:15,c:[132,134,192],d:"Tu traverses tous les obstacles pendant 15 s. Attention : les trous restent des trous.",f:"M12 3a7 7 0 0 0-7 7v11l3.5-2.4L12 21l3.5-2.4L19 21V10a7 7 0 0 0-7-7zM9.3 9.5a1.3 1.3 0 1 0 .001 0zM14.7 9.5a1.3 1.3 0 1 0 .001 0z"},
+ {id:"ram",n:"Bélier",p:1500,a:1,t:20,c:[176,98,58],d:"Tu pulvérises les obstacles sur ton passage pendant 20 s.",f:"M12 2l2.2 5.4 5.8-.9-3.4 4.8 4.4 3.9-5.8.2-1.2 5.7L12 16.5l-4 4.6-1.2-5.7-5.8-.2 4.4-3.9L4 6.5l5.8.9z"},
+ {id:"slow",n:"Ralenti",p:900,a:1,t:18,c:[88,142,184],d:"Le temps passe deux fois moins vite pendant 18 s : tout est plus facile à lire (les mètres aussi avancent moins vite).",s:"M12 3a9 9 0 1 0 .001 0zM12 7v5.2l3.6 2"},
+ {id:"auto",n:"Pilote automatique",p:1400,a:1,t:35,c:[96,112,190],d:"La bille se pilote toute seule pendant 35 s : elle évite les obstacles, et le pilote rattrape ses rares erreurs.",f:"M12 2.5l8 18.5-8-4.2L4 21z"},
+ {id:"moon",n:"Gravité lunaire",p:1000,a:1,t:30,c:[170,160,204],d:"Gravité divisée par 2,5 pendant 30 s : sauts bien plus hauts et plus longs. Utile pour franchir un gros trou, à lancer en l’air.",f:"M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"},
  {id:"coins",n:"Pièces ×2",p:2200,a:1,t:0,c:[212,166,44],d:"Double les pièces gagnées à la fin de cette partie.",f:"M12 3a9 9 0 1 0 .001 0zM12 6.5a5.5 5.5 0 1 0 .001 0z",s:"M12 9v6M9.8 10.6h3.2a1.4 1.4 0 0 1 0 2.8h-2a1.4 1.4 0 0 0 0 2.8h3.2"},
- {id:"jump",n:"Grand saut",p:800,a:1,t:0,c:[84,162,142],d:"Un énorme bond (jusqu’à 8 m de haut) : tu passes par-dessus les obstacles et les trous. À lancer juste avant l’obstacle.",f:"M12 2.5l7 8h-4.2V15H9.2v-4.5H5zM7 18.5h10v2H7z"},
- {id:"eagle",n:"Vue d’aigle",p:600,a:1,t:35,c:[146,122,86],d:"Pendant 35 s, des flèches lumineuses te montrent le chemin sûr, et la caméra monte pour voir plus loin.",s:"M2 12C5.5 6.5 18.5 6.5 22 12 18.5 17.5 5.5 17.5 2 12z",f:"M12 9.2a2.8 2.8 0 1 0 .001 0z"}
+ {id:"jump",n:"Grand saut",p:800,a:1,t:0,c:[84,162,142],d:"Un énorme bond (jusqu’à 12 m de haut) : tu passes par-dessus les obstacles et les trous. À lancer juste avant l’obstacle.",f:"M12 2.5l7 8h-4.2V15H9.2v-4.5H5zM7 18.5h10v2H7z"},
+ {id:"eagle",n:"Vue d’aigle",p:600,a:1,t:45,c:[146,122,86],d:"Pendant 45 s, des flèches lumineuses te montrent le chemin sûr, et la caméra monte pour voir plus loin.",s:"M2 12C5.5 6.5 18.5 6.5 22 12 18.5 17.5 5.5 17.5 2 12z",f:"M12 9.2a2.8 2.8 0 1 0 .001 0z"}
 ],BONM={};
 BONS.forEach(function(b){BONM[b.id]=b;});
 function bonSVG(id,col){var b=BONM[id];if(!b)return "";
   return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"'+(col?' style="color:'+col+'"':"")+'>'+(b.f?'<path d="'+b.f+'" fill="currentColor" fill-rule="evenodd"/>':"")+(b.s?'<path d="'+b.s+'" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>':"")+'</svg>';}
-function gp(){return GRL[lvl]*(RUN.fx.moon>0?0.5:1)*(par()?0.4:1);}
+function gp(){return GRL[lvl]*(RUN.fx.moon>0?0.4:1)*(par()?0.4:1);}
 function bonN(id){return Math.max(0,Math.min(BCAP,(SD.bn&&SD.bn[id])|0));}
 function bonCol(b,a){return rgba(b.c,a===undefined?1:a);}
 var RUN={q:[],pas:{shield:0,second:0},fx:{},cx2:false,inv:0,rk:null,ts:1,tr0:null,eg:0,atx:0,afr:0};
@@ -1429,8 +1431,8 @@ function landSpot(z,lim){
   return null;
 }
 function startRocket(D){
-  var v=clamp(vNom(B.z)*1.6,90,150),L=landSpot(B.z+D-30,150)||landSpot(B.z+D+120);if(!L)return false;
-  RUN.rk={D:D,t:0,T:(L.z-B.z)/v,z0:B.z,y0:B.y,x0:B.x,z1:L.z,x1:L.x,y1:L.y+R,H:D>1000?120:75,v:v};
+  var v=clamp(D/6,150,420),L=landSpot(B.z+D-30,150)||landSpot(B.z+D+120);if(!L)return false;
+  RUN.rk={D:D,t:0,T:(L.z-B.z)/v,z0:B.z,y0:B.y,x0:B.x,z1:L.z,x1:L.x,y1:L.y+R,H:D>2000?120:75,v:v};
   RUN.tr0=TRAIL;TRAIL="fire";B.air=true;gnd=null;B.vy=0;
   sfx(120,900,0.7,"sawtooth",0.22);shake=Math.max(shake,0.3);return true;
 }
@@ -1460,6 +1462,7 @@ function hit(c,type){
   if(type==="obs"){
     if(f.ghost>0)return true;
     if(f.ram>0){smash(c);return true;}
+    if(f.auto>0&&(RUN.ah||0)<8){RUN.ah=(RUN.ah||0)+1;smash(c);say("Esquive du pilote");return true;}
     if(RUN.inv>0)return true;
     if(RUN.pas.shield>0){RUN.pas.shield--;bonUse("shield");RUN.inv=1.3;smash(c);say("Bouclier");bonHud(true);return true;}
     return false;
@@ -1470,18 +1473,18 @@ function hit(c,type){
 }
 function activate(id){
   var b=BONM[id],f=RUN.fx;
-  if(id==="rocket"||id==="mega"){if(!startRocket(id==="mega"?1500:750))return false;}
+  if(id==="rocket"||id==="mega"){if(!startRocket((id==="mega"?1500:750)/0.5))return false;}
   say(b.n);
   if(b.t>0){f[id]=b.t;sfx(300,900,0.3,"triangle",0.16);}
   if(id==="boost"){shake=Math.max(shake,0.15);sfx(200,1500,0.6,"sawtooth",0.2);}
   else if(id==="coins"){RUN.cx2=true;sfx(500,1500,0.4,"triangle",0.18);}
   else if(id==="jump"){
-    if(!B.air&&gnd){B.air=true;gnd=null;B.vy=Math.sqrt(2*gp()*8);B.at=0;B.y+=0.05;}
-    else if(B.air){B.vy=Math.max(B.vy,0)+Math.sqrt(2*gp()*6);B.at=0.05;}
+    if(!B.air&&gnd){B.air=true;gnd=null;B.vy=Math.sqrt(2*gp()*12);B.at=0;B.y+=0.05;}
+    else if(B.air){B.vy=Math.max(B.vy,0)+Math.sqrt(2*gp()*9);B.at=0.05;}
     sfx(260,820,0.25,"triangle",0.2);puffAt(B.x,B.y-R,8,false);
   }
   else if(id==="ram"||id==="ghost")RUN.inv=Math.max(RUN.inv,0.2);
-  else if(id==="auto"){RUN.atx=B.x;RUN.afr=0;}
+  else if(id==="auto"){RUN.atx=B.x;RUN.afr=0;RUN.ah=0;RUN.as=0;}
 }
 function launchBonus(){
   var id;
@@ -1497,13 +1500,13 @@ function bonTick(h){
   if(RUN.hold>0){bonHud(false);return;}
   for(k in f){f[k]-=h;if(f[k]<=0){delete f[k];}}
   if(RUN.inv>0)RUN.inv-=h;
-  tg=(f.boost>0?2:1)*(f.slow>0?0.5:1);RUN.ts+=(tg-RUN.ts)*Math.min(1,h*7);
+  tg=(f.boost>0?2.6:1)*(f.slow>0?0.5:1);RUN.ts+=(tg-RUN.ts)*Math.min(1,h*7);
   RUN.eg+=((f.eagle>0?1:0)-RUN.eg)*Math.min(1,h*3);
   bonHud(false);
 }
 /* ---------- pilote automatique : même logique que le robot de test (simulation 1,6 s, 21 cibles latérales) ---------- */
 function autoPilot(){
-  var sp=Math.max(speed,8),g=gp(),k,c,z,f,i,j,tt,x,X,cost,bestC=1e9,bestX=B.x,tgt=null,tg,dx,lo,hi,cx,za,zb,y,ok,m;
+  var NS=40,sp=Math.max(speed,8),g=gp(),k,c,z,f,i,j,tt,x,X,cost,bestC=1e9,bestX=B.x,tgt=null,tg,dx,lo,hi,cx,za,zb,y,ok,m;
   if(B.air){
     for(k=1;k<=60&&tgt===null;k++){tt=k*0.05;z=B.z+sp*tt;y=B.y+B.vy*tt-g*tt*tt/2-0.5;
       for(i=0;i<chunks.length;i++){c=chunks[i];if(c.deco||z<c.z0||z>c.z1)continue;var cy=(c.ya+c.yb)/2;
@@ -1511,33 +1514,30 @@ function autoPilot(){
     return tgt===null?RUN.atx:tgt;
   }
   var near=[],cen=[],cs=[],freeT=[],tlast=0,fz=1e9,TAB=[];
-  for(i=0;i<cubes.length;i++){c=cubes[i];if(c.z0+c.zl>B.z-1&&c.z0<B.z+sp*2.2)near.push(c);}
+  for(i=0;i<cubes.length;i++){c=cubes[i];if(c.z0+c.zl>B.z-1&&c.z0<B.z+sp*2.6)near.push(c);}
   for(i=0;i<near.length;i++)if(near[i].z0<fz)fz=near[i].z0;
   for(i=0;i<near.length;i++){c=near[i];if(c.z0<=fz+2.5){tt=(c.z0+c.zl+0.8-B.z)/sp;if(tt>tlast)tlast=tt;}}
-  for(k=0;k<=32;k++){z=B.z+sp*k*0.05;var a2=[],sx=0;
+  for(k=0;k<=NS;k++){z=B.z+sp*k*0.05;var a2=[],sx=0;
     for(i=0;i<chunks.length;i++){c=chunks[i];if(c.deco||c.frag)continue;if(z>=c.z0&&z<=c.z1){a2.push(c);f=(z-c.z0)/(c.z1-c.z0);sx+=(c.x0+(c.x0b-c.x0)*f+c.x1+(c.x1b-c.x1)*f)/2;}}
     cs.push(a2);cen.push(a2.length?sx/a2.length:null);}
   function box(c,t2){if(c.mono)return [Math.min(c.pv,c.pv+c.dir*c.H),Math.max(c.pv,c.pv+c.dir*c.H)];var q=c.cx;if(c.mv)q=c.mv.base+c.mv.amp*Math.sin((tm+t2)*c.mv.w+c.mv.ph);return [q-c.hw,q+c.hw];}
   function blocked(xx,zz,t2,mg){var q,b;for(var n=0;n<near.length;n++){q=near[n];if(zz<q.z0-0.6||zz>q.z0+q.zl+0.6)continue;b=box(q,t2);if(xx>b[0]-mg&&xx<b[1]+mg)return true;}return false;}
   function gok(xx,kk){var a=cs[kk],q,ff,l2,h2,zz=B.z+sp*kk*0.05;for(var n=0;n<a.length;n++){q=a[n];ff=(zz-q.z0)/(q.z1-q.z0);l2=q.x0+(q.x0b-q.x0)*ff;h2=q.x1+(q.x1b-q.x1)*ff;if(xx>=l2+0.2&&xx<=h2-0.2&&(q.ya+(q.yb-q.ya)*ff)<=B.y+9)return true;}return false;}
-  for(k=0;k<=32;k++){z=B.z+sp*k*0.05;tt=k*0.05;var base=cen[k]===null?B.x:cen[k],pick=base,found;
+  for(k=0;k<=NS;k++){z=B.z+sp*k*0.05;tt=k*0.05;var base=cen[k]===null?B.x:cen[k],pick=base,found;
     for(j=0;j<=16;j++){found=false;for(var sg2=0;sg2<(j?2:1);sg2++){var xx=base+(sg2?-1:1)*j*0.4;if(gok(xx,k)&&!blocked(xx,z,tt,0.9)){pick=xx;found=true;break;}}if(found)break;}
     freeT.push(pick);}
   for(X=B.x-6;X<=B.x+6.01;X+=0.6){
     cost=0.03*Math.abs(X-B.x);x=B.x;
-    for(k=1;k<=32;k++){
+    for(k=1;k<=NS;k++){
       tt=k*0.05;z=B.z+sp*tt;tg=(tt<=Math.max(tlast,0.3))?X:freeT[k];
       dx=(tg-x)*(1-Math.exp(-9*0.05));dx=Math.max(-1.2,Math.min(1.2,dx));x+=dx;
       if(k%2===0){ok=false;for(i=0;i<cs[k].length;i++){c=cs[k][i];f=(z-c.z0)/(c.z1-c.z0);lo=c.x0+(c.x0b-c.x0)*f;hi=c.x1+(c.x1b-c.x1)*f;y=c.ya+(c.yb-c.ya)*f;if(x>=lo-0.1&&x<=hi+0.1&&y<=B.y+9){ok=true;break;}}if(!ok)cost+=500;}
       for(i=0;i<near.length;i++){c=near[i];za=c.z0-0.6;zb=c.z0+c.zl+0.6;if(z<za||z>zb)continue;m=box(c,tt);
-        if(x>m[0]-0.42&&x<m[1]+0.42)cost+=100;else{var dd=Math.min(Math.abs(x-m[0]),Math.abs(x-m[1]));if(dd<1.0)cost+=0.6*(1.0-dd);}}
+        if(x>m[0]-0.75&&x<m[1]+0.75)cost+=100;else{var dd=Math.min(Math.abs(x-m[0]),Math.abs(x-m[1]));if(dd<1.4)cost+=0.8*(1.4-dd);}}
     }
     cost+=0.02*Math.abs(X-(cen[10]===null?X:cen[10]));
     TAB.push([X,cost]);if(cost<bestC){bestC=cost;bestX=X;}
   }
-  var st=null;for(i=0;i<TAB.length;i++)if(Math.abs(TAB[i][0]-B.x)<0.3){st=TAB[i];break;}
-  if(st&&st[1]<60)bestX=B.x;
-  else{var okc=TAB.filter(function(t){return t[1]<60;});if(okc.length){okc.sort(function(a,b){return Math.abs(a[0]-B.x)-Math.abs(b[0]-B.x);});bestX=okc[0][0];}}
   return bestX;
 }
 /* ---------- interface en jeu : bouton rond + pastilles des effets en cours ---------- */
@@ -1545,7 +1545,7 @@ var bonKey="";
 function bonHud(force){
   var f=RUN.fx,k,s="",btn=$("bonbtn"),nx,i,key,b,hudh="";
   for(k in f){b=BONM[k];if(b)hudh+='<span class="bch" style="--bc:'+bonCol(b)+'">'+bonSVG(k)+'<b>'+Math.ceil(f[k])+'</b></span>';}
-  if(RUN.rk)hudh+='<span class="bch" style="--bc:rgb(204,84,64)">'+bonSVG(RUN.rk.D>600?"mega":"rocket")+'</span>';
+  if(RUN.rk)hudh+='<span class="bch" style="--bc:rgb(204,84,64)">'+bonSVG(RUN.rk.D>2000?"mega":"rocket")+'</span>';
   if(RUN.pas.shield>0)hudh+='<span class="bch p" style="--bc:'+bonCol(BONM.shield)+'">'+bonSVG("shield")+'<b>'+RUN.pas.shield+'</b></span>';
   if(RUN.pas.second>0)hudh+='<span class="bch p" style="--bc:'+bonCol(BONM.second)+'">'+bonSVG("second")+'<b>'+RUN.pas.second+'</b></span>';
   if(RUN.cx2)hudh+='<span class="bch" style="--bc:'+bonCol(BONM.coins)+'">'+bonSVG("coins")+'</span>';
@@ -1703,7 +1703,7 @@ function paraMsg(){
 }
 function say(t){if(WORLD===WORLDS.paradis)return;var c=$("cap");c.textContent=t;c.classList.remove("on");void c.offsetWidth;c.classList.add("on");}
 function setBody(){
-  document.body.classList.toggle("playing",mode==="play"||mode==="pause");
+  document.body.classList.toggle("playing",mode==="play"||mode==="pause");document.body.classList.toggle("nocur",mode==="play"||mode==="crash"||mode==="fall");
   document.body.classList.toggle("m-menu",mode==="menu");
   document.body.classList.toggle("intro",mode==="intro");
   $("hud").classList.toggle("on",mode==="play"||mode==="pause"||mode==="crash"||mode==="fall");
@@ -1939,7 +1939,7 @@ function updatePlay1(dt){
       else if(!c.dead){var o=c.ft;c.ft+=dt;if(o<0.35&&c.ft>=0.35)dustAt(c);if(c.ft>2.2)c.dead=true;}
     }
   }
-  if(RUN.fx.hop>0&&!B.air&&gnd&&!gnd.sub){B.air=true;gnd=null;B.vy=Math.sqrt(2*gp()*2.4);B.at=0;B.y+=0.05;}
+  if(RUN.fx.hop>0&&!B.air&&gnd&&!gnd.sub){B.air=true;gnd=null;B.vy=Math.sqrt(2*gp()*3.6);B.at=0;B.y+=0.05;}
   phys(dt,true);
   for(i=0;i<cubes.length;i++){c=cubes[i];
     if(c.mono){var mp=monoPts(c),mx0=1e9,mx1=-1e9,my1=-1e9,q2;for(q2=0;q2<4;q2++){mx0=Math.min(mx0,mp[q2][0]);mx1=Math.max(mx1,mp[q2][0]);my1=Math.max(my1,mp[q2][1]);}
@@ -1955,7 +1955,9 @@ function updatePlay1(dt){
   fovS+=(Math.max(boostT>0?(boostK>1.4?1.8:1):0,RUN.fx.boost>0?2.2:0)-fovS)*Math.min(1,dt*6);
   var fm=1e9;for(i=0;i<chunks.length;i++){c=chunks[i];if(c.deco||c.dead)continue;if(c.z1>B.z-20&&c.z0<B.z+160){if(c.ya<fm)fm=c.ya;if(c.yb<fm)fm=c.yb;}}
   if(fm===1e9)fm=0;
-  if(B.y<fm-8&&!(FIN.gen&&B.z>FIN.zr0-5)){startFall();return;}
+  if(B.y<fm-8&&!(FIN.gen&&B.z>FIN.zr0-5)){
+    if(RUN.fx.auto>0&&(RUN.as||0)<3){var L2=landSpot(B.z+34);if(L2){RUN.as=(RUN.as||0)+1;B.z=L2.z;B.x=L2.x;tx=L2.x;B.y=L2.y+R;B.vy=0;B.air=false;gnd=null;B.sq=0.4;RUN.inv=1.4;say("Rattrapage du pilote");sfx(300,1000,0.3,"triangle",0.16);puffAt(B.x,B.y-R,12,true);return;}}
+    startFall();return;}
   ensureWorld();
   var s=curSc();if(s!==score){score=s;$("scv").textContent=s;}
 }
@@ -5009,7 +5011,7 @@ function render(){
   for(i=0;i<props.length;i++){var pr=props[i];if(pr.z>camZ+1.5&&pr.z<camZ+DRAWD)list.push({k:pr.z,t:5,o:pr});}
   for(i=0;i<trail.length;i++){var tpp=trail[i];if(tpp.z>camZ+1.5)list.push({k:tpp.z,t:4,o:tpp});}
   list.sort(function(a,b){var d=b.k-a.k;if(d)return d;if(a.t!==b.t)return a.t-b.t;
-    if(a.t===0)return (a.o.sub-b.o.sub)||(Math.abs((b.o.x0+b.o.x1)/2-camX)-Math.abs((a.o.x0+a.o.x1)/2-camX));return 0;});
+    if(a.t===0){var sd=a.o.sub-b.o.sub;if(sd)return sd;if(Math.min(a.o.x1,b.o.x1)-Math.max(a.o.x0,b.o.x0)>0.15)return (a.o.id||0)-(b.o.id||0);return Math.abs((b.o.x0+b.o.x1)/2-camX)-Math.abs((a.o.x0+a.o.x1)/2-camX);}return 0;});
   for(i=0;i<list.length;i++){var it=list[i];
     if(it.t===0)drawChunk(it.o);else if(it.t===1)drawPad(it.o);else if(it.t===6)drawArrow(it.o);
     else if(it.t===2){if(it.o.mono)drawMono(it.o);else{drawCubeShadow(it.o);drawCube(it.o);}}
