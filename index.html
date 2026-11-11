@@ -25,6 +25,13 @@ canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 #veil{position:absolute;inset:0;background:var(--ivory);opacity:0;pointer-events:none;z-index:2}
 button{font:inherit;color:inherit;cursor:pointer}
 body.nocur,body.nocur *{cursor:none!important}
+#cnt{position:absolute;inset:0;z-index:4;display:none;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*3);--cf:inherit;--cc:#F4EFE6;--cs:0 0 calc(var(--u)*1.2) rgba(8,14,36,.8);color:var(--cc);text-shadow:var(--cs);font-family:var(--cf);cursor:pointer}
+#cnt.on{display:flex}
+#cnt b{font-size:calc(var(--u)*34);font-weight:300;line-height:1;animation:cntp 1s ease-out both}
+#cnt i{font-style:normal;font-size:max(10px,calc(var(--u)*2.6));letter-spacing:.3em;text-transform:uppercase;font-weight:700;opacity:.85}
+#cntb{display:block;width:calc(var(--u)*40);height:calc(var(--u)*1.6);border:calc(var(--u)*.4) solid var(--cc);box-sizing:border-box;border-radius:var(--cr,99px);overflow:hidden;box-shadow:var(--cs)}
+#cntb u{display:block;height:100%;width:0;background:var(--cc);text-decoration:none}
+@keyframes cntp{0%{transform:scale(1.5);opacity:0}25%{transform:scale(1);opacity:1}100%{transform:scale(.9);opacity:.7}}
 button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
 /* Logo permanent */
@@ -383,6 +390,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="app">
   <canvas id="game" aria-label="Zone de jeu Abel Run"></canvas>
   <div id="veil"></div>
+  <div id="cnt" aria-live="polite"><b id="cntn"></b><i id="cntl">Chargement du monde…</i><span id="cntb"><u></u></span></div>
   <div id="hud">
     <div class="sc"><span id="scv">0</span><small>mètres</small></div>
     <div class="lv"><span>Niveau</span><b id="lvn">Course</b><div class="dots" id="dots"></div></div>
@@ -469,7 +477,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.32","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.33","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -1703,7 +1711,7 @@ function paraMsg(){
 }
 function say(t){if(WORLD===WORLDS.paradis)return;var c=$("cap");c.textContent=t;c.classList.remove("on");void c.offsetWidth;c.classList.add("on");}
 function setBody(){
-  document.body.classList.toggle("playing",mode==="play"||mode==="pause");document.body.classList.toggle("nocur",mode==="play"||mode==="crash"||mode==="fall");
+  document.body.classList.toggle("playing",mode==="play"||mode==="pause");document.body.classList.toggle("nocur",mode==="play"||mode==="crash"||mode==="fall"||mode==="count");
   document.body.classList.toggle("m-menu",mode==="menu");
   document.body.classList.toggle("intro",mode==="intro");
   $("hud").classList.toggle("on",mode==="play"||mode==="pause"||mode==="crash"||mode==="fall");
@@ -1790,11 +1798,42 @@ function drawerOn(){return $("drawer").classList.contains("on");}
 function openDrawer(){$("drawer").classList.add("on");var b=$("bburger");b.setAttribute("aria-expanded","true");b.setAttribute("aria-label","Fermer le menu");try{$("bshopm").focus();}catch(e){}}
 function closeDrawer(){$("drawer").classList.remove("on");var b=$("bburger");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Ouvrir le menu");}
 function startDemo(){resetWorld(true);newBall();speed=16;tm=0;parts=[];cause="";}
+/* ---------- chargement anticipé (v3.33) : textures préparées dans le menu, compte à rebours pour un nouvel univers ---------- */
+var CNT={t:0,z0:0,n:0},LASTW=null,CNTS={pixel:{f:"'Courier New',ui-monospace,monospace",c:"#FFFFFF",s:"0 .07em 0 #1b2236,.07em .07em 0 #1b2236,.07em 0 0 #1b2236",r:"0"}};
+function texTotal(){var n=0,k;for(k in TEXTS)n++;return n;}
+function texPending(){if(!texOn())return 0;var n=0,k;for(k in TEXTS)if(!TEXC[k])n++;return n;}
+function texWarmStep(ms){if(!texOn())return 0;var t0=performance.now(),k;for(k in TEXTS){if(TEXC[k])continue;texGet(k);if(performance.now()-t0>=ms)break;}return texPending();}
+function texIdle(){
+  if(texPending()===0)return;
+  setTimeout(function(){if(mode==="menu"||mode==="shop")texWarmStep(1);texIdle();},90);
+}
+function cntReady(){return texPending()===0&&G.z>=B.z+LOOK;}
+function cntStart(){
+  var e=$("cnt"),st=CNTS[SD.eq.w]||null,lt=!!WORLD.light;
+  e.style.setProperty("--cf",st?st.f:"inherit");e.style.setProperty("--cc",st?st.c:(lt?"#1B2236":"#F4EFE6"));
+  e.style.setProperty("--cs",st?st.s:(lt?"0 0 calc(var(--u)*1.2) rgba(255,255,255,.9)":"0 0 calc(var(--u)*1.2) rgba(8,14,36,.8)"));
+  e.style.setProperty("--cr",st?st.r:"99px");
+  CNT.t=3;CNT.n=0;CNT.z0=G.z;mode="count";setBody();e.classList.add("on");cntShow(3);
+}
+function cntShow(n){var b=$("cntn");CNT.n=n;b.textContent=n>0?n:"";b.style.animation="none";void b.offsetWidth;b.style.animation="";}
+function cntDone(){
+  $("cnt").classList.remove("on");LASTW=SD.eq.w;mode="play";setBody();muStop(0.4);
+}
+function cntTick(h){
+  CNT.t-=h;var left=texWarmStep(7),g=0,n=Math.max(1,Math.ceil(CNT.t));
+  while(G.z<B.z+LOOK&&g++<2)nextSection();
+  var pl=(1-left/Math.max(1,texTotal()))*0.5+clamp((G.z-CNT.z0)/Math.max(1,B.z+LOOK-CNT.z0),0,1)*0.5;
+  $("cntb").firstChild.style.width=Math.round(100*(CNT.t<=0?pl:Math.max(pl,1-CNT.t/3)*0.35+pl*0.65))+"%";
+  if(CNT.t>0&&n!==CNT.n)cntShow(n);
+  if(CNT.t<=0){if(CNT.n!==0)cntShow(0);if(cntReady()||CNT.t<-6)cntDone();}
+}
 function startGame(){
   unlock();goFs();closePanel();gnd=null;boostK=1.2;PV=null;applyCosm();
   if(par()&&lvl!==3){lvl=3;sSet("lvl","3");}
   resetWorld(false);newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();
+  if(!par()&&SD.eq.w!==LASTW){cntStart();return;}
+  LASTW=SD.eq.w;var g0=0;while(G.z<B.z+LOOK&&g0++<80)nextSection();
   mode="play";setBody();
   if(par())muStart(0,false);else muStop(0.4);
 }
@@ -2189,10 +2228,10 @@ function texFace(img,P0,P1,P3,nu,nv,ou,ov,clip,alpha){
 /* texture d’une boîte (x0..x1, za..zb, yb..yt) : m porte tx (côtés), txT (dessus), txF (face avant), em (lave émissive) */
 function texBox(x0,x1,zz,z1,yb,y1,m,c){
   if(!m||!m.tx||!texOn())return;
-  var dz=zz-camZ,k=F*fov/dz;if(dz>100||((x1-x0)*k<10&&(y1-yb)*k<10))return;
+  var dz=zz-camZ,k=F*fov/dz;if(dz>135||((x1-x0)*k<10&&(y1-yb)*k<10))return;
   var A=P(x0,yb,zz),Bp=P(x1,yb,zz),C=P(x1,y1,zz),D=P(x0,y1,zz),E=P(x0,y1,z1),Fq=P(x1,y1,z1),Gp=P(x0,yb,z1),H=P(x1,yb,z1);
   if(!(A&&Bp&&C&&D&&E&&Fq&&Gp&&H))return;
-  var nf=m.tx==="grassside"||m.tx==="snowside",ou=nf?0:hsh(x0*0.37+zz*1.7),ov=nf?0:hsh(zz*0.73+x0*0.9+3),al=clamp(1-fogf(dz)*2.2,0,1)*(WORLD.glow?0.55:0.92),
+  var nf=m.tx==="grassside"||m.tx==="snowside",ou=nf?0:hsh(x0*0.37+zz*1.7),ov=nf?0:hsh(zz*0.73+x0*0.9+3),al=clamp(1-fogf(dz)*2.2,0,1)*(WORLD.glow?0.55:0.92)*clamp((135-dz)/40,0,1),
       tT=m.txT||m.tx,tF=m.txF||m.tx,iS=texGet(m.tx),iT=texGet(tT),iF=texGet(tF),TS=TEXTS[m.tx]||2,TT=TEXTS[tT]||2,TF=TEXTS[tF]||2,hh=y1-yb;
   texFace(iF,[x0,y1,zz],[x1,y1,zz],[x0,yb,zz],(x1-x0)/TF,hh/TF,ou,ov,[A,Bp,C,D],al*0.8);
   if(camX<x0)texFace(iS,[x0,y1,zz],[x0,y1,z1],[x0,yb,zz],(z1-zz)/TS,hh/TS,ou,ov,[A,Gp,E,D],al*0.65);
@@ -5738,6 +5777,7 @@ function frame(now){
   while(acc>=h&&n<6){
     if(mode==="play"){bonTick(h);if(FIN.ph)RUN.ts=finTs();else if(par())RUN.ts=PTS;updatePlay(h*RUN.ts);}
     else if(mode==="crash"||mode==="fall")updateEnd(h);
+    else if(mode==="count")cntTick(h);
     else if(mode==="menu"||mode==="intro"||mode==="shop"){if(started)updateDemo(h);}
     updFx(h);acc-=h;n++;
   }
@@ -5752,7 +5792,7 @@ makeSprites();buildBrand();buildSlider();setLvlUI(true);updMute();updQual();updC
 resize();
 window.addEventListener("resize",resize);
 if("ResizeObserver" in window){}
-setTimeout(muPrefetch,6000);
+setTimeout(muPrefetch,6000);setTimeout(texIdle,2500);$("cnt").addEventListener("click",function(){if(mode==="count"&&cntReady())cntDone();});
 $("binstall").style.display="none";try{if(!isStandalone()&&sGet("shvis")!=="1")$("bshare").classList.add("pulse");}catch(e){}
 /* ---------- mises à jour (v2.9.2) ----------
    Le service worker installe la nouvelle version complète dès sa publication (fichiers relus sans passer par le cache HTTP).
