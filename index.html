@@ -466,7 +466,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.18","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.19","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -586,7 +586,9 @@ function updMute(){$("bmute").textContent=muted?"Son coupé":"Son";if(master)mas
    Un seul fichier MP3 (6 min), lu en flux par un lecteur audio ordinaire : il n’est jamais décompressé en mémoire, donc aucun ralentissement du jeu.
    Il est téléchargé en arrière-plan quand l’univers Paradis est possédé, et gardé hors connexion par le service worker (cache « musique »).
    MU.t = temps de course écoulé (secondes de jeu, pause exclue) ; toutes les 0,5 s, si la musique s’en écarte de plus de 0,4 s, on la recale. */
-var MU={url:"paradis-1.mp3",a:null,on:0,t:0,rep:0,chk:0,fade:0,pre:0,lip:257.2};
+var MU={url:"paradis-2.mp3",a:null,on:0,t:0,rep:0,chk:0,fade:0,pre:0,lip:191.66};
+var PTS=2.684,PSC=33333;
+function curSc(){var v=Math.floor(B.z*0.5)+bonus;return (WORLD===WORLDS.paradis&&FIN.zT==null&&v>PSC)?PSC:v;}
 function muAud(){if(MU.a)return MU.a;try{var a=new Audio();a.preload="auto";a.loop=false;a.src=MU.url;a.muted=muted;MU.a=a;}catch(e){MU.a=null;}return MU.a;}
 function muPlay(a){try{var p=a.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
 function muStart(t0,rep){
@@ -622,7 +624,7 @@ function muTick(dt){
   MU.chk=0.25;
   if(mode==="cine"){
     /* générique : la musique est maîtresse ; on l’étire très légèrement (sans changer la hauteur) pour qu’elle se termine avec lui */
-    var left=CINE.end-CINE.t,r=left>1?(d-a.currentTime)/left:1;
+    var left=(CINE.end-CINE.t)/CINE.k,r=left>1?(d-a.currentTime)/left:1;
     muRate(a,clamp(r,0.9,1.06));return;
   }
   var df=MU.t-a.currentTime;
@@ -632,7 +634,7 @@ function muTick(dt){
   else muRate(a,1);
 }
 /* ---------- musique d’introduction (v3.17) : les dernières notes du Paradis ouvrent le jeu (le jeu recommence) ---------- */
-var IM={url:"intro-2.mp3",a:null,ok:0,pre:0,t0:0};
+var IM={url:"intro-3.mp3",a:null,ok:0,pre:0,t0:0};
 function imAud(){if(IM.a)return IM.a;try{var a=new Audio();a.preload="auto";a.loop=false;a.src=IM.url;a.muted=muted;IM.a=a;}catch(e){IM.a=null;}return IM.a;}
 function imTry(){
   var a=imAud();if(!a||IM.ok||mode!=="intro")return;
@@ -738,16 +740,16 @@ Object.assign(MAT,{
  opb:[[26,26,30],[52,52,58],"tile"],opw:[[240,240,236],[255,255,252],"tile"],sumig:[[78,80,86],[116,118,124],"stone"],sumib:[[34,34,40],[62,62,70],"stone"],sumir:[[190,40,40],[224,72,62],"tile"],
  vgr:[[196,50,60],[236,104,104],"ice"],vgb:[[50,80,196],[104,144,238],"ice"],vgy:[[220,170,50],[250,212,104],"ice"],vgg:[[50,150,90],[104,204,144],"ice"]});
 var GEOW={
- route66:{rock:[["boulders","redrock",30],["pyramid","sandstone",24],["mound","dirt",16],["boulders","sandstone",16],["block","lava",5]],tall:[["spires","redrock",50],["spires","sandstone",30],["pyramid","sandstone",20]],ridge:[["ridge","redrock",50],["ridge","lava",24],["ridge","sandstone",26]],blk:["sandstone","redrock","stone","lava"],mono:"redrock"},
+ route66:{rock:[["boulders","redrock",30],["pyramid","sandstone",24],["mound","dirt",16],["boulders","sandstone",16],["block","redrock",5]],tall:[["spires","redrock",50],["spires","sandstone",30],["pyramid","sandstone",20]],ridge:[["ridge","redrock",50],["ridge","redrock",24],["ridge","sandstone",26]],blk:["sandstone","redrock","stone","redrock"],mono:"redrock"},
  classic:{rock:[["boulders","stone",34],["pyramid","stone",18],["mound","grass",30],["boulders","granite",18]],tall:[["spires","stone",60],["pyramid","granite",40]],ridge:[["ridge","stone",60],["ridge","log",40]],blk:["stone","granite"],mono:"stone"},
  neon:{rock:[["boulders","crystal",50],["pyramid","crystal",30],["mound","crystal",20]],tall:[["spires","crystal",70],["pyramid","crystal",30]],ridge:[["ridge","crystal",100]],blk:["crystal"],mono:"crystal"},
  forest:{rock:[["boulders","moss",26],["mound","grass",36],["pyramid","stone",10],["boulders","stone",16],["mound","dirt",12]],tall:[["spires","stone",40],["spires","moss",30],["pyramid","moss",30]],ridge:[["ridge","log",70],["ridge","moss",30]],blk:["moss","stone","grass"],mono:"stone"},
  snow:{rock:[["boulders","snowrock",30],["pyramid","ice",22],["mound","snow",28],["boulders","ice",12],["pyramid","snowrock",8]],tall:[["spires","ice",60],["spires","snowrock",40]],ridge:[["ridge","ice",50],["ridge","snowrock",50]],blk:["ice","snowrock","snow"],mono:"ice"},
- city:{rock:[["boulders","concrete",30],["boulders","stone",20],["pyramid","stone",12],["mound","dirt",22],["mound","grass",16]],tall:[["spires","concrete",50],["spires","basalt",50]],ridge:[["ridge","concrete",60],["ridge","stone",40]],blk:["concrete","stone","basalt"],mono:"basalt"},
+ city:{rock:[["boulders","concrete",30],["boulders","stone",20],["pyramid","stone",12],["mound","brick",22],["mound","iron",16]],tall:[["spires","concrete",50],["spires","basalt",50]],ridge:[["ridge","concrete",60],["ridge","stone",40]],blk:["concrete","stone","basalt"],mono:"basalt"},
  ocean:{rock:[["boulders","sandstone",22],["mound","sand",36],["pyramid","sandstone",16],["boulders","coral",26]],tall:[["spires","coral",50],["spires","sandstone",30],["pyramid","sand",20]],ridge:[["ridge","coral",40],["ridge","sandstone",30],["ridge","log",30]],blk:["sandstone","coral","sand"],mono:"sandstone"},
  lava:{rock:[["boulders","basalt",30],["pyramid","basalt",14],["boulders","lava",20],["mound","magma",16],["pyramid","lava",8],["block","lava",12]],tall:[["spires","basalt",55],["spires","lava",25],["pyramid","basalt",20]],ridge:[["ridge","lava",60],["ridge","basalt",40]],blk:["basalt","lava","magma"],mono:"basalt"},
  space:{rock:[["boulders","asteroid",40],["pyramid","regolith",16],["mound","regolith",22],["boulders","crystal",14],["mound","asteroid",8]],tall:[["spires","asteroid",50],["spires","crystal",30],["pyramid","asteroid",20]],ridge:[["ridge","asteroid",60],["ridge","regolith",40]],blk:["asteroid","regolith","crystal"],mono:"asteroid"},
- rainbow:{rock:[["boulders","stone",20],["mound","grass",30],["pyramid","sandstone",18],["boulders","coral",14],["boulders","snowrock",18]],tall:[["spires","stone",40],["spires","ice",30],["pyramid","sandstone",30]],ridge:[["ridge","stone",40],["ridge","log",30],["ridge","ice",30]],blk:["stone","ice","sandstone"],mono:"stone"}};
+ rainbow:{rock:[["boulders","toyblue",20],["mound","toygreen",30],["pyramid","toyyellow",18],["boulders","toyred",14],["boulders","marble",18]],tall:[["spires","toyblue",40],["spires","toyblue",30],["pyramid","toyyellow",30]],ridge:[["ridge","toyblue",40],["ridge","toyyellow",30],["ridge","toyblue",30]],blk:["toyblue","toyblue","toyyellow"],mono:"toyblue"}};
 Object.assign(GEOW,{
  prairie:{rock:[["boulders","stone",24],["mound","grass",44],["pyramid","dirt",12],["boulders","moss",20]],tall:[["spires","stone",50],["pyramid","grass",30],["spires","granite",20]],ridge:[["ridge","log",50],["ridge","grass",50]],blk:["grass","dirt","stone"],mono:"stone"},
  montagne:{rock:[["boulders","granite",36],["pyramid","stone",20],["mound","snowrock",16],["boulders","stone",28]],tall:[["spires","granite",50],["spires","snowrock",30],["pyramid","stone",20]],ridge:[["ridge","stone",50],["ridge","snowrock",50]],blk:["granite","stone","snowrock"],mono:"granite"},
@@ -779,7 +781,7 @@ Object.assign(GEOW,{
  bonbons:{rock:[["boulders","candy",26],["mound","choco",20],["pyramid","candy",16],["boulders","mint",18],["mound","candy",20]],tall:[["spires","candy",40],["spires","mint",30],["pyramid","choco",30]],ridge:[["ridge","choco",40],["ridge","candy",30],["ridge","mint",30]],blk:["candy","mint","choco"],mono:"candy"},
  halloween:{rock:[["boulders","basalt",30],["mound","moss",20],["pyramid","obsidian",16],["boulders","stone",20],["mound","dirt",14]],tall:[["spires","obsidian",50],["spires","basalt",30],["pyramid","stone",20]],ridge:[["ridge","log",40],["ridge","obsidian",60]],blk:["basalt","obsidian","log"],mono:"obsidian"},
  noel:{rock:[["boulders","snowrock",30],["mound","snow",34],["pyramid","ice",14],["boulders","ice",12],["block","plank",10]],tall:[["spires","snowrock",40],["spires","ice",30],["pyramid","snow",30]],ridge:[["ridge","snow",50],["ridge","snowrock",50]],blk:["snow","ice","plank"],mono:"snow"},
- fete:{rock:[["block","toyred",20],["block","toyblue",16],["block","toyyellow",16],["mound","sand",14],["boulders","plank",20],["pyramid","plank",14]],tall:[["pyramid","toyred",30],["spires","plank",40],["pyramid","toyblue",30]],ridge:[["ridge","plank",50],["ridge","toyred",25],["ridge","toyblue",25]],blk:["toyred","toyyellow","plank"],mono:"plank"},
+ fete:{rock:[["block","toyred",20],["block","toyblue",16],["block","toyyellow",16],["mound","iron",14],["boulders","plank",20],["pyramid","plank",14]],tall:[["pyramid","toyred",30],["spires","plank",40],["pyramid","toyblue",30]],ridge:[["ridge","plank",50],["ridge","toyred",25],["ridge","toyblue",25]],blk:["toyred","toyyellow","plank"],mono:"plank"},
  cosmos:{rock:[["boulders","asteroid",30],["pyramid","crystal",20],["mound","regolith",16],["boulders","crystal",24],["mound","asteroid",10]],tall:[["spires","crystal",50],["spires","asteroid",30],["pyramid","crystal",20]],ridge:[["ridge","asteroid",50],["ridge","crystal",50]],blk:["asteroid","crystal","regolith"],mono:"asteroid"},
  usine:{rock:[["boulders","iron",24],["block","brick",20],["boulders","rust",20],["pyramid","iron",10],["mound","rust",14],["block","iron",12]],tall:[["spires","iron",40],["spires","brick",30],["pyramid","rust",30]],ridge:[["ridge","iron",50],["ridge","rust",30],["ridge","brick",20]],blk:["iron","brick","rust","copper"],mono:"iron"},
  cristal:{rock:[["boulders","facets",40],["pyramid","facets",24],["mound","basalt",16],["boulders","crystal",20]],tall:[["spires","crystal",60],["spires","facets",40]],ridge:[["ridge","facets",50],["ridge","basalt",50]],blk:["facets","crystal","basalt"],mono:"facets"},
@@ -788,7 +790,7 @@ Object.assign(GEOW,{
  abysses:{rock:[["boulders","facets",20],["mound","basalt",24],["boulders","coral",24],["pyramid","coral",14],["mound","sand",18]],tall:[["spires","coral",50],["spires","basalt",30],["pyramid","facets",20]],ridge:[["ridge","basalt",50],["ridge","coral",50]],blk:["coral","basalt","facets"],mono:"coral"},
  galaxie:{rock:[["boulders","crystal",30],["pyramid","crystal",20],["boulders","asteroid",24],["mound","regolith",16],["mound","crystal",10]],tall:[["spires","crystal",60],["spires","asteroid",20],["pyramid","crystal",20]],ridge:[["ridge","crystal",60],["ridge","asteroid",40]],blk:["crystal","asteroid","facets"],mono:"crystal"}});
 Object.assign(GEOW,{
- salar:{rock:[["boulders","snow",30],["mound","sand",26],["pyramid","snowrock",14],["boulders","stone",30]],tall:[["spires","snowrock",50],["pyramid","snow",30],["spires","stone",20]],ridge:[["ridge","snow",60],["ridge","sandstone",40]],blk:["snow","stone","sandstone"],mono:"snowrock"},
+ salar:{rock:[["boulders","marble",30],["mound","sand",26],["pyramid","cloud",14],["boulders","stone",30]],tall:[["spires","cloud",50],["pyramid","marble",30],["spires","stone",20]],ridge:[["ridge","marble",60],["ridge","sandstone",40]],blk:["marble","stone","sandstone"],mono:"cloud"},
  prehisto:{rock:[["boulders","moss",26],["mound","dirt",26],["pyramid","basalt",14],["boulders","granite",20],["mound","grass",14]],tall:[["spires","basalt",50],["spires","granite",30],["pyramid","moss",20]],ridge:[["ridge","log",50],["ridge","basalt",50]],blk:["basalt","moss","dirt"],mono:"basalt"},
  fungi:{rock:[["boulders","mint",20],["mound","crystal",14],["boulders","basalt",30],["mound","moss",26],["pyramid","mint",10]],tall:[["spires","mint",40],["spires","basalt",40],["pyramid","crystal",20]],ridge:[["ridge","basalt",60],["ridge","mint",40]],blk:["basalt","mint","crystal"],mono:"mint"},
  papier:{rock:[["block","cloud",30],["pyramid","marble",24],["mound","cloud",20],["boulders","marble",26]],tall:[["pyramid","marble",50],["spires","cloud",50]],ridge:[["ridge","cloud",60],["ridge","marble",40]],blk:["marble","cloud","candy"],mono:"cloud"},
@@ -797,7 +799,7 @@ Object.assign(GEOW,{
  paradis:{rock:[["mound","cloud",40],["boulders","cloud",28],["pyramid","marble",16],["boulders","marble",16]],tall:[["spires","marble",60],["pyramid","cloud",40]],ridge:[["ridge","cloud",60],["ridge","marble",40]],blk:["cloud","marble"],mono:"cloud"}});
 Object.assign(GEOW,{
  ninja:{rock:[["boulders","stone",30],["mound","grass",30],["pyramid","granite",14],["boulders","moss",26]],tall:[["spires","stone",50],["pyramid","granite",30],["spires","basalt",20]],ridge:[["ridge","stone",50],["ridge","log",50]],blk:["stone","plank","granite"],mono:"stone"},
- pirates:{rock:[["boulders","stone",30],["mound","sand",30],["pyramid","sandstone",14],["boulders","moss",26]],tall:[["spires","stone",50],["spires","sandstone",30],["pyramid","granite",20]],ridge:[["ridge","log",50],["ridge","stone",50]],blk:["plank","stone","sandstone"],mono:"stone"},
+ pirates:{rock:[["boulders","stone",30],["mound","sand",30],["pyramid","sandstone",14],["boulders","plank",26]],tall:[["spires","stone",50],["spires","sandstone",30],["pyramid","stone",20]],ridge:[["ridge","log",50],["ridge","stone",50]],blk:["plank","stone","sandstone"],mono:"stone"},
  tresor:{rock:[["boulders","sandstone",28],["mound","sand",34],["pyramid","sandstone",16],["boulders","gold",8],["block","plank",14]],tall:[["spires","sandstone",50],["pyramid","sandstone",30],["spires","stone",20]],ridge:[["ridge","sandstone",50],["ridge","log",50]],blk:["sandstone","plank","gold"],mono:"sandstone"}});
 var GEOF=null,GEO=(sGet("geo")==="1");
 function wid(){for(var k in WORLDS)if(WORLDS[k]===WORLD)return k;return "route66";}
@@ -1083,7 +1085,7 @@ function secZig(d){
   G.z+=L;G.last="zig";decorate(z0,G.z);
 }
 function secHills(d){
-  var z0=G.z,cx=G.cx,vv=vNom(z0+70),hl=Math.max(rnd(46,76),vv*rnd(1.0,1.5)),L=r6(Math.max(rnd(110,170),hl*1.9)),amp=Math.min(rnd(3.6,8.0),0.27*hl/Math.PI),sg=Math.random()<0.7?1:-1;
+  var z0=G.z,cx=G.cx,vv=vNom(z0+70),hl=Math.max(rnd(46,76),vv*rnd(1.0,1.5)),L=r6(Math.max(rnd(110,170),hl*1.9)),amp=Math.min(rnd(3.6,8.0)*(par()?1.3:1),0.27*hl/Math.PI*(par()?1.2:1)),sg=Math.random()<0.7?1:-1;
   function e(z){var u=(z-z0)/L;return smooth(u/0.12)*smooth((1-u)/0.12);}
   function wf(z){return lerp(WW,lerp(par()?WW*0.9:3.4,WW,0.5+0.5*Math.sin((z-z0)/(hl*1.7)*6.283)),e(z));}
   function yf(z){return sg*amp*e(z)*(0.5-0.5*Math.cos((z-z0)/hl*6.283));}
@@ -1266,7 +1268,7 @@ function nextSection0(){
       if(Lp>0.5){var zp0=G.z;emitRoad(G.cx-HW,G.cx+HW,G.z,G.z+Lp,0);G.z+=Lp;G.last="plain";decorate(zp0,G.z);return;}
       var sL=SL[lvl],Lr=54;emitRamp(G.cx-HW,G.cx+HW,G.z,G.z+Lr,0,sL*Lr);FIN.gen=1;FIN.zr0=G.z;FIN.lip=G.z+Lr;FIN.ly=sL*Lr;FIN.cx=G.cx;G.z+=Lr;return;
     }
-    var dP=dLvl(G.z);ROWSP=spf(dP);var po=[["winding",26],["zig",18],["hills",16],["dip",16],["jump",14],["jumpx",16],["chain",8],["plain",10]],tP=0,rP,pP="plain",iP;
+    var dP=dLvl(G.z);ROWSP=spf(dP);var po=[["winding",24],["zig",14],["hills",32],["dip",14],["plain",6]],tP=0,rP,pP="plain",iP;
     G.n++;G.cur="";
     if(G.n<=2){secPlain();return;}
     po=po.filter(function(a){return a[0]!==G.last||a[0]==="plain";});
@@ -1354,7 +1356,7 @@ var BONS=[
 BONS.forEach(function(b){BONM[b.id]=b;});
 function bonSVG(id,col){var b=BONM[id];if(!b)return "";
   return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"'+(col?' style="color:'+col+'"':"")+'>'+(b.f?'<path d="'+b.f+'" fill="currentColor" fill-rule="evenodd"/>':"")+(b.s?'<path d="'+b.s+'" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>':"")+'</svg>';}
-function gp(){return GRL[lvl]*(RUN.fx.moon>0?0.5:1);}
+function gp(){return GRL[lvl]*(RUN.fx.moon>0?0.5:1)*(par()?0.4:1);}
 function bonN(id){return Math.max(0,Math.min(BCAP,(SD.bn&&SD.bn[id])|0));}
 function bonCol(b,a){return rgba(b.c,a===undefined?1:a);}
 var RUN={q:[],pas:{shield:0,second:0},fx:{},cx2:false,inv:0,rk:null,ts:1,tr0:null,eg:0,atx:0,afr:0};
@@ -1403,7 +1405,7 @@ function rocketStep(dt){
   B.y=lerp(k.y0,k.y1,s)+4*k.H*s*(1-s);B.vy=(k.y1-k.y0)/k.T+4*k.H*(1-2*s)/k.T;B.air=true;B.at=0.6;speed=k.v;B.lv+=((B.x-ox)/dt-B.lv)*Math.min(1,dt*10);
   B.ph+=dt*Math.min(2.2,1.4+speed*0.025);emitTrail(dt);if(B.sq>0)B.sq=Math.max(0,B.sq-dt*5);
   if(s>=1){B.z=k.z1;B.x=k.x1;tx=B.x;B.y=k.y1;B.vy=0;B.air=false;gnd=null;speed=Math.min(k.v,vNom(B.z)*1.15);TRAIL=RUN.tr0;RUN.rk=null;RUN.inv=Math.max(RUN.inv,1.6);sfx(140,70,0.2,"triangle",0.25);puffAt(B.x,B.y-R,14,true);shake=Math.max(shake,0.25);}
-  ensureWorld();var sc=Math.floor(B.z*0.5)+bonus;if(sc!==score){score=sc;$("scv").textContent=sc;}
+  ensureWorld();var sc=curSc();if(sc!==score){score=sc;$("scv").textContent=sc;}
 }
 /* seconde chance : on repart quelques mètres plus loin */
 function revive(){
@@ -1772,7 +1774,7 @@ function crash(){
 }
 function startFall(){if(revive())return;mode="fall";fallT=0;cause="Hors piste";say("Hors piste");sfx(520,60,0.7,"square",0.18);setBody();}
 function finish(){
-  mode="over";var before=bests(lvl);score=Math.floor(B.z*0.5)+bonus;addRun(score,lvl);var gain=coinsFor(score,lvl)*(RUN.cx2?2:1)*(SD.ch.x2?2:1);if(gain>0){SD.coins+=gain;saveShop();}
+  mode="over";var before=bests(lvl);score=curSc();addRun(score,lvl);var gain=coinsFor(score,lvl)*(RUN.cx2?2:1)*(SD.ch.x2?2:1);if(gain>0){SD.coins+=gain;saveShop();}
   var msg="";if(score>0){if(score>before.all)msg="Nouveau record !";else if(score>before.week)msg="Meilleur score de la semaine !";else if(score>before.day)msg="Meilleur score du jour !";}
   $("ovt").textContent=cause||"Perdu";$("ovs").textContent=score;$("ovb").textContent=msg;$("ovr").innerHTML=tilesHTML(bests(lvl));
   $("ovg").innerHTML=gain>0?(coinHTML()+"+"+gain+(gain>1?" pièces":" pièce")+" <small>"+(RUN.cx2?"× 2 · ":"· ")+"total "+fmtN(SD.coins)+"</small>"):"";updCoinsUI();updEqMini();
@@ -1793,7 +1795,7 @@ function phys(dt,real){
   var bot=B.y-R,g;
   if(!B.air){
     g=groundAt(B.x,B.z,bot+0.9);
-    if(!g||g.y<bot-0.25){B.air=true;gnd=null;B.at=0;if(real&&B.vy>2.5&&!said.up){said.up=1;say("Décollage");sfx(260,620,0.25,"triangle",0.2);puffAt(B.x,B.y-R,10,true);}}
+    if(!g||g.y<bot-(par()?0.03:0.25)){B.air=true;gnd=null;B.at=0;if(real&&B.vy>2.5&&!said.up){said.up=1;say("Décollage");sfx(260,620,0.25,"triangle",0.2);puffAt(B.x,B.y-R,10,true);}}
     else{B.y=g.y+R;B.vy=g.slope*speed;gnd=g;}
   }
   if(B.air){
@@ -1919,7 +1921,7 @@ function updatePlay1(dt){
   if(fm===1e9)fm=0;
   if(B.y<fm-8&&!(FIN.gen&&B.z>FIN.zr0-5)){startFall();return;}
   ensureWorld();
-  var s=Math.floor(B.z*0.5)+bonus;if(s!==score){score=s;$("scv").textContent=s;}
+  var s=curSc();if(s!==score){score=s;$("scv").textContent=s;}
 }
 function updateDemo(dt){
   tm+=dt;speed=16;B.z+=speed*dt;tx=Math.sin(tm*0.5)*1.8;var ox1=B.x;B.x+=(tx-B.x)*Math.min(1,dt*3);B.lv+=((B.x-ox1)/dt-B.lv)*Math.min(1,dt*10);B.ph+=dt*(1.4+speed*0.025);emitTrail(dt);
@@ -4848,7 +4850,7 @@ function closeShop(){
   PV=null;shopSel=null;var ch=applyCosm();mode="menu";setBody();setLvlUI();updCoinsUI();if(ch)startDemo();
 }
 function giveCoins(){
-  var sc=Math.floor(B.z*0.5)+bonus,g=coinsFor(sc,lvl)*(RUN.cx2?2:1)*(SD.ch.x2?2:1);if(g>0){SD.coins+=g;saveShop();}return g;
+  var sc=curSc(),g=coinsFor(sc,lvl)*(RUN.cx2?2:1)*(SD.ch.x2?2:1);if(g>0){SD.coins+=g;saveShop();}return g;
 }
 function quitGame(){giveCoins();toMenu();updCoinsUI();}
 var qual=sGet("qual");if(qual!=="high"&&qual!=="low")qual="auto";
@@ -5244,10 +5246,10 @@ function panelCode(){
 
 /* ---------- Paradis : la scène finale (portail à 33 333 points, ou code de triche) ---------- */
 /* ---------- scène finale (v3.10) : piste droite, tremplin, ralenti, chute et disparition dans un portail de lumière ---------- */
-function finTs(){return lerp(lerp(2,0.14,cineSm(0,0.9,FIN.t)),0.3,cineSm(1.6,3.4,FIN.t));}
+function finTs(){return lerp(lerp(PTS,0.14,cineSm(0,0.9,FIN.t)),0.3,cineSm(1.6,3.4,FIN.t));}
 function finTick(dt){
   if(mode!=="play")return;
-  if(FIN.ph===0){if(B.z>=FIN.lip-1){FIN.ph=1;FIN.t=0;document.body.classList.add("fin");if(MU.rep&&MU.on){MU.t=MU.lip;MU.chk=0;}sfx(260,50,1.6,"sine",0.14);}return;}
+  if(FIN.ph===0){if(B.z>=FIN.lip-1){FIN.ph=1;FIN.t=0;document.body.classList.add("fin");if(MU.on){MU.t=MU.lip;MU.chk=0;}sfx(260,50,1.6,"sine",0.14);}return;}
   FIN.t+=dt;puffs=[];
   var pp=(FIN.t-1.4)/4.6;
   if(pp>0&&!FIN.snd){FIN.snd=1;sfx(330,990,4.2,"sine",0.07);sfx(495,1480,4.2,"triangle",0.04);}
@@ -5282,9 +5284,9 @@ function startFinaleRun(real){
   resetWorld(false);FIN.zT=198;FIN.real=!!real;newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();
   mode="play";setBody();
-  muStart(MU.lip-9.2,true);
+  muStart(MU.lip-6.65,true);
 }
-var CINE={on:false,t:0,raf:0,last:0,cl:[],pt:[],end:100,lineI:-1,yaw0:0,real:false};
+var CINE={on:false,t:0,raf:0,last:0,cl:[],pt:[],end:100,k:100/60,lineI:-1,yaw0:0,real:false};
 var CINE_L0=[[7,"Où suis-je ?"],[14,"Tout est calme, comme avant le premier pas."],[21,"Tu te souviens de la route, des chutes, des élans."],[29,"Rien de tout cela n’était en vain : chaque pas t’a mené ici."],[36,"Ce qui t’a fait tomber t’a aussi fait avancer."],[43,"Bravo : le chemin est parcouru."],[50,"Qui roulait, au fond ?"],[57,"Peut-être que la question compte moins que la route."],[65,"On avance droit devant, même quand tout vacille."],[73,"Ce qui finit ici ressemble à ce qui commençait."],[81,"Entre."]],CINE_L=CINE_L0.slice();
 var CINE_YAW=[[0,0],[5,0.04],[9,-0.85],[13,-0.98],[17,-0.3],[21.5,0],[100,0]];
 var CINE_PIT=[[0,0],[8,0.0],[11,0.07],[15,0.07],[19,0.02],[24,0.02],[100,0.02]];
@@ -5369,15 +5371,15 @@ function cineText(t){
 function cineFrame(now){
   if(!CINE.on)return;
   CINE.raf=requestAnimationFrame(cineFrame);
-  var dt=Math.min(0.1,Math.max(0,(now-CINE.last)/1000));CINE.last=now;CINE.t+=dt;
-  cineDraw(CINE.t,dt);cineText(CINE.t);
+  var dt=Math.min(0.1,Math.max(0,(now-CINE.last)/1000));CINE.last=now;CINE.t+=dt*CINE.k;
+  cineDraw(CINE.t,dt*CINE.k);cineText(CINE.t);
   if(CINE.t>10)$("cineskip").classList.add("on");
   if(CINE.t>=CINE.end)cineEnd();
 }
 function startParadise(real){
   if(CINE.on)return;
   CINE.real=!!real;CINE_L=CINE_L0.slice();if(real){CINE_L.splice(CINE_L.length-1,0,[77,"333 333 pièces t’attendent de l’autre côté."]);SD.coins+=333333;saveShop();updCoinsUI();}
-  if(real){try{addRun(Math.floor(B.z*0.5)+bonus,lvl);}catch(e){}giveCoins();RUN.rk=null;RUN.fx={};RUN.ts=1;RUN.eg=0;}
+  if(real){try{addRun(curSc(),lvl);}catch(e){}giveCoins();RUN.rk=null;RUN.fx={};RUN.ts=1;RUN.eg=0;}
   CINE.on=true;CINE.t=0;CINE.lineI=-1;dragging=false;keys.l=false;keys.r=false;
   if(!CINE.cl.length)cineBuild();
   mode="cine";setBody();closePanel();$("cinetx").textContent="";$("cineskip").classList.remove("on");
@@ -5693,7 +5695,7 @@ function frame(now){
   if(mode==="intro"){var idt=Math.min(0.05,Math.max(0,(now-introLast)/1000));introLast=now;introFrame((now-introT0)/1000,idt);}
   acc+=dt;var n=0,h=1/60;
   while(acc>=h&&n<6){
-    if(mode==="play"){bonTick(h);if(FIN.ph)RUN.ts=finTs();else if(par())RUN.ts=2;updatePlay(h*RUN.ts);}
+    if(mode==="play"){bonTick(h);if(FIN.ph)RUN.ts=finTs();else if(par())RUN.ts=PTS;updatePlay(h*RUN.ts);}
     else if(mode==="crash"||mode==="fall")updateEnd(h);
     else if(mode==="menu"||mode==="intro"||mode==="shop"){if(started)updateDemo(h);}
     updFx(h);acc-=h;n++;

@@ -1,7 +1,7 @@
 // Abel Run — service worker (v2.9.2)
 // Nom du cache = "abelrun-v" + version du jeu (cfg.version de index.html, points remplacés par des tirets).
 // À CHAQUE nouvelle version : changer ce nom ET la version dans index.html.
-var CACHE = "abelrun-v3-18";
+var CACHE = "abelrun-v3-19";
 // Musique du Paradis : cache à part, jamais effacé lors d’une mise à jour (le fichier porte un numéro dans son nom : paradis-1.mp3).
 var MUSIC = "abelrun-musique";
 var ASSETS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
