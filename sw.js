@@ -1,7 +1,7 @@
 // Abel Run — service worker (v2.9.2)
 // Nom du cache = "abelrun-v" + version du jeu (cfg.version de index.html, points remplacés par des tirets).
 // À CHAQUE nouvelle version : changer ce nom ET la version dans index.html.
-var CACHE = "abelrun-v3-16";
+var CACHE = "abelrun-v3-17";
 // Musique du Paradis : cache à part, jamais effacé lors d’une mise à jour (le fichier porte un numéro dans son nom : paradis-1.mp3).
 var MUSIC = "abelrun-musique";
 var ASSETS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
@@ -36,7 +36,7 @@ self.addEventListener("message", function (e) {
 self.addEventListener("fetch", function (e) {
   var req = e.request, url = new URL(req.url);
   if (req.method !== "GET" || url.origin !== self.location.origin || /sw\.js$/.test(url.pathname)) return;
-  if (/paradis-\d+\.mp3$/.test(url.pathname)) { e.respondWith(musique(req)); return; }
+  if (/(paradis|intro)-\d+\.mp3$/.test(url.pathname)) { e.respondWith(musique(req)); return; }
   e.respondWith(new Promise(function (resolve) {
     var done = false, finish = function (r) { if (!done && r) { done = true; resolve(r); } };
     var fromCache = function () {

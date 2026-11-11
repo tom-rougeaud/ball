@@ -201,6 +201,13 @@ body.lt .sc small{opacity:.75}
 .shcoins{display:flex;align-items:center;gap:calc(var(--u)*1.6);min-height:44px;padding:0 calc(var(--u)*4);border-radius:999px;border:1.5px solid rgba(244,239,230,.55);background:rgba(10,18,44,.62);font-weight:800;font-size:max(14px,calc(var(--u)*4));font-variant-numeric:tabular-nums}
 .shsheet{align-self:center;width:100%;max-width:min(100%,calc(var(--u)*150));height:64%;display:flex;flex-direction:column;border-radius:calc(var(--u)*5) calc(var(--u)*5) 0 0;background:rgba(12,20,48,.93);border:1.5px solid rgba(244,239,230,.22);border-bottom:0;box-shadow:0 -10px 40px rgba(0,0,0,.35);padding-bottom:env(safe-area-inset-bottom,0px)}
 .shtabs{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);padding:calc(var(--u)*2.2) calc(var(--u)*2) calc(var(--u)*1);flex:none}
+.shsrch{position:relative;display:flex;align-items:center;padding:0 calc(var(--u)*3) calc(var(--u)*1.2);flex:none}
+.shsrch input{flex:1 1 auto;min-width:0;min-height:38px;border-radius:12px;border:1.5px solid rgba(244,239,230,.4);background:rgba(244,239,230,.1);color:#F4EFE6;font:inherit;font-weight:600;font-size:max(13px,calc(var(--u)*3.1));padding:0 34px 0 12px}
+.shsrch input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.shsrch input::placeholder{color:rgba(244,239,230,.6)}
+.shsrch button{position:absolute;right:calc(var(--u)*3.6);min-width:30px;min-height:30px;border:0;border-radius:50%;background:transparent;color:#F4EFE6;font-size:20px;line-height:1;display:none;cursor:pointer}
+.shsrch.on button{display:block}
+.shnone{grid-column:1/-1;padding:calc(var(--u)*4);text-align:center;opacity:.75;font-weight:600}
 .shthm{display:flex;align-items:center;gap:calc(var(--u)*2);padding:0 calc(var(--u)*3) calc(var(--u)*1);flex:none}
 .shthm label{font-size:max(11px,calc(var(--u)*2.8));font-weight:700;opacity:.75;white-space:nowrap}
 .shthm select{flex:1 1 auto;min-width:0;min-height:36px;border-radius:10px;border:1.5px solid rgba(244,239,230,.4);background:rgba(244,239,230,.1);color:#F4EFE6;font:inherit;font-weight:700;font-size:max(12px,calc(var(--u)*3));padding:0 8px}
@@ -435,6 +442,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
     <div class="shtop"><button class="pill" id="shback" type="button">‹ Retour</button><div class="shcoins" aria-live="polite"><span class="coin" aria-hidden="true"></span><b id="shcoins">0</b></div></div>
     <div class="shsheet">
       <div class="shtabs" id="shtabs" role="tablist" aria-label="Catégories"></div>
+      <div class="shsrch"><input id="shq" type="search" inputmode="search" autocomplete="off" spellcheck="false" placeholder="Rechercher dans toute la boutique…" aria-label="Rechercher dans toute la boutique"><button type="button" id="shqx" aria-label="Effacer la recherche">×</button></div>
       <div class="shthm" id="shthm"><label for="shsel">Thème</label><select id="shsel"></select><small id="shcnt"></small></div>
       <div class="shgrid" id="shgrid"></div>
       <div class="shbar"><div class="shinfo"><b id="shname"></b><small id="shdesc"></small></div><div class="shbtns"><button class="shbuy" id="shbuy" type="button">Acheter</button><button class="shbuy sec" id="shbuy2" type="button">Équiper</button></div></div>
@@ -454,7 +462,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.16","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.17","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -561,6 +569,7 @@ function unlock(){
     }catch(e){AC=null;return;}
   }
   try{if(AC.state==="suspended")AC.resume();}catch(e){}
+  if(mode==="intro")imTry();
 }
 function sfx(f1,f2,dur,type,vol){
   if(!AC||muted)return;
@@ -576,7 +585,21 @@ function updMute(){$("bmute").textContent=muted?"Son coupé":"Son";if(master)mas
 var MU={url:"paradis-1.mp3",a:null,on:0,t:0,rep:0,chk:0,fade:0,pre:0,lip:257.2};
 function muAud(){if(MU.a)return MU.a;try{var a=new Audio();a.preload="auto";a.loop=false;a.src=MU.url;a.muted=muted;MU.a=a;}catch(e){MU.a=null;}return MU.a;}
 function muPlay(a){try{var p=a.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
-function muStart(t0,rep){var a=muAud();if(!a)return;MU.on=1;MU.t=t0||0;MU.rep=rep?1:0;MU.chk=0;MU.fade=0;try{a.volume=1;}catch(e){}a.muted=muted;try{if(a.readyState>0)a.currentTime=MU.t;}catch(e){}muPlay(a);}
+function muStart(t0,rep){
+  var a=muAud();if(!a)return;MU.on=1;MU.t=t0||0;MU.rep=rep?1:0;MU.chk=0;MU.fade=0;a.muted=muted;
+  try{a.volume=1;}catch(e){}
+  try{
+    if(a.readyState>0){a.currentTime=MU.t;}
+    else if(MU.t>0.5){
+      /* fichier pas encore chargé : on se place au bon endroit dès que la durée est connue, sans laisser entendre le début du morceau */
+      try{a.volume=0;}catch(e){}
+      var go=function(){a.removeEventListener("loadedmetadata",go);try{a.currentTime=MU.t;}catch(e){}};
+      var ok=function(){a.removeEventListener("seeked",ok);try{if(MU.on&&!(MU.fade>0))a.volume=1;}catch(e){}};
+      a.addEventListener("loadedmetadata",go);a.addEventListener("seeked",ok);
+    }
+  }catch(e){}
+  muPlay(a);
+}
 function muHalt(){var a=MU.a;MU.fade=0;if(!a)return;try{a.pause();if(a.readyState>0)a.currentTime=0;}catch(e){}}
 function muStop(fade){if(!MU.a||!MU.on)return;MU.on=0;if(fade)MU.fade=fade;else muHalt();}
 function muTick(dt){
@@ -585,12 +608,29 @@ function muTick(dt){
   if(!MU.on)return;
   var live=(mode==="play"&&WORLD===WORLDS.paradis)||mode==="cine";
   if(!live){if(mode==="pause"){if(!a.paused)try{a.pause();}catch(e){}return;}muStop(0.9);return;}
+  if(MU.rep&&FIN.ph===0&&a.readyState<2)return;
   MU.t+=dt;
+  if(MU.rep&&FIN.ph===0&&MU.t>MU.lip-0.2)MU.t=MU.lip-0.2;
   var d=a.duration,ok=!isFinite(d)||MU.t<d-0.1;
   if(a.paused&&ok&&!document.hidden)muPlay(a);
   MU.chk-=dt;
   if(MU.chk<=0){MU.chk=0.5;if(a.readyState>=2&&isFinite(d)&&MU.t<d-0.3&&Math.abs(a.currentTime-MU.t)>0.4){try{a.currentTime=MU.t;}catch(e){}}}
 }
+/* ---------- musique d’introduction (v3.17) : les dernières notes du Paradis ouvrent le jeu (le jeu recommence) ---------- */
+var IM={url:"intro-1.mp3",a:null,ok:0,pre:0,t0:0};
+function imAud(){if(IM.a)return IM.a;try{var a=new Audio();a.preload="auto";a.loop=false;a.src=IM.url;a.muted=muted;IM.a=a;}catch(e){IM.a=null;}return IM.a;}
+function imTry(){
+  var a=imAud();if(!a||IM.ok||mode!=="intro")return;
+  var el=Math.max(0,(performance.now()-IM.t0)/1000);
+  try{a.volume=1;a.muted=muted;if(a.readyState>0&&el>0.2&&el<(a.duration||8.7)-0.5)a.currentTime=el;}catch(e){}
+  try{var p=a.play();if(p&&p.then)p.then(function(){IM.ok=1;}).catch(function(){});else IM.ok=1;}catch(e){}
+}
+function imTick(t){
+  var a=IM.a;if(!a)return;
+  if(t>=T_FADE-0.7){var v=clamp(1-(t-(T_FADE-0.7))/1.1,0,1);try{a.volume=v;}catch(e){}if(v<=0&&!a.paused){try{a.pause();}catch(e){}}}
+}
+function imStop(){var a=IM.a;if(a&&!a.paused){try{a.pause();}catch(e){}}}
+function imPrefetch(){try{if(IM.pre||!window.fetch||navigator.onLine===false)return;IM.pre=1;fetch(IM.url).then(function(r){return r.ok?r.blob():null;}).then(function(b){if(!b)IM.pre=0;}).catch(function(){IM.pre=0;});}catch(e){IM.pre=0;}}
 function muPrefetch(){
   try{
     if(MU.pre||!window.fetch||navigator.onLine===false||!isOwn("w","paradis"))return;
@@ -2424,6 +2464,19 @@ function rarOf(k,p){var t=RTH[k]||RTH.b;return p<=t[0]?0:(p<=t[1]?1:(p<=t[2]?2:3
 SHOP.worlds.forEach(function(a){CATS.w.push({id:a[0],n:a[1],p:a[2],d:a[3]||""});});
 SHOP.balls.forEach(function(a){CATS.b.push({id:a[0],n:a[1],p:a[2],c:a[3],m:a[4]||0,d:a[5]||"",f:a[6]||"",c2:a[7]||null,g:a[8]||""});});
 SHOP.patterns.forEach(function(a){CATS.p.push({id:a[0],n:a[1],p:a[2],d:a[3]||""});});
+/* v3.17 : un « motif » qui remplace la couleur de la bille (football, planète Terre, tigre…) est en réalité une couleur de bille :
+   il passe dans l’onglet Couleurs (identifiant s_… ; achats, équipement et sauvegardes sont convertis). Les vrais motifs restent des surcouches. */
+var MIGP={},MIGN={lune:"Lune cratérisée",jupiter:"Jupiter à grande tache"};
+(function(){var keep=[];CATS.p.forEach(function(it){
+  if(/Garde ses propres couleurs/.test(it.d)){MIGP[it.id]="s_"+it.id;CATS.b.push({id:"s_"+it.id,n:MIGN[it.id]||it.n,p:it.p,c:[244,240,230],m:0,d:it.d.replace(/\s*Garde ses propres couleurs\.?/,"").trim(),f:"",c2:null,g:"",pt:it.id});}
+  else keep.push(it);});CATS.p=keep;})();
+function migShop(d){
+  var key,q,o,k,L;if(!d||typeof d!=="object")return d;
+  if(d.own&&typeof d.own==="object"){o={};for(key in d.own){q=key.split(":");if(q.length===2&&q[0]==="p"&&MIGP[q[1]])o["b:"+MIGP[q[1]]]=d.own[key];else o[key]=d.own[key];}d.own=o;}
+  if(d.eq&&typeof d.eq==="object"&&MIGP[d.eq.p]){d.eq.b=MIGP[d.eq.p];d.eq.p="none";}
+  if(d.lk&&typeof d.lk==="object")for(k in d.lk){L=d.lk[k];if(L&&typeof L==="object"&&MIGP[L.p]){L.b=MIGP[L.p];L.p="none";}}
+  return d;
+}
 SHOP.trails.forEach(function(a){CATS.t.push({id:a[0],n:a[1],p:a[2],d:a[3]||""});});
 SHOP.effects.forEach(function(a){CATS.e.push({id:a[0],n:a[1],p:a[2],d:a[3]||""});});
 SHOP.tracks.forEach(function(a){CATS.k.push({id:a[0],n:a[1],p:a[2],c:a[3],d:a[4]||"",st:a[5]||null});});
@@ -2439,7 +2492,7 @@ function cleanLook(src,own){var o={},i,k,id;if(!src||typeof src!=="object")retur
 var REFUND={"b:obsidian":4000,"b:galaxy":11200,"b:magma":12800,"b:plasma":16000,"b:neonviolet":5600,"t:pluieor":9600,"t:ecume":2200,"t:canon":3600,"t:cendres":1000,"t:sel":1150,"t:rosee":1300,"t:vapeur":1450,"t:eclatsglace":2400,"t:pixelsneon":2200,"t:spores":2700,"t:bulleor":2800,"t:rubis":3000,"t:emeraude":3000,"t:saphir":3000,"t:meteores":3200,"t:nebuleuse":4600};
 function loadShop(){
   var o={coins:0,own:{},eq:{},bn:{},q:[],lk:{},refund:0,ch:{x2:0,fb:0}},k,i,key,q,id,dd=null;
-  try{var d=JSON.parse(sGet("shop")||"null");dd=d;
+  try{var d=migShop(JSON.parse(sGet("shop")||"null"));dd=d;
     if(d&&typeof d==="object"){
       o.coins=Math.max(0,Math.floor(+d.coins||0));if(!isFinite(o.coins))o.coins=0;
       if(d.own&&typeof d.own==="object")for(key in d.own){q=key.split(":");if(q.length===2&&findItem(q[0],q[1]))o.own[key]=1;else if(REFUND[key])o.refund+=REFUND[key];}
@@ -2839,7 +2892,7 @@ function applyCosm(){
       cu=function(k){return L?L[k]:cur(k);},b=findItem("b",cu("b"))||CATS.b[0],kk=findItem("k",cu("k"));
   WORLD=nw;
   if(nw.allw){BC={c:[255,255,255],ink:[150,158,186],m:0,f:"",c2:null};PATT="none";FXB="none";TRAIL="none";TRKC=null;TRKS=null;if(nw.nacre){BC.f="pearl";FXB="etincelles";}}
-  else{BC={c:b.c,ink:inkFor(b.c),m:b.m,f:b.f||"",c2:b.c2||null};PATT=cu("p");FXB=cu("e");TRAIL=cu("t");TRKC=(kk&&kk.c)?kk.c:null;TRKS=(kk&&kk.st)?kk.st:(((!kk||kk.id==="auto")&&WTRK[wid])?WTRK[wid]:null);}
+  else{BC={c:b.c,ink:inkFor(b.c),m:b.m,f:b.f||"",c2:b.c2||null};PATT=b.pt||cu("p");if(b.pt&&SPORTS[b.pt]){BC.c=SPORTS[b.pt].c;BC.ink=SPORTS[b.pt].i;}FXB=cu("e");TRAIL=cu("t");TRKC=(kk&&kk.c)?kk.c:null;TRKS=(kk&&kk.st)?kk.st:(((!kk||kk.id==="auto")&&WTRK[wid])?WTRK[wid]:null);}
   LTC=null;document.body.classList.toggle("lt",!!WORLD.light);
   return ch;
 }
@@ -3226,7 +3279,7 @@ W.prehisto.ts=1;W.atlantide.ts=1;
 })();
 /* ---------- v3.4 : Paradis (150 000 pièces) — tout est blanc : piste, obstacles, ciel, sol. Rien d’autre. ---------- */
 WORLDS.paradis={stg:[ST("Paradis",[255,255,255],[255,255,255],[255,255,255],[254,254,255],[244,246,252],[255,255,255],0,[252,252,255],[255,255,255],[255,255,255],[236,240,251],0,[255,255,255],0,0,0)],
-  deco:null,isl:null,noIsl:1,nacre:1,props:[["cloud",4],["pfeather",3],["pspark",3],["plotus",3],["pring",2],["parch",2],["pcol",2],["pyramid",1],["obelisk",1]],allw:1,noObs:1,edge:[178,186,210],nosun:1,light:1,pgap:[8,13],ridge:0,rock:[246,247,252]};
+  deco:null,isl:null,noIsl:1,nacre:1,props:null,allw:1,noObs:1,edge:[178,186,210],nosun:1,light:1,pgap:[8,13],ridge:0,rock:[246,247,252]};
 /* ---------- v3.14 : petits décors du Paradis (blancs, nacrés, aux ombres bleutées) ---------- */
 (function(){
 var P=PROPD,LI=[250,251,255],SD2=[208,215,236],GO=[250,226,158],PK=[246,206,226];
@@ -4456,7 +4509,7 @@ function qualEff(){return qual==="auto"?(perfLow?"low":"high"):(qual==="low"?"lo
 var perfLow=false,perfEma=0.0167,perfBad=0;
 
 /* ---------- boutique : écran, aperçu en direct, achats ---------- */
-var TABS=[["x","Bonus"],["b","Couleurs"],["p","Motifs"],["e","Effets"],["t","Traînées"],["k","Pistes"],["w","Univers"]],TABD={x:"Bonus à usage unique",e:"Effet autour de la bille",b:"Couleur de la bille",p:"Motif de la bille",t:"Traînée derrière la bille",k:"Couleur de la piste",w:"Univers du jeu"};
+var TABS=[["x","Bonus"],["b","Couleurs"],["p","Motifs"],["e","Effets"],["t","Traînées"],["k","Pistes"],["w","Univers"]],TABD={x:"Bonus à usage unique",e:"Effet autour de la bille",b:"Couleur de la bille",p:"Motif posé par-dessus la couleur de la bille",t:"Traînée derrière la bille",k:"Couleur de la piste",w:"Univers du jeu"};
 var shopTab="b",shopSel=null,shopT=0;
 /* thèmes de la boutique (noms génériques) : chaque objet est rangé selon son identifiant */
 function TS(a){var o={},i;a.split(" ").forEach(function(x){o[x]=1;});return o;}
@@ -4475,6 +4528,11 @@ var THD={
   ["Encres et aquarelles",function(id){return id.indexOf("e_")===0||id.indexOf("a_")===0||id==="u_sumi";}],
   ["Faïence et mosaïque",function(id){return /^(t_|z_|c_)/.test(id)||id==="u_bauhaus"||id==="u_azulejo";}],
   ["Disques et carbone",function(id){return /^(d_|r_)/.test(id)||id==="u_deco"||id==="u_opart";}],
+  ["Sports et jeux",TS("s_football s_basket s_baseball s_golf s_tennis s_billard")],
+  ["Animaux",TS("s_vache s_zebre s_tigre s_leopard")],
+  ["Ciel et astres",TS("s_comete s_lune s_terre s_jupiter")],
+  ["Nature et fruits",TS("s_pasteque s_citrouille s_marguerites s_eclair")],
+  ["Curiosités",TS("s_toile s_toilerouge s_circuit s_disco s_vitrail s_prisme s_smiley s_losange")],
   ["Billes d’univers",function(id){return id.indexOf("u_")===0;}]],
  p:[["Géométrie",TS("none stripes dots checker spiral losange vichy anneaux chevron vagues hexa tartan cibles pixels")],
   ["Sports et jeux",TS("football basket baseball golf tennis billard")],
@@ -4531,15 +4589,15 @@ function thumb(k,it,locked){
     c2.fillStyle="rgba(10,18,44,.5)";c2.fillRect(0,0,S,S);
     c2.fillStyle="rgba(0,0,0,.28)";c2.beginPath();c2.ellipse(34,52,17,4.4,0,0,6.2832);c2.fill();
     var fb=k==="b"?it.f:eb.f,fc=k==="b"?it.c2:eb.c2;
-    if(fb&&GLW[fb]&&!(k==="p"&&SPORTS[it.id]))finGlow(c2,32,31,21,col,fb,0.6,0.5);
-    paintBall(c2,32,31,21,{col:col,ink:inkFor(col),pat:k==="p"?it.id:"none",metal:mt,fin:fb,c2:fc,ph:0.12,tilt:-0.2,dpr:d,fresh:true,q:"high",cap:96});
+    if(fb&&GLW[fb]&&!((k==="p"&&SPORTS[it.id])||(k==="b"&&it.pt)))finGlow(c2,32,31,21,col,fb,0.6,0.5);
+    paintBall(c2,32,31,21,{col:col,ink:inkFor(col),pat:k==="p"?it.id:(k==="b"&&it.pt?it.pt:"none"),metal:mt,fin:fb,c2:fc,ph:0.12,tilt:-0.2,dpr:d,fresh:true,q:"high",cap:96});
   }else if(k==="e"){
-    var eb3=findItem("b",SD.eq.b)||CATS.b[0],sq3=SPORTS[SD.eq.p],ec3=sq3?{c:sq3.c,ink:sq3.i,m:0,f:""}:{c:eb3.c,ink:inkFor(eb3.c),m:eb3.m,f:eb3.f||"",c2:eb3.c2};
+    var eb3=findItem("b",SD.eq.b)||CATS.b[0],ptq=eb3.pt||SD.eq.p,sq3=SPORTS[ptq],ec3=sq3?{c:sq3.c,ink:sq3.i,m:0,f:""}:{c:eb3.c,ink:inkFor(eb3.c),m:eb3.m,f:eb3.f||"",c2:eb3.c2};
     c2.fillStyle="rgba(10,18,44,.55)";c2.fillRect(0,0,S,S);
     var FX0=FXN[it.id],er=FX0?clamp(27/(FX0.x||2.4),9,15):15,ex=(FX0&&FX0.k==="echo")?42:32;
     if(ec3.f&&GLW[ec3.f]&&!sq3)finGlow(c2,ex,32,er,ec3.c,ec3.f,0.6,0.5);
     if(it.id==="double"){fxGhost(c2,14,35,12,ec3,0.22);fxGhost(c2,24,34,14,ec3,0.4);}else if(FX0)fxNew(c2,it.id,ex,32,er,ec3,0.6,0);else if(it.id!=="none")fxPre(c2,it.id,32,32,13.5,ec3,0.6);
-    paintBall(c2,it.id==="double"?42:ex,32,FX0?er:15,{col:ec3.c,ink:ec3.ink,pat:SD.eq.p,metal:ec3.m,fin:ec3.f,c2:ec3.c2,ph:0.12,tilt:-0.2,dpr:d,fresh:true,q:"high",cap:96});
+    paintBall(c2,it.id==="double"?42:ex,32,FX0?er:15,{col:ec3.c,ink:ec3.ink,pat:ptq,metal:ec3.m,fin:ec3.f,c2:ec3.c2,ph:0.12,tilt:-0.2,dpr:d,fresh:true,q:"high",cap:96});
     if(FX0)fxNew(c2,it.id,ex,32,er,ec3,0.6,1);
   }else if(k==="t"){
     c2.fillStyle="rgba(10,18,44,.55)";c2.fillRect(0,0,S,S);c2.fillStyle="rgba(238,233,223,.14)";c2.fillRect(0,48,S,16);
@@ -4581,11 +4639,52 @@ function priceHTML(it,k){
   return coinHTML()+fmtN(it.p);
 }
 function coinHTML(){return '<span class="coin" aria-hidden="true"></span>';}
+var shopQ="";
+function nrm(t){return String(t||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
+function goItem(k,id){
+  shopQ="";$("shq").value="";
+  if(k!==shopTab){shopTab=k;shopSel=null;PV=null;var ch=applyCosm();if(ch)startDemo();}
+  shopTheme[k]="";renderShop();selectItem(k,id);
+  var g=$("shgrid"),i;for(i=0;i<g.children.length;i++)if(g.children[i].getAttribute("data-id")===id){try{g.children[i].scrollIntoView({block:"center"});}catch(e){}break;}
+}
+function renderSearch(grid){
+  var words=nrm(shopQ).split(/\s+/).filter(Boolean),res=0,i,gi,ti,k,groups,tn;
+  grid.innerHTML="";grid.setAttribute("aria-label","Résultats de la recherche");$("shthm").style.display="none";
+  for(ti=0;ti<TABS.length&&res<80;ti++){
+    k=TABS[ti][0];tn=TABS[ti][1];
+    var th={};if(k!=="x"){groups=themeGroups(k);for(gi=0;gi<groups.length;gi++)groups[gi].a.forEach(function(it){th[it.id]=groups[gi].n;});}
+    var hits=CATS[k].filter(function(it){var hay=nrm(it.n+" "+(it.d||"")+" "+(th[it.id]||"")+" "+tn+" "+(k==="x"?"bonus":"")+" "+(k!=="x"&&isOwn(k,it.id)?"possede":"a acheter"));return words.every(function(w){return hay.indexOf(w)>=0;});});
+    if(!hits.length)continue;
+    hits.sort(function(a,b){var x=words.every(function(w){return nrm(a.n).indexOf(w)>=0;})?0:1,y=words.every(function(w){return nrm(b.n).indexOf(w)>=0;})?0:1;return x-y;});
+    var hd=document.createElement("div");hd.className="shsec";hd.innerHTML="<span></span><small>"+hits.length+"</small>";hd.firstChild.textContent=tn;grid.appendChild(hd);
+    hits.slice(0,Math.max(0,80-res)).forEach(function(it){res++;grid.appendChild(shopCard(k,it,null,function(){goItem(k,it.id);}));});
+  }
+  if(!res){var nn=document.createElement("div");nn.className="shnone";nn.textContent="Aucun résultat pour « "+shopQ+" ».";grid.appendChild(nn);}
+}
+function bindShopSearch(){
+  var q=$("shq"),x=$("shqx");if(!q||q.__b)return;q.__b=1;
+  q.oninput=function(){shopQ=q.value.trim();q.parentNode.classList.toggle("on",!!q.value);renderShop();$("shgrid").scrollTop=0;};
+  x.onclick=function(){q.value="";shopQ="";q.parentNode.classList.remove("on");renderShop();q.focus();};
+}
+function shopCard(k,it,sel,pick){
+    var b=document.createElement("button"),own=k==="x"||isOwn(k,it.id),eq=k==="x"?SD.q.indexOf(it.id)>=0:SD.eq[k]===it.id;
+    b.type="button";var rr=k==="x"?-1:rarOf(k,it.p);b.className="shc"+(rr>0?" r"+rr:"")+(it.id===sel?" sel":"")+(own?"":" lock")+(eq?" eq":"");b.setAttribute("data-id",it.id);
+    b.setAttribute("aria-label",k==="x"?it.n+" : en stock "+bonN(it.id)+", "+it.p+" pièces":it.n+" ("+RARN[rr]+") : "+(own?(eq?"équipé":"possédé"):it.p+" pièces"));
+    b.appendChild(thumb(k,it,!own));
+    if(k==="x"){var qb=document.createElement("span");qb.className="shq"+(bonN(it.id)<1?" z":"");qb.textContent="×"+bonN(it.id);b.appendChild(qb);}
+    if(rr>=0){var rd=document.createElement("i");rd.className="shr r"+rr;rd.setAttribute("aria-hidden","true");b.appendChild(rd);}
+    var n=document.createElement("span");n.className="shn";n.textContent=it.n;b.appendChild(n);
+    var p=document.createElement("span");p.className="shp";p.innerHTML=priceHTML(it,k);b.appendChild(p);
+    b.onclick=pick;
+    return b;
+}
 function renderShop(){
   var tabs="",i,k,it,grid=$("shgrid"),sel=shopSel&&shopSel.k===shopTab?shopSel.id:SD.eq[shopTab];
   for(i=0;i<TABS.length;i++)tabs+='<button type="button" role="tab" class="shtab'+(TABS[i][0]===shopTab?" on":"")+'" data-k="'+TABS[i][0]+'" aria-selected="'+(TABS[i][0]===shopTab)+'">'+TABS[i][1]+'</button>';
   $("shtabs").innerHTML=tabs;
   Array.prototype.forEach.call($("shtabs").children,function(b){b.onclick=function(){setTab(b.getAttribute("data-k"));};});
+  bindShopSearch();
+  if(shopQ){renderSearch(grid);return;}
   grid.innerHTML="";grid.setAttribute("aria-label",TABD[shopTab]);
   var groups=shopTab==="x"?[{n:"",a:CATS.x}]:themeGroups(shopTab),thm=shopTheme[shopTab]||"",sh=$("shsel"),gi,html="";
   if(thm&&!groups.some(function(g){return g.n===thm;}))thm=shopTheme[shopTab]="";
@@ -4600,16 +4699,7 @@ function renderShop(){
   if(thm&&g.n!==thm)return;
   if(!thm&&g.n){var hd=document.createElement("div");hd.className="shsec";var no=0;g.a.forEach(function(it){if(isOwn(shopTab,it.id))no++;});hd.innerHTML="<span></span><small>"+no+"/"+g.a.length+"</small>";hd.firstChild.textContent=g.n;grid.appendChild(hd);}
   g.a.forEach(function(it){
-    var b=document.createElement("button"),own=shopTab==="x"||isOwn(shopTab,it.id),eq=shopTab==="x"?SD.q.indexOf(it.id)>=0:SD.eq[shopTab]===it.id;
-    b.type="button";var rr=shopTab==="x"?-1:rarOf(shopTab,it.p);b.className="shc"+(rr>0?" r"+rr:"")+(it.id===sel?" sel":"")+(own?"":" lock")+(eq?" eq":"");b.setAttribute("data-id",it.id);
-    b.setAttribute("aria-label",shopTab==="x"?it.n+" : en stock "+bonN(it.id)+", "+it.p+" pièces":it.n+" ("+RARN[rr]+") : "+(own?(eq?"équipé":"possédé"):it.p+" pièces"));
-    b.appendChild(thumb(shopTab,it,!own));
-    if(shopTab==="x"){var qb=document.createElement("span");qb.className="shq"+(bonN(it.id)<1?" z":"");qb.textContent="×"+bonN(it.id);b.appendChild(qb);}
-    if(rr>=0){var rd=document.createElement("i");rd.className="shr r"+rr;rd.setAttribute("aria-hidden","true");b.appendChild(rd);}
-    var n=document.createElement("span");n.className="shn";n.textContent=it.n;b.appendChild(n);
-    var p=document.createElement("span");p.className="shp";p.innerHTML=priceHTML(it,shopTab);b.appendChild(p);
-    b.onclick=function(){selectItem(shopTab,it.id);};
-    grid.appendChild(b);
+    grid.appendChild(shopCard(shopTab,it,sel,function(){selectItem(shopTab,it.id);}));
   });
   });
   updShopBar();
@@ -4622,6 +4712,7 @@ function updShopBar(){
   var rb=document.createElement("span");rb.className="rb r"+rarOf(k,it.p)+((k==="w"&&it.id==="paradis")?" dv":"");rb.textContent=(k==="w"&&it.id==="rainbow")?"Graal":((k==="w"&&it.id==="paradis")?"Divin":RARN[rarOf(k,it.p)]);$("shname").appendChild(rb);
   var dsc=it.d||TABD[k],gw=it.g?findItem("w",it.g):null,gb2=(k==="w")?giftOf(it.id):null;
   if(k==="w"){dsc+=(it.id==="paradis")?" En Paradis, tout devient blanc : piste et traînée ; la bille est nacrée et scintille. Il n’y a plus aucun obstacle : roule jusqu’à 33 333 points pour atteindre le portail.":(gb2?" Elle apporte sa bille « "+gb2.n+" » et sa piste.":"");}
+  if(k==="p"){var eb5=findItem("b",SD.eq.b);if(eb5&&eb5.pt)dsc+=" (Ta bille actuelle a déjà son propre motif : choisis une couleur unie pour voir celui-ci.)";}
   if(cur("w")==="paradis"&&k!=="w"&&k!=="x")dsc+=" (En Paradis la bille, la piste et la traînée sont imposées : change d’univers pour voir ce choix.)";
   $("shdesc").textContent=dsc;
   if(eq){btn.textContent="Équipé";btn.disabled=true;btn.classList.add("ok");}
@@ -4632,6 +4723,7 @@ function updShopBar(){
   Array.prototype.forEach.call($("shgrid").children,function(b){b.classList.toggle("sel",b.getAttribute("data-id")===it.id);});
 }
 function setTab(k){
+  if(shopQ){shopQ="";$("shq").value="";$("shq").parentNode.classList.remove("on");if(k===shopTab){renderShop();return;}}
   if(k===shopTab)return;shopTab=k;shopSel=null;PV=null;var ch=applyCosm();if(ch)startDemo();renderShop();$("shgrid").scrollTop=0;sfx(520,640,0.05,"sine",0.1);
 }
 function selectItem(k,id){
@@ -4657,6 +4749,7 @@ function updCoinsUI(){
 function openShop(){
   unlock();closePanel();closeDrawer();
   if(mode!=="menu")startDemo();
+  shopQ="";if($("shq")){$("shq").value="";$("shq").parentNode.classList.remove("on");}
   mode="shop";PV=null;shopSel=null;setBody();renderShop();updCoinsUI();
 }
 function closeShop(){
@@ -4859,6 +4952,7 @@ function doBurst(){
 function bounceY(u,gy,drop){var off;if(u<0.6){var f=u/0.6;off=1-f*f;}else{var q=(u-0.6)/0.4;off=0.16*4*q*(1-q);}return gy-off*drop;}
 var T_BURST=1.8,T_L0=2.3,T_LS=0.34,T_SHINE=5.05,T_BALL=6.5,T_FLOOD=7.3,T_FADE=8.2,T_END=8.7,T_QUOTE=4.4,SPEEDK=5;
 function introFrame(t,dt){
+  imTick(t);
   var W=SW,Hh=SH,c=ictx,i,j,it,s,H=iL.H;
   c.setTransform(DPR,0,0,DPR,0,0);
   var g=c.createRadialGradient(W/2,Hh*0.4,0,W/2,Hh*0.4,Math.max(W,Hh)*0.75);g.addColorStop(0,"#23468F");g.addColorStop(0.6,"#14265A");g.addColorStop(1,"#0A1330");
@@ -4960,12 +5054,13 @@ function introFrame(t,dt){
   c.globalAlpha=1;
   if(t>=T_FLOOD-0.8&&!started){started=true;startDemo();camExtra=1;}
   if(t>=T_FADE&&!iL.fading){iL.fading=true;icv.style.opacity="0";setTimeout(function(){if(mode!=="intro")icv.style.display="none";},800);}
-  if(t>=T_FADE+0.1&&mode==="intro"){mode="menu";setBody();$("brand").classList.add("on");}
+  if(t>=T_FADE+0.1&&mode==="intro"){mode="menu";setBody();$("brand").classList.add("on");imStop();}
 }
 function startIntro(){
   mode="intro";started=false;burst=false;iParts=[];if(iL){iL.thud=false;iL.whoosh=false;}
   icv.style.display="block";icv.style.opacity="1";if(iL)iL.fading=false;$("brand").classList.remove("on");
   introT0=performance.now();introLast=introT0;setBody();
+  IM.t0=introT0;IM.ok=0;if(IM.a){try{IM.a.pause();IM.a.currentTime=0;}catch(e){}}imTry();
   if(!started){startDemo();}
 }
 function skipIntro(){
@@ -5090,10 +5185,11 @@ function finDraw(){
 }
 function startFinaleRun(real){
   unlock();goFs();closePanel();gnd=null;boostK=1.2;PV={k:"w",id:"paradis"};applyCosm();PV=null;
+  if(lvl!==4){lvl=4;sSet("lvl","4");}
   resetWorld(false);FIN.zT=198;FIN.real=!!real;newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();
   mode="play";setBody();
-  muStart(MU.lip-12,true);
+  muStart(MU.lip-9.2,true);
 }
 var CINE={on:false,t:0,raf:0,last:0,cl:[],pt:[],end:100,lineI:-1,yaw0:0,real:false};
 var CINE_L0=[[7,"Où suis-je ?"],[14,"Tout est calme, comme avant le premier pas."],[21,"Tu te souviens de la route, des chutes, des élans."],[29,"Rien de tout cela n’était en vain : chaque pas t’a mené ici."],[36,"Ce qui t’a fait tomber t’a aussi fait avancer."],[43,"Bravo : le chemin est parcouru."],[50,"Qui roulait, au fond ?"],[57,"Peut-être que la question compte moins que la route."],[65,"On avance droit devant, même quand tout vacille."],[73,"Ce qui finit ici ressemble à ce qui commençait."],[81,"Entre."]],CINE_L=CINE_L0.slice();
@@ -5200,7 +5296,7 @@ function cineEnd(){
   CINE.on=false;cancelAnimationFrame(CINE.raf);
   var e=$("cine");$("cinetx").textContent="";
   try{toMenu();}catch(x){}
-  startIntro();updCoinsUI();
+  imPrefetch();startIntro();updCoinsUI();
   e.style.opacity="0";setTimeout(function(){if(!CINE.on)e.style.display="none";},2700);
 }
 $("cineskip").onclick=cineEnd;
@@ -5304,7 +5400,7 @@ function importData(file){
       loadRuns().concat(d.runs.filter(validRun)).forEach(function(r){var k=r.t+"_"+r.l+"_"+r.s;if(!seen[k]){seen[k]=1;out.push({s:Math.floor(r.s),t:r.t,l:r.l});}});
       out.sort(function(a,b){return a.t-b.t;});saveRuns(out);
       if(Array.isArray(d.best))for(var i=0;i<LV.length;i++){var v=Math.floor(+d.best[i]||0);if(v>(parseInt(sGet("best"+i)||"0",10)||0))sSet("best"+i,String(v));}
-      if(d.shop&&typeof d.shop==="object"){var sj=d.shop,key,k2,id2,c2=Math.max(0,Math.floor(+sj.coins||0));
+      if(d.shop&&typeof d.shop==="object"){var sj=migShop(d.shop),key,k2,id2,c2=Math.max(0,Math.floor(+sj.coins||0));
         if(isFinite(c2)&&c2>SD.coins)SD.coins=c2;
         if(sj.own&&typeof sj.own==="object")for(key in sj.own){var q2=key.split(":");if(q2.length===2&&findItem(q2[0],q2[1]))SD.own[key]=1;}
         grantGifts(SD);
@@ -5591,7 +5687,7 @@ if(window.__ABEL_TEST){window.__ABEL_TEST({
   ballY:function(){var q=P(B.x,B.y,B.z);return q?q[1]/SH:-1;},
   groundAt:groundAt,demo:function(){startDemo();mode="menu";started=true;},stepDemo:updateDemo,burst:function(){return iParts.length;}
 });}
-else{introT0=performance.now();introLast=introT0;requestAnimationFrame(frame);}
+else{introT0=performance.now();introLast=introT0;IM.t0=introT0;imPrefetch();imTry();requestAnimationFrame(frame);}
 })();
 </script>
 </body>
