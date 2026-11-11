@@ -61,6 +61,15 @@ body.intro .fix{background:rgba(238,233,223,.14);color:var(--ivory);border-color
 #menu{padding-top:calc(env(safe-area-inset-top,0px) + var(--u)*31);justify-content:flex-start}
 #panel{background:rgba(27,34,54,.55);z-index:8}
 .sub{margin:0;font-size:max(11px,calc(var(--u)*3));letter-spacing:.38em;text-transform:uppercase;font-weight:700;opacity:.7}
+.shqr{display:block;margin:calc(var(--u)*2) auto;width:min(72vw,300px);height:auto}
+.shqr svg{display:block;width:100%;height:auto}
+.shlink{display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap}
+.shlink input{flex:1 1 200px;min-width:0;font:inherit;font-size:max(12px,calc(var(--u)*3));padding:8px 10px;border-radius:10px;border:1.5px solid rgba(27,34,54,.35);background:rgba(27,34,54,.05);color:inherit}
+.card details{border:1.5px solid rgba(27,34,54,.2);border-radius:12px;margin:6px 0;padding:0 12px;background:rgba(27,34,54,.04)}
+.card summary{cursor:pointer;font-weight:700;padding:10px 0;list-style-position:inside}
+.card details ol,.card details ul{margin:0 0 10px;padding-left:1.3em}
+.card details p{margin:0 0 10px}
+.shnote{font-size:max(11px,calc(var(--u)*2.8));opacity:.75}
 .cdisp{display:flex;gap:calc(var(--u)*1.4);justify-content:center;margin:calc(var(--u)*1.6) 0}
 .cdisp span{width:calc(var(--u)*8);max-width:44px;height:calc(var(--u)*10);max-height:54px;display:flex;align-items:center;justify-content:center;border-radius:10px;border:2px solid rgba(27,34,54,.35);background:rgba(27,34,54,.06);font-size:calc(var(--u)*5.2);font-weight:700;font-variant-numeric:tabular-nums}
 .cmsg{text-align:center;min-height:1.4em;font-weight:700}
@@ -315,6 +324,7 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
       <button id="bdata" type="button">Mes scores</button>
       <button id="babout" type="button">À propos</button>
       <button id="bpriv" type="button">Confidentialité</button>
+      <button id="bshare" type="button">Partager</button>
       <button id="bcode" type="button">Codes</button>
       <button id="bgeo" type="button">Obstacles : simples</button>
       <button id="bq" type="button">Qualité : Auto</button>
@@ -364,7 +374,7 @@ body.shopping #bburger,body.shopping #bmute,body.shopping #brand{display:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.8","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.9","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -4570,6 +4580,72 @@ function cineEnd(){
   e.style.opacity="0";setTimeout(function(){if(!CINE.on)e.style.display="none";},2700);
 }
 $("cineskip").onclick=cineEnd;
+
+/* ---------- page Partager : lien, QR code rond personnalisé (dessiné ici, sans bibliothèque) et conseils d’installation ---------- */
+var SHARE_URL="https://tom-rougeaud.github.io/ball/",QRN=37,QRB="/lbng/wRyWNQbqluvrt1JHSV26K9ii7BF7uBB/qqqq/gDd9LABshfchhCPGmFifTbrGzWImMbMznHECk1uvPblEIoPH9rDs4os9aVaVDIUwIZqqMkwDkiwhBw5yR+mtB6bRjW3zDThWrQiC+8wutVt11wZ1N03MfOtvB/L8wSEZaSDFNbf4AS9cEe/tG1yuwQZd9Grrp9B+V19ZHES6FL9R/BEsfRP/jkXiMgA==";
+function qrMatrix(){var b=atob(QRB),m=[],r,c,k=0;for(r=0;r<QRN;r++){m.push([]);for(c=0;c<QRN;c++){m[r].push((b.charCodeAt(k>>3)>>(7-(k&7)))&1);k++;}}return m;}
+function qrSVG(){
+  var m=qrMatrix(),n=QRN,cs=5.4,o=200-n*cs/2,r,c,d="",fin=[[0,0],[0,n-7],[n-7,0]],i,x,y,cx=200,cy=200,clear=5.4*cs,F="#8C2F2B";
+  function inFin(r,c){for(var j=0;j<3;j++)if(r>=fin[j][0]&&r<fin[j][0]+7&&c>=fin[j][1]&&c<fin[j][1]+7)return true;return false;}
+  var dots="";
+  for(r=0;r<n;r++)for(c=0;c<n;c++){
+    if(!m[r][c]||inFin(r,c))continue;x=o+(c+0.5)*cs;y=o+(r+0.5)*cs;
+    if(Math.hypot(x-cx,y-cy)<clear)continue;
+    dots+='M'+(x-cs*0.5).toFixed(2)+','+y.toFixed(2)+'a'+(cs*0.5).toFixed(2)+','+(cs*0.5).toFixed(2)+' 0 1,0 '+(cs*1).toFixed(2)+',0a'+(cs*0.5).toFixed(2)+','+(cs*0.5).toFixed(2)+' 0 1,0 '+(-cs*1).toFixed(2)+',0z';
+  }
+  var fs="";
+  for(i=0;i<3;i++){x=o+fin[i][1]*cs;y=o+fin[i][0]*cs;
+    fs+='<rect x="'+(x+cs*0.5)+'" y="'+(y+cs*0.5)+'" width="'+(cs*6)+'" height="'+(cs*6)+'" rx="'+(cs*0.9)+'" fill="none" stroke="'+F+'" stroke-width="'+cs+'"/><rect x="'+(x+cs*2)+'" y="'+(y+cs*2)+'" width="'+(cs*3)+'" height="'+(cs*3)+'" rx="'+(cs*0.6)+'" fill="'+F+'"/>';}
+  var lr=cs*4.3;
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="QR code rond du jeu Abel Run : il mène vers '+SHARE_URL+'">'+
+   '<defs><linearGradient id="qd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14204A"/><stop offset="1" stop-color="#2C3C86"/></linearGradient>'+
+   '<radialGradient id="qb" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#EEE9DF"/></radialGradient>'+
+   '<radialGradient id="qs" cx=".36" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#E4DFD3"/><stop offset="1" stop-color="#A9A596"/></radialGradient>'+
+   '<clipPath id="qc"><circle cx="200" cy="200" r="'+lr+'"/></clipPath>'+
+   '<path id="qt" d="M23,200a177,177 0 0,1 354,0"/><path id="qu" d="M8,200a192,192 0 0,0 384,0"/></defs>'+
+   '<circle cx="200" cy="200" r="198" fill="#14204A"/><circle cx="200" cy="200" r="166" fill="url(#qb)"/><circle cx="200" cy="200" r="168.5" fill="none" stroke="#B9A981" stroke-width="1.4"/>'+
+   '<circle cx="200" cy="200" r="194.5" fill="none" stroke="#B9A981" stroke-width="1" opacity=".7"/>'+
+   '<text font-family="Georgia,\'Times New Roman\',serif" font-size="17" font-weight="700" letter-spacing="4.2" fill="#F4EFE6" text-anchor="middle"><textPath href="#qt" startOffset="50%">ABEL RUN · SCANNE ET JOUE</textPath></text>'+
+   '<text font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="12.5" font-weight="600" letter-spacing="1.6" fill="#D9D2C0" text-anchor="middle"><textPath href="#qu" startOffset="50%">tom-rougeaud.github.io/ball</textPath></text>'+
+   '<g fill="#F4EFE6"><path d="M13,200l5,-5l5,5l-5,5z"/><path d="M377,200l5,-5l5,5l-5,5z"/></g>'+
+   '<path d="'+dots+'" fill="url(#qd)"/>'+fs+
+   '<circle cx="200" cy="200" r="'+(lr+4.2)+'" fill="#F4EFE6"/><circle cx="200" cy="200" r="'+(lr+1.2)+'" fill="#14204A"/>'+
+   '<g clip-path="url(#qc)"><rect x="'+(200-lr)+'" y="'+(200-lr)+'" width="'+(lr*2)+'" height="'+(lr*2)+'" fill="#14204A"/>'+
+   '<path d="M'+(200-lr*0.24)+','+(200+lr*0.28)+'L'+(200+lr*0.24)+','+(200+lr*0.28)+'L'+(200+lr*0.95)+','+(200+lr)+'L'+(200-lr*0.95)+','+(200+lr)+'z" fill="#3E5390" opacity=".85"/>'+
+   '<ellipse cx="200" cy="'+(200+lr*0.5)+'" rx="'+(lr*0.5)+'" ry="'+(lr*0.1)+'" fill="#0A1230" opacity=".7"/>'+
+   '<circle cx="200" cy="'+(200-lr*0.12)+'" r="'+(lr*0.52)+'" fill="url(#qs)"/></g></svg>';
+}
+function qrPNG(cb){
+  var img=new Image(),sv=qrSVG(),u="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(sv);
+  img.onload=function(){var cn=document.createElement("canvas");cn.width=cn.height=1400;var c2=cn.getContext("2d");c2.fillStyle="#FFFFFF";c2.fillRect(0,0,1400,1400);c2.drawImage(img,0,0,1400,1400);try{cn.toBlob(function(b){cb(b);},"image/png");}catch(e){cb(null);}};
+  img.onerror=function(){cb(null);};img.src=u;
+}
+function panelShare(){
+  var dts=[
+   ["iPhone et iPad",'<ol><li>Ouvre le lien dans <b>Safari</b> (Chrome, Edge et Firefox le permettent aussi depuis iOS 16.4).</li><li>Touche <b>⋯</b> en bas à droite (ou le bouton <b>Partager</b>), puis <b>Partager</b>.</li><li>Fais défiler et choisis <b>Sur l’écran d’accueil</b>.</li><li>Sous iOS 26 et plus : laisse <b>Ouvrir comme app web</b> activé, puis touche <b>Ajouter</b>.</li></ol>'],
+   ["Android · Chrome",'<ol><li>Ouvre le lien dans <b>Chrome</b>.</li><li>Touche le menu <b>⋮</b> en haut à droite.</li><li>Choisis <b>Installer l’application</b> ou <b>Ajouter à l’écran d’accueil</b>, puis <b>Installer</b>.</li></ol><p class="shnote">Une bannière d’installation peut aussi apparaître toute seule. Le bouton « Installer » du menu du jeu fait la même chose.</p>'],
+   ["Android · Samsung Internet",'<ol><li>Ouvre le lien dans <b>Samsung Internet</b>.</li><li>Touche le menu <b>≡</b> en bas à droite.</li><li>Choisis <b>Ajouter la page à</b>, puis <b>Écran d’accueil</b>.</li></ol>'],
+   ["Android · Firefox",'<ol><li>Ouvre le lien dans <b>Firefox</b>.</li><li>Touche le menu <b>⋮</b>.</li><li>Choisis <b>Installer</b>.</li></ol>'],
+   ["Windows, Mac, Linux · Chrome ou Edge",'<ol><li>Ouvre le lien dans <b>Chrome</b> ou <b>Edge</b>.</li><li>Clique sur l’icône d’installation (un écran avec une flèche) à droite de la barre d’adresse, puis <b>Installer</b>.</li><li>Sinon : menu <b>⋮</b> de Chrome › <b>Diffuser, enregistrer et partager</b> › <b>Installer la page en tant qu’application</b> ; dans Edge, menu <b>…</b> › <b>Applications</b> › <b>Installer ce site en tant qu’application</b>.</li></ol><p class="shnote">Le jeu apparaît ensuite dans le menu Démarrer (Windows), le Launchpad (Mac) ou la liste des applications, et peut être épinglé.</p>'],
+   ["Mac · Safari",'<ol><li>Ouvre le lien dans <b>Safari</b> (macOS Sonoma 14 ou plus récent).</li><li>Menu <b>Fichier</b> › <b>Ajouter au Dock</b> (ou bouton <b>Partager</b> › <b>Ajouter au Dock</b>).</li></ol>'],
+   ["Firefox sur ordinateur",'<p>Firefox ne sait pas installer une application web sur ordinateur. Ouvre plutôt le lien dans Chrome ou Edge, ou ajoute-le simplement à tes favoris.</p>'],
+   ["Ça ne marche pas ?",'<ul><li>Ouvre le lien <b>directement dans le navigateur</b> : depuis une application de messagerie ou un réseau social, choisis « Ouvrir dans Safari » ou « Ouvrir dans Chrome ».</li><li>Mets ton navigateur et ton système à jour.</li><li>Pour retirer l’application : appui long sur l’icône (téléphone) ou « Désinstaller » dans le menu de la fenêtre (ordinateur).</li></ul>']];
+  var dh="";dts.forEach(function(x,i){dh+='<details'+(i===0?'':'')+'><summary>'+x[0]+'</summary>'+x[1]+'</details>';});
+  openPanel('<h2>Partager Abel Run</h2><p>Scanne le QR code ou envoie le lien : le jeu est gratuit, sans compte, et fonctionne ensuite sans connexion une fois installé.</p>'+
+   '<div class="shlink"><input id="shurl" type="text" readonly value="'+SHARE_URL+'" aria-label="Lien du jeu"><button class="pill" id="shcopy" type="button">Copier</button>'+(navigator.share?'<button class="pill" id="shsend" type="button">Envoyer…</button>':'')+'</div>'+
+   '<div class="shqr" id="shqr">'+qrSVG()+'</div>'+
+   '<p class="row"><button class="pill" id="shpng" type="button">Enregistrer le QR code (PNG)</button></p><p id="shmsg" class="cmsg" aria-live="polite">&nbsp;</p>'+
+   '<h3>Installer le jeu sur ton appareil</h3>'+dh+
+   '<p class="shnote">Conseils vérifiés le 11 novembre 2026. Les noms des menus peuvent varier un peu selon la version et la langue de ton appareil.</p>'+CLOSE);
+  var msg=function(t){var e=$("shmsg");if(e)e.textContent=t;};
+  $("shcopy").onclick=function(){
+    var ok=function(){msg("Lien copié.");},ko=function(){var i=$("shurl");i.focus();i.select();msg("Sélectionné : copie-le avec Ctrl + C (ou appui long sur mobile).");};
+    try{if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(SHARE_URL).then(ok,ko);else ko();}catch(e){ko();}
+  };
+  var sb=$("shsend");if(sb)sb.onclick=function(){try{navigator.share({title:"Abel Run",text:"Abel Run : un petit jeu de course, gratuit, à installer sur ton écran d’accueil.",url:SHARE_URL}).catch(function(){});}catch(e){}};
+  $("shpng").onclick=function(){qrPNG(function(b){if(!b){msg("Enregistrement impossible ici : fais une capture d’écran du QR code.");return;}
+    try{var u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="AbelRun-QR.png";document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(u);},500);msg("QR code enregistré.");}catch(e){msg("Enregistrement impossible ici : fais une capture d’écran du QR code.");}});};
+}
 function panelData(){
   var t="";for(var i=0;i<LV.length;i++)t+='<p><b>'+LV[i].n+'</b></p><div class="rec">'+tilesHTML(bests(i))+'</div>';
   openPanel('<h2>Mes scores</h2>'+t+'<p>Sauvegarde tes scores, tes pièces et tes achats dans un fichier, ou récupère-les sur un autre appareil.</p>'+
@@ -4661,7 +4737,7 @@ $("bmute").onclick=function(){muted=!muted;sSet("mute",muted?"1":"0");unlock();u
 $("bburger").onclick=function(){if(drawerOn())closeDrawer();else openDrawer();};
 $("drawer").addEventListener("pointerdown",function(e){if(e.target===$("drawer"))closeDrawer();});
 Array.prototype.forEach.call($("drawer").querySelectorAll("button"),function(b){if(b.id!=="bq")b.addEventListener("click",closeDrawer);});
-$("babout").onclick=panelAbout;$("bupdchk").onclick=panelUpdate;$("bupdchk").textContent="Mise à jour · v"+CFG.version;$("bpriv").onclick=panelPriv;$("bdata").onclick=panelData;$("bcode").onclick=panelCode;$("binstall").onclick=panelInstall;
+$("babout").onclick=panelAbout;$("bupdchk").onclick=panelUpdate;$("bupdchk").textContent="Mise à jour · v"+CFG.version;$("bpriv").onclick=panelPriv;$("bdata").onclick=panelData;$("bcode").onclick=panelCode;$("bshare").onclick=panelShare;$("binstall").onclick=panelInstall;
 $("panel").addEventListener("pointerdown",function(e){if(e.target===$("panel"))closePanel();});
 
 function resize(){
