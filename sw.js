@@ -1,7 +1,7 @@
 // Abel Run — service worker (v2.9.2)
 // Nom du cache = "abelrun-v" + version du jeu (cfg.version de index.html, points remplacés par des tirets).
 // À CHAQUE nouvelle version : changer ce nom ET la version dans index.html.
-var CACHE = "abelrun-v3-3";
+var CACHE = "abelrun-v3-3-1";
 var ASSETS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 // Installation : tous les fichiers sont relus sur le réseau en contournant le cache HTTP du navigateur
