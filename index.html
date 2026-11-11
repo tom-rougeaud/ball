@@ -454,7 +454,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"3.12","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"3.13","prefix":"abelrun_v2_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -568,7 +568,39 @@ function sfx(f1,f2,dur,type,vol){
     o.frequency.setValueAtTime(f1,t);o.frequency.exponentialRampToValueAtTime(Math.max(20,f2),t+dur);
     g.gain.setValueAtTime(vol||0.2,t);g.gain.exponentialRampToValueAtTime(0.001,t+dur);o.connect(g);g.connect(sfxG);o.start(t);o.stop(t+dur+0.02);}catch(e){}
 }
-function updMute(){$("bmute").textContent=muted?"Son coupé":"Son";if(master)master.gain.value=muted?0:0.9;}
+function updMute(){$("bmute").textContent=muted?"Son coupé":"Son";if(master)master.gain.value=muted?0:0.9;if(MU.a)MU.a.muted=muted;}
+/* ---------- musique du Paradis (v3.13) ----------
+   Un seul fichier MP3 (6 min), lu en flux par un lecteur audio ordinaire : il n’est jamais décompressé en mémoire, donc aucun ralentissement du jeu.
+   Il est téléchargé en arrière-plan quand l’univers Paradis est possédé, et gardé hors connexion par le service worker (cache « musique »).
+   MU.t = temps de course écoulé (secondes de jeu, pause exclue) ; toutes les 0,5 s, si la musique s’en écarte de plus de 0,4 s, on la recale. */
+var MU={url:"paradis-1.mp3",a:null,on:0,t:0,rep:0,chk:0,fade:0,pre:0,lip:257.2};
+function muAud(){if(MU.a)return MU.a;try{var a=new Audio();a.preload="auto";a.loop=false;a.src=MU.url;a.muted=muted;MU.a=a;}catch(e){MU.a=null;}return MU.a;}
+function muPlay(a){try{var p=a.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
+function muStart(t0,rep){var a=muAud();if(!a)return;MU.on=1;MU.t=t0||0;MU.rep=rep?1:0;MU.chk=0;MU.fade=0;try{a.volume=1;}catch(e){}a.muted=muted;try{if(a.readyState>0)a.currentTime=MU.t;}catch(e){}muPlay(a);}
+function muHalt(){var a=MU.a;MU.fade=0;if(!a)return;try{a.pause();if(a.readyState>0)a.currentTime=0;}catch(e){}}
+function muStop(fade){if(!MU.a||!MU.on)return;MU.on=0;if(fade)MU.fade=fade;else muHalt();}
+function muTick(dt){
+  var a=MU.a;if(!a)return;
+  if(MU.fade>0){MU.fade-=dt;try{a.volume=Math.max(0,MU.fade/0.9);}catch(e){}if(MU.fade<=0)muHalt();return;}
+  if(!MU.on)return;
+  var live=(mode==="play"&&WORLD===WORLDS.paradis)||mode==="cine";
+  if(!live){if(mode==="pause"){if(!a.paused)try{a.pause();}catch(e){}return;}muStop(0.9);return;}
+  MU.t+=dt;
+  var d=a.duration,ok=!isFinite(d)||MU.t<d-0.1;
+  if(a.paused&&ok&&!document.hidden)muPlay(a);
+  MU.chk-=dt;
+  if(MU.chk<=0){MU.chk=0.5;if(a.readyState>=2&&isFinite(d)&&MU.t<d-0.3&&Math.abs(a.currentTime-MU.t)>0.4){try{a.currentTime=MU.t;}catch(e){}}}
+}
+function muPrefetch(){
+  try{
+    if(MU.pre||!window.fetch||navigator.onLine===false||!isOwn("w","paradis"))return;
+    if(navigator.connection&&navigator.connection.saveData)return;
+    MU.pre=1;fetch(MU.url).then(function(r){return r.ok?r.blob():null;}).then(function(b){if(!b)MU.pre=0;}).catch(function(){MU.pre=0;});
+  }catch(e){MU.pre=0;}
+}
+document.addEventListener("visibilitychange",function(){if(document.hidden&&MU.a&&MU.on)try{MU.a.pause();}catch(e){}});
+/* plein écran : seulement après un geste (appui sur Jouer) ; ignoré là où le navigateur ne le permet pas (iPhone : jeu installé sur l’écran d’accueil) */
+function goFs(){try{if(document.fullscreenElement||document.webkitFullscreenElement)return;var e=document.documentElement,f=e.requestFullscreen||e.webkitRequestFullscreen;if(f){var p=f.call(e);if(p&&p.catch)p.catch(function(){});}}catch(x){}}
 document.addEventListener("visibilitychange",function(){
   if(!AC)return;
   try{if(document.hidden)AC.suspend();else AC.resume();}catch(e){}
@@ -1632,11 +1664,12 @@ function openDrawer(){$("drawer").classList.add("on");var b=$("bburger");b.setAt
 function closeDrawer(){$("drawer").classList.remove("on");var b=$("bburger");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Ouvrir le menu");}
 function startDemo(){resetWorld(true);newBall();speed=16;tm=0;parts=[];cause="";}
 function startGame(){
-  unlock();closePanel();gnd=null;boostK=1.2;PV=null;applyCosm();
+  unlock();goFs();closePanel();gnd=null;boostK=1.2;PV=null;applyCosm();
   if(par()&&lvl!==4){lvl=4;sSet("lvl","4");}
   resetWorld(false);newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();
   mode="play";setBody();
+  if(par())muStart(0,false);else muStop(0.4);
 }
 function toMenu(){RUN.rk=null;RUN.fx={};RUN.ts=1;RUN.eg=0;applyCosm();startDemo();mode="menu";setBody();setLvlUI();updEqMini();}
 function pauseGame(){if(mode==="play"){mode="pause";dragging=false;setBody();}}
@@ -4222,7 +4255,7 @@ function selectItem(k,id){
 function buySel(){
   if(shopTab==="x"){bonBuy((shopSel&&shopSel.k==="x")?shopSel.id:CATS.x[0].id);return;}
   var k=shopTab,id=(shopSel&&shopSel.k===k)?shopSel.id:SD.eq[k],it=findItem(k,id);if(!it||SD.eq[k]===id)return;
-  if(!isOwn(k,id)){if(SD.coins<it.p)return;SD.coins-=it.p;SD.own[k+":"+id]=1;sfx(500,1500,0.35,"triangle",0.16);sfx(900,1800,0.25,"sine",0.1);}
+  if(!isOwn(k,id)){if(SD.coins<it.p)return;SD.coins-=it.p;SD.own[k+":"+id]=1;sfx(500,1500,0.35,"triangle",0.16);sfx(900,1800,0.25,"sine",0.1);if(k==="w"&&id==="paradis")setTimeout(muPrefetch,800);}
   else sfx(420,760,0.12,"triangle",0.14);
   if(k==="w")setWorld(id);else SD.eq[k]=id;
   saveShop();PV=null;shopSel={k:k,id:id};applyCosm();renderShop();updCoinsUI();
@@ -4637,7 +4670,7 @@ function panelCode(){
 function finTs(){return lerp(lerp(2,0.14,cineSm(0,0.9,FIN.t)),0.3,cineSm(1.6,3.4,FIN.t));}
 function finTick(dt){
   if(mode!=="play")return;
-  if(FIN.ph===0){if(B.z>=FIN.lip-1){FIN.ph=1;FIN.t=0;document.body.classList.add("fin");sfx(260,50,1.6,"sine",0.14);}return;}
+  if(FIN.ph===0){if(B.z>=FIN.lip-1){FIN.ph=1;FIN.t=0;document.body.classList.add("fin");if(MU.rep&&MU.on){MU.t=MU.lip;MU.chk=0;}sfx(260,50,1.6,"sine",0.14);}return;}
   FIN.t+=dt;puffs=[];
   var pp=(FIN.t-1.4)/4.6;
   if(pp>0&&!FIN.snd){FIN.snd=1;sfx(330,990,4.2,"sine",0.07);sfx(495,1480,4.2,"triangle",0.04);}
@@ -4667,10 +4700,11 @@ function finDraw(){
   ctx.restore();
 }
 function startFinaleRun(real){
-  unlock();closePanel();gnd=null;boostK=1.2;PV={k:"w",id:"paradis"};applyCosm();PV=null;
+  unlock();goFs();closePanel();gnd=null;boostK=1.2;PV={k:"w",id:"paradis"};applyCosm();PV=null;
   resetWorld(false);FIN.zT=198;FIN.real=!!real;newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();
   mode="play";setBody();
+  muStart(MU.lip-12,true);
 }
 var CINE={on:false,t:0,raf:0,last:0,cl:[],pt:[],end:100,lineI:-1,yaw0:0,real:false};
 var CINE_L0=[[7,"Où suis-je ?"],[14,"Plus de route, plus de pierres : plus rien qui te barre le chemin."],[21,"Tu as traversé tant de chutes, tant d’obstacles…"],[29,"Après l’enfer qu’il t’a fallu traverser pour arriver jusqu’ici,"],[36,"il nous a semblé que tu méritais bien le paradis."],[43,"Bravo : tu as terminé le jeu."],[50,"Et si la bille, c’était toi ?"],[57,"On t’a toujours dit d’avancer en ligne droite, quels que soient les obstacles."],[65,"Quelles que soient tes chutes et tes échecs, tu pouvais toujours continuer à avancer."],[73,"Peut-être que la fin revient au même que le début."],[81,"Entre."]],CINE_L=CINE_L0.slice();
@@ -5086,6 +5120,7 @@ function frame(now){
     updFx(h);acc-=h;n++;
   }
   if(n>=6)acc=0;
+  muTick(n*h);
   if(mode==="menu")faceTick(dt);
   if(mode==="menu"&&!NUD.done){NUD.done=1;setTimeout(function(){if(mode==="menu")instNudge();},1500);}
   if(mode==="play"&&WORLD===WORLDS.paradis){if(FIN.gen)finTick(dt);if(!FIN.ph&&Math.floor(B.z*0.5)+bonus>=33333+700)startParadise(true);}
@@ -5095,6 +5130,7 @@ makeSprites();buildBrand();buildSlider();setLvlUI(true);updMute();updQual();updC
 resize();
 window.addEventListener("resize",resize);
 if("ResizeObserver" in window){}
+setTimeout(muPrefetch,6000);
 $("binstall").style.display="none";try{if(!isStandalone()&&sGet("shvis")!=="1")$("bshare").classList.add("pulse");}catch(e){}
 /* ---------- mises à jour (v2.9.2) ----------
    Le service worker installe la nouvelle version complète dès sa publication (fichiers relus sans passer par le cache HTTP).
