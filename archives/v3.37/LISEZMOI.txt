@@ -1,0 +1,3 @@
+Copie de sauvegarde d'Abel Run, version 3.37 (avant l'ajout de l'histoire).
+Pour revenir en arrière : remplacer index.html et sw.js à la racine du dépôt par les fichiers de ce dossier, puis publier.
+Un repère git "v3.37" pointe aussi sur cette version.

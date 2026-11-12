@@ -1,0 +1,26 @@
+{
+  "name": "Abel Run",
+  "short_name": "Abel Run",
+  "description": "Jeu de course minimaliste en 3D : glisse le doigt, le pavé tactile ou utilise les flèches.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1B2236",
+  "theme_color": "#1B2236",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
