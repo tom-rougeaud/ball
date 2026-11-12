@@ -72,6 +72,7 @@ body.m-menu #brand{top:calc(env(safe-area-inset-top,0px) + var(--u)*9);width:cal
 #hcv{width:100%;height:100%;display:block}
 #hctx{position:absolute;left:0;right:0;bottom:0;height:12%;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 7%;font:italic 400 clamp(15px,4vw,26px)/1.3 Georgia,"Times New Roman",serif;color:#f2ede4;opacity:0;transition:opacity 1.1s ease}
 #hctx.on{opacity:1}
+#hctx.s{color:#e9857b}
 #hcskip{position:absolute;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);opacity:.8}
 #cap{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + var(--u)*16);text-align:center;font-size:max(10px,calc(var(--u)*3));letter-spacing:.34em;text-transform:uppercase;font-weight:700;opacity:0}
 #cap.on{animation:cap 2s ease both}
@@ -500,7 +501,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"4.0.2","prefix":"abelrun_h1_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"4.0.3","prefix":"abelrun_h1_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -1858,8 +1859,8 @@ function cntTick(h){
    Chapitre 1 « La Route » : une silhouette sombre à l’écharpe rouge court devant la bille.
    Rouler dans ses traces de pas réduit l’écart ; une fois rejointe, elle se retourne.
    Deux cinématiques dessinées par le jeu encadrent le chapitre (entrée et fin). */
-var HST=(function(){try{var o=JSON.parse(sGet("story")||"null");if(o&&typeof o==="object"&&o.done)return o;}catch(e){}return {ch:1,done:{},fail:0,seen:{}};})();
-if(!HST.seen)HST.seen={};
+var HST=(function(){try{var o=JSON.parse(sGet("story")||"null");if(o&&typeof o==="object"&&o.done)return o;}catch(e){}return {ch:1,done:{},fail:0,seen:{},runs:0};})();
+if(!HST.seen)HST.seen={};if(!(HST.runs>0))HST.runs=0;
 function stSave(){sSet("story",JSON.stringify(HST));}
 var CHAP=[null,
   {n:"La Route",q:"Toute route commence par quelqu’un qui s’éloigne.",
@@ -1867,18 +1868,35 @@ var CHAP=[null,
    e:"Elle t’attendait."}];
 var STO={on:false,x:0,y:0,z:0,gap:18,card:0,prog:0,ph:0,prints:[],lastP:0,side:1,end:0,endT:0,ts:1,clock:0,scarf:[],skip:0};
 (function(){for(var i=0;i<10;i++)STO.scarf.push({x:i*3.6,y:-80,ox:i*3.6,oy:-80});})();
-function stActive(){return !par()&&HST.ch===1&&!HST.done[1];}
+function stActive(){return !par()&&HST.ch===1&&!HST.done[1]&&!!HST.seen.in1;}
+/* le chapitre 1 s’impose après la 5e course, quel que soit le score : à la course suivante, la bille se fige peu après le départ */
+function stDue(){return !par()&&HST.ch===1&&!HST.done[1]&&!HST.seen.in1&&HST.runs>=5;}
+function stNote(){return (HST.ch===1&&!HST.done[1]&&HST.seen.in1&&HST.fail>=4)?"Elle te semble trop rapide ? Baisse le niveau de vitesse (curseur « Niveau » du menu).":"";}
+function stTrigger(){
+  if(mode!=="play"||STO.trig)return;
+  STO.trig=1;dragging=false;
+  hcStart("in1",function(){
+    mode="play";setBody();stBegin();
+    speed=Math.min(speed,vNom(B.z)*0.4);RUN.rmp=1.8;RUN.inv=Math.max(RUN.inv,3);tx=B.x;
+  });
+}
 function stRunStart(){
-  var s=STO;s.on=stActive();s.ts=1;if(!s.on)return;
+  var s=STO;s.trig=0;s.on=stActive();s.ts=1;if(!s.on)return;stBegin();
+}
+function stBegin(){
+  var s=STO;s.on=true;
   s.gap=18;s.card=0;s.z=B.z+s.gap;s.x=B.x;s.y=B.y-R;s.prog=0;s.ph=0;s.prints=[];s.lastP=s.z;s.side=1;s.end=0;s.endT=0;
 }
 function stRunEnd(){
-  if(STO.on&&STO.end<2){HST.fail=(HST.fail||0)+1;stSave();}
+  HST.runs=(HST.runs||0)+1;
+  if(STO.on&&STO.end<2)HST.fail=(HST.fail||0)+1;
+  stSave();
   STO.on=false;STO.ts=1;stMenu();
 }
 function stCard(n,withHint){
   var c=CHAP[n],el=$("chc"),h="";if(!c||!el)return;
   if(withHint&&HST.fail>=3)h="<em>« "+c.h[HST.fail>=10?2:(HST.fail>=6?1:0)]+" »</em>";
+  if(withHint&&stNote())h+="<em>"+stNote()+"</em>";
   el.innerHTML="<small>Chapitre "+n+"</small><b>"+c.n+"</b><i>« "+c.q+" »</i>"+h;
   el.classList.remove("on");void el.offsetWidth;el.classList.add("on");
 }
@@ -1890,11 +1908,13 @@ function stEndCard(n){
 function stMenu(){
   var el=$("hist");if(!el)return;
   if(HST.done[1])el.innerHTML="<b>Histoire</b> · Chapitre 1 résolu · la suite arrive<br><button type=\"button\" id=\"hrev\">Revoir les scènes</button>";
-  else el.innerHTML="<b>Histoire</b> · Chapitre 1 — La Route"+(HST.seen.in1?"<br><button type=\"button\" id=\"hrev\">Revoir la scène d’ouverture</button>":"");
+  else if(!HST.seen.in1)el.innerHTML="";
+  else el.innerHTML="<b>Histoire</b> · Chapitre 1 — La Route<br>Rattrape la silhouette."+(stNote()?"<br><em>"+stNote()+"</em>":"")+"<br><button type=\"button\" id=\"hrev\">Revoir la scène d’ouverture</button>";
   var b=$("hrev");if(b)b.onclick=function(){unlock();hcStart("in1",function(){if(HST.done[1])hcStart("out1",function(){mode="menu";setBody();});else{mode="menu";setBody();}});};
 }
 function stTick(dt){
-  var s=STO,c,t,lo,hi,des,i,cb,p,gy;if(!s.on)return;
+  var s=STO,c,t,lo,hi,des,i,cb,p,gy;
+  if(!s.on){if(tm>3.2&&stDue()&&!B.air)stTrigger();return;}
   if(!s.card){s.card=1;stCard(1,true);}
   var rdt0=dt/(s.ts||1);
   s.clock+=rdt0;
@@ -2038,7 +2058,7 @@ var SIL=(function(){
   return {draw:draw,print:print,body:body,skel:skel,runP:runP,idleP:idleP,mx:mx};
 })();
 /* ---------- cinématiques du chapitre (dessinées, sans vidéo) ---------- */
-var HC={on:false,id:"",t:0,done:null,g:null,W:0,H:0,S:1,st:{scarf:[],clock:0},scroll:0,ph:0,prints:[],lastSt:-1,txt:"",DUR:{in1:14.2,out1:11.6}};
+var HC={on:false,id:"",t:0,done:null,g:null,W:0,H:0,S:1,st:{scarf:[],clock:0},scroll:0,ph:0,prints:[],lastSt:-1,txt:"",DUR:{in1:25.2,out1:11.6}};
 (function(){for(var i=0;i<10;i++)HC.st.scarf.push({x:i*3.6,y:-80,ox:i*3.6,oy:-80});})();
 function hcResize(){
   var cv=$("hcv"),d=Math.min(2,window.devicePixelRatio||1);
@@ -2056,14 +2076,14 @@ function hcEnd(){
   el.classList.add("out");setTimeout(function(){if(!HC.on)el.classList.remove("on");},700);
   if(d)d();
 }
-function hcText(t){if(t===HC.txt)return;HC.txt=t;var el=$("hctx");el.classList.remove("on");if(t){el.textContent=t;void el.offsetWidth;el.classList.add("on");}}
+function hcText(t,sp){if(t===HC.txt)return;HC.txt=t;var el=$("hctx");el.classList.remove("on");if(t){el.textContent=t;el.classList.toggle("s",!!sp);void el.offsetWidth;el.classList.add("on");}}
 function hcTick(dt){
   if(!HC.on)return;
-  HC.t+=dt;HC.st.clock+=dt;
+  HC.t+=dt;HC.st.clock+=dt;HC.tt=HC.t;
   if(HC.id==="in1")hcIn1(dt);else hcOut1(dt);
   if(HC.t>=HC.DUR[HC.id])hcEnd();
 }
-function hcE(a,b){return smooth((HC.t-a)/(b-a));}
+function hcE(a,b){return smooth(((HC.tt===undefined?HC.t:HC.tt)-a)/(b-a));}
 function hcScene(g,W,H,S,HZ){
   var CX=W/2,gr,rg,x,z;
   gr=g.createLinearGradient(0,0,0,HZ);gr.addColorStop(0,"#152238");gr.addColorStop(0.6,"#3d5a80");gr.addColorStop(1,"#d9b48c");
@@ -2106,7 +2126,8 @@ function hcPrints(g,dt,vel){
 }
 /* entrée du chapitre 1 : la bille seule dans le noir, la route apparaît, la silhouette attend, puis s’enfuit */
 function hcIn1(dt){
-  var g=HC.g,W=HC.W,H=HC.H,S=HC.S,HZ=H*0.27,t=HC.t,CX=W/2,PI=Math.PI;
+  var g=HC.g,W=HC.W,H=HC.H,S=HC.S,HZ=H*0.27,tr=HC.t,CX=W/2,PI=Math.PI;
+  var t=tr<10.2?tr:(tr<20.5?10.2:tr-10.3);HC.tt=t;   /* 10,2 → 20,5 : elle fait face, la scène se parle */
   var bx=CX,by=H*0.79,br=19*S;
   var kh=0.2,yaw=PI,pose,run=0;
   /* caméra */
@@ -2116,10 +2137,14 @@ function hcIn1(dt){
   else{z=lerp(2.7,1,hcE(10.2,11.2));fx=CX;fy=lerp(HZ+(H-HZ)*kh-22*S,by,hcE(10.2,11.2));}
   /* la silhouette */
   if(t>9.3){yaw=PI+PI*hcE(9.3,10.2);}
+  if(tr>19.4)yaw=2*PI+PI*smooth((tr-19.4)/1.0);
   if(t>10.2){run=hcE(10.2,10.9);HC.ph+=dt*1.7*run;kh=lerp(0.2,0.05,smooth((t-10.4)/3.4));}
   pose=SIL.mx(SIL.idleP(HC.st.clock,yaw),SIL.runP(HC.ph,yaw),run);
   if(t>8.3&&t<9.4){pose.ht+=2.6*hcE(8.3,8.8);pose.head+=0.1*hcE(8.3,8.8);}
   if(t>9.3&&t<10.2){var q=(t-9.3)/0.9;pose.fl[1]+=3.5*Math.max(0,Math.sin(q*4*PI));pose.fr[1]+=3.5*Math.max(0,-Math.sin(q*4*PI));}
+  /* dialogue : elle penche la tête à la question, baisse les yeux à la réponse, se retourne à la fin */
+  if(tr>10.2&&tr<20.5){pose.ht+=2.4*smooth((tr-10.6)/0.8)-1.6*smooth((tr-15.2)/1.2);pose.head+=0.1*smooth((tr-10.6)/0.8)-0.12*smooth((tr-15.2)/1.2);
+    if(tr>19.4){var q2=(tr-19.4)/1.0;pose.fl[1]+=3.5*Math.max(0,Math.sin(q2*4*PI));pose.fr[1]+=3.5*Math.max(0,-Math.sin(q2*4*PI));}}
   /* la bille : immobile, frémit, puis se met à rouler */
   var roll=hcE(12.2,13.6),vel=roll*120,shk=(t>11.4&&t<12.4)?Math.sin(t*70)*1.3*S*(1-hcE(11.9,12.4)):0;
   HC.scroll+=vel*dt;
@@ -2140,7 +2165,8 @@ function hcIn1(dt){
   var vg=g.createRadialGradient(W/2,H*0.5,H*0.28,W/2,H*0.5,H*0.8);vg.addColorStop(0,"rgba(8,12,20,0)");vg.addColorStop(1,"rgba(8,12,20,.55)");g.fillStyle=vg;g.fillRect(0,0,W,H);
   var fo=hcE(13.3,14.1);if(fo>0.003){g.fillStyle="rgba(5,7,12,"+fo.toFixed(3)+")";g.fillRect(0,0,W,H);}
   hcBars(g,W,H);
-  hcText(t>0.9&&t<4.6?"Elle roulait depuis toujours, sans savoir pourquoi.":(t>6.3&&t<9.6?"Jusqu’au jour où quelqu’un l’attendit sur la route.":""));
+  if(tr<10)hcText(tr>0.9&&tr<4.6?"Elle roulait depuis toujours, sans savoir pourquoi.":(tr>6.3&&tr<9.6?"Jusqu’au jour où quelqu’un l’attendit sur la route.":""));
+  else hcText(tr>10.6&&tr<12.9?"Qui es-tu ?":(tr>13.6&&tr<18.1?"Tu ne veux pas vraiment le savoir. Même si tu le sais déjà.":(tr>18.7&&tr<22.4?"On se retrouvera bientôt.":"")),tr>13);
 }
 /* fin du chapitre 1 : elle ralentit, s’arrête, se retourne, penche la tête, recule d’un pas et disparaît dans la lumière */
 function hcOut1(dt){
@@ -2174,7 +2200,6 @@ function hcOut1(dt){
 
 function startGame(){
   unlock();goFs();closePanel();gnd=null;boostK=1.2;PV=null;applyCosm();
-  if(stActive()&&!HST.seen.in1&&!STO.skip){hcStart("in1",function(){STO.skip=1;startGame();STO.skip=0;});return;}
   if(par()&&lvl!==3){lvl=3;sSet("lvl","3");}
   resetWorld(false);newBall();tx=0;speed=LV[lvl].v*0.5;tm=0;boostT=0;bonus=0;said={};parts=[];shake=0;fovS=0;camYv=4.4;camExtra=1;score=0;
   $("scv").textContent="0";setLvlUI();ensureWorld();runInit();stRunStart();
@@ -2197,7 +2222,7 @@ function startFall(){if(revive())return;mode="fall";fallT=0;cause="Hors piste";s
 function finish(){
   stRunEnd();mode="over";var before=bests(lvl);score=curSc();addRun(score,lvl);var gain=coinsFor(score,lvl)*(RUN.cx2?2:1)*(SD.ch.x2?2:1);if(gain>0){SD.coins+=gain;saveShop();}
   var msg="";if(score>0){if(score>before.all)msg="Nouveau record !";else if(score>before.week)msg="Meilleur score de la semaine !";else if(score>before.day)msg="Meilleur score du jour !";}
-  $("ovt").textContent=cause||"Perdu";$("ovs").textContent=score;$("ovb").textContent=msg;$("ovr").innerHTML=tilesHTML(bests(lvl));
+  $("ovt").textContent=cause||"Perdu";$("ovs").textContent=score;$("ovb").textContent=msg||stNote();$("ovr").innerHTML=tilesHTML(bests(lvl));
   $("ovg").innerHTML=gain>0?(coinHTML()+"+"+gain+(gain>1?" pièces":" pièce")+" <small>"+(RUN.cx2?"× 2 · ":"· ")+"total "+fmtN(SD.coins)+"</small>"):"";updCoinsUI();updEqMini();
   if(msg)sfx(660,1320,0.3,"square",0.15);
   setBody();
@@ -2288,7 +2313,7 @@ function airGain(){return B.air?1+1.4*clamp((B.at-0.06)/0.18,0,1):1;}
 function updatePlay(dt){var n=Math.max(1,Math.ceil(speed*dt/1.4)),i;for(i=0;i<n;i++){updatePlay1(dt/n);if(mode!=="play")return;}}
 function updatePlay1(dt){
   tm+=dt;
-  if(STO.on)stTick(dt);
+  stTick(dt);
   if(RUN.rk){rocketStep(dt);return;}
   if(RUN.hold>0){
     RUN.hold-=dt;speed=0;B.vy=0;tx=B.x;B.lv=0;
