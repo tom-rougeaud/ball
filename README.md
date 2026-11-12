@@ -1,5 +1,6 @@
 # ball
 
+Version 3.46 : plus de scène d’entrée en boucle après une défaite (laboratoire) ; silhouette avec mains et manteau ; orage visuel (pluie, éclairs, lueur) tant que la silhouette est là.
 Version 3.45 : jauge et consigne affichées en haut de l’écran pendant chaque chapitre ; carte de début de chapitre réduite ; chapitre 2 plus facile (calme en 14 s, tolérance plus large).
 Version 3.44 : sound design revu — notes uniquement pour le texte (petits bips), le reste est du vent ; orage (pluie, tonnerre) dès que la silhouette est là.
 Version 3.43 : « Savoir comment gagner » (10 000 pièces par chapitre) dans la page Chapitres ; dans le laboratoire, la consigne de chaque chapitre est affichée gratuitement.
