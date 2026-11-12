@@ -1,5 +1,7 @@
 # ball
 
+Version 3.42 : sound design (voix de texte façon blips, ambiances par scène et en course), vrai gouffre au chapitre 3, bascule du monde au chapitre 8, boutique fermée au chapitre 7.
+
 ## Version 2 — Histoire (essai)
 
 Le dossier `v2/` contient une copie séparée du jeu, pour essayer le mode Histoire sans toucher au jeu habituel : https://tom-rougeaud.github.io/ball/v2/
