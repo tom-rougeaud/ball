@@ -4,7 +4,7 @@
 
 Le dossier `v2/` contient une copie séparée du jeu, pour essayer le mode Histoire sans toucher au jeu habituel : https://tom-rougeaud.github.io/ball/v2/
 
-Version 4.0.3 (essai n° 3) : le chapitre 1 s’impose après la 5e course (la bille se fige, la scène d’ouverture démarre), scène d’ouverture allongée avec un dialogue, conseil de baisser le niveau de vitesse après 4 échecs. Version 4.0.2 (essai n° 2) : scènes d’ouverture et de fin du chapitre 1, dessinées par le jeu (bouton « Passer », bouton pour les revoir dans le menu). Version 4.0.1 (essai n° 1) : chapitre 1 « La Route », avec la silhouette à l’écharpe rouge qui court devant la bille. Sauvegarde séparée, recopiée du jeu habituel au premier lancement.
+Version 4.0.4 (essai n° 4) : nouvelle sauvegarde de l’histoire (compteur de courses visible dans le menu, bouton d’essai), déclenchement 1 s après le départ. Version 4.0.3 (essai n° 3) : le chapitre 1 s’impose après la 5e course (la bille se fige, la scène d’ouverture démarre), scène d’ouverture allongée avec un dialogue, conseil de baisser le niveau de vitesse après 4 échecs. Version 4.0.2 (essai n° 2) : scènes d’ouverture et de fin du chapitre 1, dessinées par le jeu (bouton « Passer », bouton pour les revoir dans le menu). Version 4.0.1 (essai n° 1) : chapitre 1 « La Route », avec la silhouette à l’écharpe rouge qui court devant la bille. Sauvegarde séparée, recopiée du jeu habituel au premier lancement.
 
 # Abel Run v3
 
