@@ -1,5 +1,6 @@
 # ball
 
+Version 3.44 : sound design revu — notes uniquement pour le texte (petits bips), le reste est du vent ; orage (pluie, tonnerre) dès que la silhouette est là.
 Version 3.43 : « Savoir comment gagner » (10 000 pièces par chapitre) dans la page Chapitres ; dans le laboratoire, la consigne de chaque chapitre est affichée gratuitement.
 Version 3.42 : sound design (voix de texte façon blips, ambiances par scène et en course), vrai gouffre au chapitre 3, bascule du monde au chapitre 8, boutique fermée au chapitre 7.
 
