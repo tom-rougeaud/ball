@@ -4,7 +4,7 @@
 
 Le dossier `v2/` contient une copie séparée du jeu, pour essayer le mode Histoire sans toucher au jeu habituel : https://tom-rougeaud.github.io/ball/v2/
 
-Version 4.0.1 (essai n° 1) : chapitre 1 « La Route », avec la silhouette à l’écharpe rouge qui court devant la bille. Sauvegarde séparée, recopiée du jeu habituel au premier lancement.
+Version 4.0.2 (essai n° 2) : scènes d’ouverture et de fin du chapitre 1, dessinées par le jeu (bouton « Passer », bouton pour les revoir dans le menu). Version 4.0.1 (essai n° 1) : chapitre 1 « La Route », avec la silhouette à l’écharpe rouge qui court devant la bille. Sauvegarde séparée, recopiée du jeu habituel au premier lancement.
 
 # Abel Run v3
 
