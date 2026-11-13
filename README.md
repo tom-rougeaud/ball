@@ -1,5 +1,6 @@
 # ball
 
+Version 3.52 : chapitre 4 — les lueurs dorées (leurres) s’affichent enfin (bug de hauteur corrigé, aussi pour les chapitres 2, 6, 8 et 9), lanterne visible à la main de la silhouette, 700 m au lieu de 1 000 m, moins de leurres, flamme qui se rallume plus vite.
 Version 3.51 : boutique — l’achat porte toujours sur l’objet nommé dans la barre du bas ; en Paradis, un objet acheté est désormais mémorisé (il apparaît en quittant Paradis) au lieu de s’afficher « équipé » puis de disparaître au rechargement.
 Version 3.50 : plus aucune superposition au début d’une partie (carte du chapitre, puis consigne) ; écran de fin : ligne « chapitre en cours » et bouton Chapitres, bandeau d’installation masqué pour laisser voir Chapitres et Boutique ; la touche Entrée ou Espace ne relance plus une cinématique.
 Version 3.49 : les textes des scènes n’« écrivent » plus lettre après lettre : la réplique apparaît entière, en fondu, avec un seul son doux.
