@@ -1,5 +1,6 @@
 # ball
 
+Version 3.50 : plus aucune superposition au début d’une partie (carte du chapitre, puis consigne) ; écran de fin : ligne « chapitre en cours » et bouton Chapitres, bandeau d’installation masqué pour laisser voir Chapitres et Boutique ; la touche Entrée ou Espace ne relance plus une cinématique.
 Version 3.49 : les textes des scènes n’« écrivent » plus lettre après lettre : la réplique apparaît entière, en fondu, avec un seul son doux.
 Version 3.48 : nouveaux textes de l’histoire (fichier Word), durées d’affichage des répliques ajustées, orage visuel dans les scènes dès que la silhouette est là (nuages, pluie, éclairs et tonnerre), léger zoom d’approche.
 Version 3.47 : chapitre 3 — le vide arrive à 500 m, 4 planches par chute (10 parties) ; chapitre 4 — brume plus claire, pièces-leurres dorées bien visibles et plus fréquentes, 1 000 m à parcourir.
