@@ -70,6 +70,9 @@ body.m-menu #brand{top:calc(env(safe-area-inset-top,0px) + var(--u)*9);width:cal
 #chc i,#chc em{display:none!important}
 #chh{position:absolute;left:5%;right:5%;top:calc(env(safe-area-inset-top,0px) + 56px);pointer-events:none;text-align:center;opacity:0;transition:opacity .4s;color:#F4EFE6;font-size:max(12px,calc(var(--u)*3.4));text-shadow:0 0 3px rgba(8,14,36,.95),0 0 8px rgba(8,14,36,.85)}
 #chh.on{opacity:1}
+.rec .tile{overflow:hidden;padding-left:calc(var(--u)*.5)!important;padding-right:calc(var(--u)*.5)!important}
+.rec .tile i{font-size:max(7px,calc(var(--u)*1.65))!important;letter-spacing:.01em!important;white-space:normal!important;line-height:1.15}
+.rec .tile b{font-size:clamp(15px,calc(var(--u)*4.8),30px)!important}
 body.m-over #nudge{display:none!important}
 .ovh{font-size:max(12px,calc(var(--u)*3.3));font-style:italic;text-align:center;color:#F4EFE6;opacity:.92;margin:.2em 8% .9em;line-height:1.35}
 #chh .gb{display:block;width:56%;height:7px;margin:.35em auto .3em;border-radius:99px;background:rgba(244,239,230,.22);overflow:hidden;box-shadow:0 0 0 1px rgba(8,14,36,.55)}
@@ -532,10 +535,10 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"4.10.4","prefix":"abelrun_h1_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"4.10.5","prefix":"abelrun_h1_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
- "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",150000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
+ "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",200000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
  "balls":[["white","Blanc",0,[244,240,230],0,"La bille d’origine."],["coral","Corail",350,[240,106,92]],["orange","Orange",350,[250,150,50]],["yellow","Jaune",350,[248,208,60]],["lime","Citron vert",350,[150,210,60]],["green","Vert",350,[50,170,100]],["turquoise","Turquoise",350,[40,190,190]],["blue","Bleu",350,[60,110,230]],["violet","Violet",350,[140,96,220]],["pink","Rose",350,[240,120,180]],["black","Noir",350,[40,42,52]],["silver","Argent",650,[196,200,210],1,"Reflets métalliques."],["gold","Or",650,[236,190,70],1,"Reflets métalliques."],["mint","Menthe",350,[152,226,196],0,"Un vert d’eau tout frais."],["lavender","Lavande",350,[190,172,238],0,"Un violet tendre."],["peach","Pêche",400,[252,190,160],0,"Doux et chaleureux."],["navy","Marine",400,[30,56,120],0,"Un bleu profond."],["burgundy","Bordeaux",500,[136,34,60],0,"Rouge vin, très élégant."],["bronze","Bronze",1000,[190,126,64],1,"Reflets métalliques chauds."],["copper","Cuivre",1100,[210,114,76],1,"Reflets métalliques rosés."],["platinum","Platine",1300,[214,222,232],1,"Un gris bleuté de métal précieux."],["rosegold","Or rose",1400,[232,160,148],1,"Reflets métalliques rose doré."],["steel","Acier bleuté",1400,[112,148,190],1,"Un acier froid aux reflets bleus."],["sunset","Coucher de soleil",1600,[255,150,70],0,"Un dégradé orange et rose qui roule avec la bille.","grad",[200,60,150]],["lagoon","Dégradé lagon",1600,[40,200,200],0,"Du turquoise au bleu profond.","grad",[30,60,170]],["candy","Barbe à papa",1900,[255,150,210],0,"Rose et bleu pastel, tout en douceur.","grad",[130,190,255]],["pearl","Perle",2400,[244,240,236],0,"Un nacré aux reflets changeants.","pearl"],["marble","Marbre",3200,[240,238,234],0,"Du marbre blanc veiné de gris.","marble",[90,96,110]],["jade","Jade",3500,[60,168,120],0,"Une pierre verte veinée de clair.","marble",[200,240,214]],["ruby","Rubis",4800,[214,28,64],0,"Une gemme taillée en facettes.","gem"],["sapphire","Saphir",4800,[40,84,220],0,"Une gemme bleue taillée en facettes.","gem"],["neoncyan","Néon cyan",5600,[40,230,255],0,"Brille de sa propre lumière.","neon"],["neonpink","Néon rose",5600,[255,70,170],0,"Brille de sa propre lumière.","neon"],["neongreen","Néon vert",6400,[100,255,120],0,"Brille de sa propre lumière.","neon"],["diamond","Diamant",8000,[236,244,255],0,"Facettes étincelantes et éclats d’arc-en-ciel.","diam"],["holo","Holographique",9600,[170,190,230],0,"Des reflets arc-en-ciel qui changent avec l’angle.","holo"],["aurore","Dégradé aurore",1800,[64,224,160],0,"Du vert menthe au violet, comme une aurore boréale.","grad",[150,86,236]],["quartz","Quartz rose",2800,[246,196,212],0,"Une pierre rose pâle, veinée de blanc.","marble",[255,246,250]],["amber","Ambre",3400,[238,164,40],0,"Une résine dorée veinée de brun.","marble",[132,62,10]],["lapis","Lapis-lazuli",4300,[32,62,168],0,"Un bleu profond parsemé de veines dorées.","marble",[232,196,96]],["emerald","Émeraude",5200,[22,168,96],0,"Une gemme verte taillée en facettes.","gem"],["gradrb","Dégradé rouge et bleu",1900,[226,36,52],0,"Du rouge vif au bleu profond, en un seul dégradé.","grad",[34,84,230]],["marblerb","Marbre rouge et bleu",3600,[226,36,52],0,"Un marbre rouge veiné de bleu.","marble",[34,84,230]],["scarlet","Diamant écarlate",8200,[226,28,50],0,"Un diamant d’un rouge éclatant, taillé en facettes.","hdiam",[150,10,30]],["azure","Diamant azur",8200,[28,92,238],0,"Un diamant d’un bleu profond, taillé en facettes.","hdiam",[14,54,184]],["duo","Diamant rouge et bleu",9400,[226,28,50],0,"Des facettes rouges et bleues, pour se sentir un héros.","bdiam",[30,92,240]],["opale","Opale",3000,[236,242,238],0,"Un nacré laiteux aux reflets verts.","pearl"],["topaze","Topaze",5000,[244,170,36],0,"Une gemme dorée taillée en facettes.","gem"],["amethyste","Améthyste",5000,[150,86,214],0,"Une gemme violette taillée en facettes.","gem"],["cornaline","Cornaline",4800,[230,100,50],0,"Une gemme orange taillée en facettes.","gem"],["turqpierre","Turquoise veinée",3200,[56,186,176],0,"Une pierre bleu-vert veinée de sombre.","marble",[24,98,110]],["onyx","Onyx",3600,[26,26,32],0,"Noir profond veiné de gris clair.","marble",[196,200,212]],["malachite","Malachite",3800,[30,134,88],0,"Des veines vertes, du clair au très sombre.","marble",[8,56,38]],["rhodonite","Rhodonite",3000,[226,112,140],0,"Rose vif veiné de brun.","marble",[70,34,44]],["neonorange","Néon orange",5600,[255,150,40],0,"Brille de sa propre lumière.","neon"],["neonjaune","Néon jaune",6400,[255,236,70],0,"Brille de sa propre lumière.","neon"],["diamor","Diamant doré",8400,[240,190,60],0,"Un diamant couleur de miel, taillé en facettes.","hdiam",[160,100,10]],["diamvert","Diamant émeraude",8400,[30,190,110],0,"Un diamant vert, taillé en facettes.","hdiam",[10,110,60]],["diamviolet","Diamant violet",8400,[150,70,230],0,"Un diamant violet, taillé en facettes.","hdiam",[80,30,160]],["crepuscule","Dégradé crépuscule",1800,[255,120,100],0,"Du corail au bleu nuit.","grad",[60,60,170]],["foretgrad","Dégradé forêt",1800,[150,220,100],0,"Du vert tendre au vert profond.","grad",[20,110,80]],["feugrad","Dégradé feu",1900,[255,220,70],0,"Du jaune vif au rouge.","grad",[220,40,30]],["nuitgrad","Dégradé nuit",1800,[80,90,200],0,"Du bleu au bleu nuit.","grad",[20,20,70]],["marbrenoir","Marbre noir et or",4200,[26,26,32],0,"Un marbre noir veiné d’or.","marble",[230,190,80]],["chrome","Chrome",1500,[226,230,236],1,"Un miroir de métal clair."],["titane","Titane",1500,[140,148,162],1,"Un métal gris froid."],["ornoir","Or noir",2200,[70,58,40],1,"Un métal sombre aux reflets dorés."],["u_route66","Sable du désert",0,[226,170,104],0,"La bille de l’univers « Route 66 » : offerte avec lui.","marble",[150,84,44],"route66"],["u_classic","Bleu d’origine",0,[92,150,240],0,"La bille de l’univers « Classique » : offerte avec lui.","grad",[40,80,190],"classic"],["u_neon","Néon de la grille",3100,[190,90,255],0,"La bille de l’univers « Néon » : offerte avec lui.","neon",null,"neon"],["u_forest","Mousse des bois",4500,[58,130,72],0,"La bille de l’univers « Forêt » : offerte avec lui.","marble",[176,220,150],"forest"],["u_snow","Boule de neige",6400,[244,248,255],0,"La bille de l’univers « Neige » : offerte avec lui.","marble",[190,214,240],"snow"],["u_city","Nuit en ville",8100,[40,44,96],0,"La bille de l’univers « Ville la nuit » : offerte avec lui.","grad",[255,190,90],"city"],["u_ocean","Perle de l’océan",10500,[60,190,210],0,"La bille de l’univers « Océan » : offerte avec lui.","marble",[240,252,255],"ocean"],["u_lava","Boule de lave",12500,[52,22,16],0,"La bille de l’univers « Lave » : offerte avec lui.","magma",null,"lava"],["u_space","Astéroïde",14600,[96,94,104],0,"La bille de l’univers « Espace » : offerte avec lui.","marble",[40,38,46],"space"],["u_rainbow","Arc-en-ciel",20000,[255,170,200],0,"La bille de l’univers « Route arc-en-ciel » : offerte avec lui.","holo",null,"rainbow"],["u_prairie","Pré fleuri",1500,[120,190,80],0,"La bille de l’univers « Prairie » : offerte avec lui.","marble",[250,226,90],"prairie"],["u_montagne","Granit",1600,[150,152,160],0,"La bille de l’univers « Montagne » : offerte avec lui.","marble",[60,64,74],"montagne"],["u_automne","Feuille d’automne",1600,[226,120,40],0,"La bille de l’univers « Automne » : offerte avec lui.","grad",[140,50,30],"automne"],["u_savane","Soleil de savane",2000,[236,170,70],0,"La bille de l’univers « Savane » : offerte avec lui.","grad",[196,90,50],"savane"],["u_canyon","Grès rouge",2000,[196,92,60],0,"La bille de l’univers « Canyon » : offerte avec lui.","marble",[240,170,120],"canyon"],["u_marais","Vase des marais",2000,[86,110,70],0,"La bille de l’univers « Marais » : offerte avec lui.","marble",[30,50,38],"marais"],["u_toundra","Pierre de toundra",2000,[150,156,160],0,"La bille de l’univers « Toundra » : offerte avec lui.","marble",[90,100,110],"toundra"],["u_bambou","Bambou",3100,[150,196,90],0,"La bille de l’univers « Bambouseraie » : offerte avec lui.","marble",[70,120,50],"bambou"],["u_sakura","Pétale de cerisier",3800,[255,196,214],0,"La bille de l’univers « Cerisiers en fleurs » : offerte avec lui.","grad",[246,140,176],"sakura"],["u_village","Paille dorée",3800,[226,196,110],0,"La bille de l’univers « Village » : offerte avec lui.","marble",[150,110,50],"village"],["u_jungle","Feuillage de jungle",4500,[30,140,70],0,"La bille de l’univers « Jungle » : offerte avec lui.","marble",[190,230,60],"jungle"],["u_banquise","Boule de glace",4500,[190,224,248],0,"La bille de l’univers « Banquise » : offerte avec lui.","marble",[255,255,255],"banquise"],["u_recif","Corail",6000,[240,110,100],0,"La bille de l’univers « Récif » : offerte avec lui.","marble",[255,200,120],"recif"],["u_chateau","Pierre du château",6400,[160,160,170],0,"La bille de l’univers « Château » : offerte avec lui.","marble",[80,80,96],"chateau"],["u_desertantique","Grès doré",7300,[226,190,120],0,"La bille de l’univers « Désert antique » : offerte avec lui.","marble",[170,120,60],"desertantique"],["u_mars","Roche de Mars",8100,[196,92,56],0,"La bille de l’univers « Planète rouge » : offerte avec lui.","marble",[110,40,26],"mars"],["u_blocs","Bille-jouet",8100,[236,70,70],0,"La bille de l’univers « Pays des blocs » : offerte avec lui.","grad",[70,120,236],"blocs"],["u_temple","Jade ancien",10000,[74,130,90],0,"La bille de l’univers « Temple perdu » : offerte avec lui.","marble",[190,200,150],"temple"],["u_lune","Roche lunaire",10500,[176,178,184],0,"La bille de l’univers « Colonie lunaire » : offerte avec lui.","marble",[90,92,100],"lune"],["u_bonbons","Sucre d’orge",10500,[255,120,170],0,"La bille de l’univers « Confiserie » : offerte avec lui.","grad",[255,255,255],"bonbons"],["u_halloween","Citrouille sculptée",10500,[240,130,30],0,"La bille de l’univers « Nuit des citrouilles » : offerte avec lui.","marble",[90,40,10],"halloween"],["u_noel","Boule de Noël",12500,[200,30,40],0,"La bille de l’univers « Village de Noël » : offerte avec lui.","bdiam",[30,130,70],"noel"],["u_fete","Ballon de fête",12500,[250,200,60],0,"La bille de l’univers « Fête foraine » : offerte avec lui.","grad",[236,70,120],"fete"],["u_cosmos","Énergie cosmique",14000,[150,70,230],0,"La bille de l’univers « Cosmos violet » : offerte avec lui.","plasma",null,"cosmos"],["u_usine","Cuivre vapeur",14600,[196,128,80],1,"La bille de l’univers « Usine à vapeur » : offerte avec lui.","",null,"usine"],["u_cristal","Cristal de roche",16200,[160,120,255],0,"La bille de l’univers « Grotte de cristal » : offerte avec lui.","gem",null,"cristal"],["u_eclipse","Couronne d’éclipse",16700,[30,26,22],0,"La bille de l’univers « Éclipse » : offerte avec lui.","obsid",null,"eclipse"],["u_nuages","Nuage doré",17300,[255,244,220],0,"La bille de l’univers « Royaume des nuages » : offerte avec lui.","pearl",null,"nuages"],["u_abysses","Méduse",17900,[90,170,255],0,"La bille de l’univers « Abysses lumineux » : offerte avec lui.","neon",null,"abysses"],["u_galaxie","Spirale",19000,[40,24,90],0,"La bille de l’univers « Galaxie spirale » : offerte avec lui.","galaxy",null,"galaxie"],["u_salar","Sel du salar",7700,[246,248,250],0,"La bille de l’univers « Salar miroir » : offerte avec lui.","pearl",null,"salar"],["u_prehisto","Œuf de dinosaure",9500,[214,200,160],0,"La bille de l’univers « Préhistoire » : offerte avec lui.","marble",[110,130,70],"prehisto"],["u_fungi","Spore luisante",15600,[180,255,160],0,"La bille de l’univers « Forêt de champignons » : offerte avec lui.","neon",null,"fungi"],["u_papier","Boule de papier",5600,[250,242,222],0,"La bille de l’univers « Pays de papier » : offerte avec lui.","marble",[196,150,120],"papier"],["u_atlantide","Perle d’Atlantide",18400,[180,236,236],0,"La bille de l’univers « Atlantide » : offerte avec lui.","pearl",null,"atlantide"],["u_paradis","Nacre céleste",150000,[255,255,255],0,"La bille de l’univers « Paradis » : nacrée, aux reflets scintillants. Offerte avec lui.","pearl",null,"paradis"],["u_pirates","Boulet de canon",4600,[58,60,70],1,"La bille de l’univers « Mer des pirates » : offerte avec lui.","",null,"pirates"],["u_tresor","Pièce d’or",5800,[236,190,70],1,"La bille de l’univers « Île au trésor » : offerte avec lui.","",null,"tresor"],["u_ninja","Ombre de ninja",6900,[36,38,50],0,"La bille de l’univers « Village de ninjas » : offerte avec lui.","marble",[200,40,50],"ninja"],["p_soleil","Soleil",12000,[250,182,64],0,"Une boule de feu granuleuse, chaude et lumineuse.","sun",[222,84,22]],["p_mercure","Mercure",3600,[152,146,140],0,"Gris, brûlé par le soleil et criblé de cratères.","craters",[92,88,86]],["p_venus","Vénus",4000,[228,194,124],0,"Des nuages épais et crémeux qui tourbillonnent.","swirl",[198,142,72]],["p_terre","Terre",7000,[34,88,172],0,"Océans bleus, continents verts et nuages blancs.","earth",[72,142,72]],["p_lune","Lune",3200,[204,202,196],0,"Poussière claire et cratères.","craters",[120,118,116]],["p_mars","Mars",4200,[192,90,58],0,"Rouille et cratères : la planète rouge.","craters",[122,58,38]],["p_jupiter","Jupiter",8200,[228,202,164],0,"Des bandes crème et ocre, géante et tourbillonnante.","bands",[172,104,64]],["p_saturne","Saturne",7600,[234,216,164],0,"Des bandes dorées, douces et régulières.","bands",[192,162,102]],["p_uranus","Uranus",6400,[162,216,224],0,"Une géante de glace bleu pâle, presque lisse.","swirl",[132,192,208]],["p_neptune","Neptune",6800,[42,82,192],0,"Un bleu profond traversé de vents rapides.","swirl",[22,50,142]],["p_pluton","Pluton",3400,[198,172,150],0,"Une petite planète naine brune et glacée.","blotch",[124,94,82]],["k_gazon","Bloc de gazon",2000,[94,150,56],0,"Le vert de l’herbe, en petits pixels.","blocks",[128,180,80]],["k_terre","Bloc de terre",1800,[130,88,54],0,"Un brun de terre, piqueté.","blocks",[94,62,38]],["k_pierre","Bloc de pierre",1800,[130,130,132],0,"Un gris de roche, en petits carrés.","blocks",[98,98,102]],["k_sable","Bloc de sable",2000,[224,210,152],0,"Le jaune pâle des dunes.","blocks",[198,180,122]],["k_neige","Bloc de neige",2000,[244,248,250],0,"Blanc et bleuté, comme la poudreuse.","blocks",[200,220,236]],["k_chene","Planches de chêne",2200,[170,132,78],0,"Un bois clair en pixels.","blocks",[130,98,54]],["k_diamant","Bloc de diamant",5400,[92,212,206],0,"Un turquoise glacé, éclats clairs.","blocks",[182,246,242]],["k_or","Bloc d’or",5000,[242,202,64],0,"Un jaune doré, pixel par pixel.","blocks",[255,238,150]],["k_fer","Minerai de fer",3000,[130,130,134],0,"De la pierre mouchetée de rose cuivré.","blocks",[216,172,142]],["k_minordiam","Minerai de diamant",4600,[128,128,132],0,"De la pierre mouchetée de turquoise.","blocks",[78,198,198]],["k_minoror","Minerai d’or",3600,[128,128,132],0,"De la pierre mouchetée de jaune.","blocks",[234,192,62]],["k_charbon","Minerai de charbon",2600,[112,112,116],0,"De la pierre mouchetée de noir.","blocks",[30,30,34]],["k_rouge","Minerai rouge",3200,[126,126,130],0,"De la pierre mouchetée de rouge sombre.","blocks",[190,30,34]],["k_lapis","Minerai bleu",3200,[126,126,130],0,"De la pierre mouchetée de bleu nuit.","blocks",[40,72,172]],["k_emeraude","Minerai vert",4000,[126,126,130],0,"De la pierre mouchetée de vert profond.","blocks",[50,170,92]],["k_obsid","Bloc sombre",4800,[26,16,42],0,"Un violet presque noir, vitreux.","blocks",[74,44,114]],["k_enfer","Bloc de braise",3400,[122,42,42],0,"Un rouge sombre et rugueux.","blocks",[84,26,26]],["k_citrouille","Bloc de citrouille",2600,[216,122,32],0,"Un orange chaud, quadrillé.","blocks",[162,82,22]],["v_clair","Verre clair",2600,[222,238,246],0,"Presque invisible : seuls les bords et les reflets se voient.","glass",[40,0,0]],["v_bleu","Verre bleuté",3000,[150,204,242],0,"Un verre bleu pâle et transparent.","glass",[60,0,0]],["v_rose","Verre rosé",3000,[242,172,192],0,"Un verre rose, léger comme un bonbon.","glass",[60,0,0]],["v_vert","Verre vert",3000,[150,216,172],0,"Un verre vert d’eau.","glass",[60,0,0]],["v_ambre","Verre ambré",3400,[236,182,92],0,"Un verre couleur miel.","glass",[70,0,0]],["v_violet","Verre violet",3400,[184,152,232],0,"Un verre transparent et mauve.","glass",[70,0,0]],["v_bulle","Bulle de savon",4800,[204,228,248],0,"Fine, transparente, au bord irisé.","glass",[26,0,0]],["v_fume","Verre fumé",3600,[92,98,108],0,"Un verre sombre, mystérieux.","glass",[96,0,0]],["v_glace","Glaçon",4200,[192,232,246],0,"Un bloc de glace claire.","glass",[52,0,0]],["f_tournesol","Tournesol",3200,[86,132,56],0,"De larges pétales jaunes autour d’un cœur brun.","fl_tourn",[240,192,44]],["f_coquelicot","Coquelicot",3000,[98,142,66],0,"Des pétales rouges et un cœur sombre.","fl_copp",[214,48,38]],["f_rose","Rose",3400,[70,110,56],0,"Des pétales enroulés en spirale.","fl_rose",[212,72,102]],["f_lotus","Lotus",3800,[62,112,100],0,"Des pétales pointus, roses et doux.","fl_lotus",[244,192,216]],["f_hibiscus","Hibiscus",3400,[60,112,62],0,"De grands pétales orangés, un cœur pourpre.","fl_hib",[238,92,62]],["f_pensee","Pensée",3000,[80,120,60],0,"Des pétales mauves et un cœur jaune.","fl_pens",[160,110,212]],["f_lavande","Champ de lavande",3200,[104,134,92],0,"De petits épis violets sur le vert.","fl_lav",[152,122,204]],["f_cerisier","Fleurs de cerisier",3800,[118,86,74],0,"Cinq pétales roses sur l’écorce.","fl_cerise",[250,194,208]],["f_bleuet","Bleuet",3000,[96,142,82],0,"Des pétales bleus en étoile.","fl_bleuet",[62,102,212]],["m_chene","Chêne",2400,[178,128,72],0,"Les cernes et le fil du bois clair.","wood",[112,70,34]],["m_noyer","Noyer",2600,[112,72,46],0,"Un bois brun et profond.","wood",[60,36,22]],["m_bouleau","Bouleau",2400,[228,210,172],0,"Un bois pâle aux veines douces.","wood",[172,150,112]],["m_ebene","Ébène",3200,[50,38,34],0,"Un bois presque noir.","wood",[22,16,14]],["e_chine","Encre de Chine",3200,[240,238,232],0,"Des volutes d’encre noire sur du papier.","ink",[28,28,34]],["e_bleue","Encre bleue",3200,[236,240,244],0,"Une goutte d’encre bleue qui s’étale.","ink",[32,62,134]],["e_sepia","Encre sépia",3200,[238,224,198],0,"Un brun ancien, comme un vieux manuscrit.","ink",[112,72,42]],["t_rose","Terrazzo rosé",3600,[238,202,192],0,"Des éclats colorés dans un fond clair.","terrazzo",[202,92,82]],["t_bleu","Terrazzo bleu",3600,[222,228,232],0,"Des éclats bleus et sombres.","terrazzo",[62,102,152]],["t_sable","Terrazzo sable",3600,[232,224,208],0,"Des éclats ocre et crème.","terrazzo",[182,122,82]],["z_bleu","Azulejo bleu",4200,[244,244,238],0,"Un carreau de faïence peint en bleu.","azulejo",[40,82,172]],["z_vert","Azulejo vert",4200,[244,244,238],0,"Un carreau de faïence vert.","azulejo",[40,132,102]],["z_terre","Azulejo terre cuite",4200,[244,238,226],0,"Un carreau orangé, façon sud.","azulejo",[192,92,52]],["a_rosebleu","Aquarelle rose et bleu",3800,[246,202,216],0,"Deux couleurs diluées qui se mélangent.","blotch",[152,182,238]],["a_sauge","Aquarelle sauge",3800,[202,222,198],0,"Du vert doux et du jaune pâle.","blotch",[238,216,152]],["a_crepus","Aquarelle du soir",3800,[250,202,164],0,"De l’orange pâle fondu dans le violet.","blotch",[142,122,202]],["c_porcelaine","Porcelaine craquelée",4000,[244,242,236],0,"Une glaçure fendillée.","crackle",[92,102,122]],["c_seche","Terre sèche",3400,[198,152,102],0,"Une boue craquelée par la sécheresse.","crackle",[92,62,38]],["c_celadon","Céladon craquelé",4200,[172,212,198],0,"Un vert d’eau fendillé.","crackle",[62,102,92]],["d_vinyle","Disque vinyle",4400,[28,28,32],0,"Des sillons fins et une étiquette rouge.","vinyl",[202,62,52]],["d_bordeaux","Vinyle bordeaux",4400,[62,22,32],0,"Des sillons sombres, une étiquette dorée.","vinyl",[222,192,122]],["d_bleu","Vinyle bleu nuit",4400,[24,30,52],0,"Des sillons sombres, une étiquette claire.","vinyl",[232,232,228]],["r_carbone","Fibre de carbone",4600,[30,32,36],0,"Un tissage serré, sombre et brillant.","carbon",[82,88,98]],["r_carbbleu","Carbone bleu",4600,[24,34,58],0,"Un tissage bleu nuit.","carbon",[72,102,152]],["r_carbrouge","Carbone rouge",4600,[48,22,24],0,"Un tissage rouge sombre.","carbon",[142,52,52]],["u_bauhaus","Mosaïque Bauhaus",8400,[240,230,210],0,"La bille de l’univers « Atelier Bauhaus » : six panneaux aux formes simples (cercle, demi-cercle, triangle, barres) en rouge, bleu, jaune et noir sur crème. Offerte avec lui.","bauhaus",null,"bauhaus"],["u_sumi","Bille d’encre",9200,[240,238,232],0,"La bille de l’univers « Encre de Chine » : offerte avec lui.","ink",[28,28,34],"sumi"],["u_pixel","Pixel géant",8800,[96,150,200],0,"La bille de l’univers « Monde de pixels » : offerte avec lui.","blocks",[236,236,240],"pixel"],["u_azulejo","Faïence du Portugal",9600,[244,244,238],0,"La bille de l’univers « Ville d’azulejos » : offerte avec lui.","azulejo",[40,82,170],"azulejo"],["u_blueprint","Calque bleu",10400,[24,60,130],0,"La bille de l’univers « Plan bleu » : offerte avec lui.","carbon",[140,180,236],"blueprint"],["u_vitrail","Verre de vitrail",12000,[200,90,90],0,"La bille de l’univers « Cathédrale de vitraux » : offerte avec lui.","glass",[90,0,0],"vitrail"],["u_deco","Disque doré",11200,[20,30,50],0,"La bille de l’univers « Art déco doré » : offerte avec lui.","vinyl",[230,190,90],"deco"],["u_opart","Spirale noir et blanc",10000,[244,244,240],0,"La bille de l’univers « Op art » : offerte avec lui.","bands",[28,28,32],"opart"]],
  "patterns":[["none","Unie",0,"Pas de motif : la couleur seule."],["stripes","Rayures",650,"Des bandes qui tournent avec le roulement."],["dots","Pois",650,"Des pastilles réparties sur toute la bille."],["checker","Damier",800,"Un damier qui se déforme en roulant."],["spiral","Spirale",1000,"Une spirale hypnotique."],["stars","Étoiles",1100,"Des étoiles à cinq branches."],["football","Football",1000,"Ballon blanc aux pentagones noirs. Garde ses propres couleurs."],["basket","Basket",1000,"Orange, avec ses lignes noires. Garde ses propres couleurs."],["baseball","Baseball",1000,"Blanche aux coutures rouges. Garde ses propres couleurs."],["golf","Golf",1000,"Blanche et couverte d’alvéoles. Garde ses propres couleurs."],["comete","Comète",1000,"Sable, large bande bleu nuit et petites étincelles. Garde ses propres couleurs."],["toile","Toile d’araignée",1100,"Fils argentés sur fond nuit. Garde ses propres couleurs."],["eclair","Éclair",1000,"Une frise en zigzag ambrée sur fond sarcelle. Garde ses propres couleurs."],["losange","Losanges",800,"Un habit d’arlequin crème et terre cuite. Garde ses propres couleurs."],["vichy","Vichy",500,"Un quadrillage doux, comme une nappe."],["anneaux","Anneaux",500,"Des anneaux autour de la bille."],["chevron","Chevrons",650,"Des chevrons qui défilent en roulant."],["vagues","Vagues",650,"Des bandes ondulées."],["meridiens","Méridiens",650,"Les lignes d’un globe terrestre."],["hexa","Nid d’abeille",800,"Un réseau d’hexagones."],["pixels","Pixels",800,"De gros pixels façon jeu rétro."],["tartan","Tartan",800,"Un écossais croisé."],["cibles","Cibles",1100,"Des cibles concentriques."],["tennis","Tennis",1100,"Jaune fluo et sa couture blanche. Garde ses propres couleurs."],["coeurs","Cœurs",1300,"Des cœurs répartis sur la bille."],["pasteque","Pastèque",1300,"Vert rayé de vert foncé. Garde ses propres couleurs."],["ecailles","Écailles",1400,"Des écailles qui se recouvrent."],["citrouille","Citrouille",1400,"Orange, avec ses côtes bien marquées. Garde ses propres couleurs."],["flammes","Flammes",1600,"Des langues de feu qui tournent."],["vache","Vache",1600,"Blanche à taches noires. Garde ses propres couleurs."],["camo","Camouflage",1900,"Des taches en deux tons."],["zebre","Zèbre",1900,"Rayures noires sur fond blanc. Garde ses propres couleurs."],["tigre","Tigre",3200,"Orange rayé de noir. Garde ses propres couleurs."],["lune","Lune",4000,"Grise et criblée de cratères. Garde ses propres couleurs."],["leopard","Léopard",4000,"Des rosettes brunes sur fond sable. Garde ses propres couleurs."],["terre","Planète Terre",4800,"Océans, continents et glaces. Garde ses propres couleurs."],["circuit","Circuit imprimé",5600,"Des pistes dorées sur fond vert. Garde ses propres couleurs."],["disco","Boule à facettes",8000,"Des miroirs qui scintillent. Garde ses propres couleurs."],["vitrail","Vitrail",11200,"Des verres colorés sertis de plomb. Garde ses propres couleurs."],["prisme","Prisme",14400,"Toutes les couleurs de l’arc-en-ciel. Garde ses propres couleurs."],["smiley","Smiley",1700,"Un grand sourire jaune. Garde ses propres couleurs."],["marguerites","Marguerites",2000,"Des fleurs blanches au cœur jaune sur un pré vert. Garde ses propres couleurs."],["billard","Boule de billard",2800,"Noire, avec son disque blanc et son numéro 8. Garde ses propres couleurs."],["jupiter","Jupiter",5200,"Bandes de nuages crème et brunes, avec sa grande tache rouge. Garde ses propres couleurs."],["toilerouge","Toile rouge",2600,"Un réseau de fils sombres sur fond rouge. Garde ses propres couleurs."]],
  "trails":[["none","Aucune",0,"Pas de traînée."],["confetti","Confettis",1000,"Une pluie de confettis colorés."],["sparks","Étincelles",1150,"Des étincelles qui rebondissent sur la piste."],["fire","Feu",1300,"Une traînée de flammes."],["ice","Glace",1300,"Des cristaux de glace."],["bubbles","Bulles",1450,"Des bulles qui montent doucement."],["stars","Étoiles filantes",1600,"Des étoiles scintillantes."],["rainbow","Arc-en-ciel",1600,"Une traînée aux couleurs de l’arc-en-ciel."],["fumee","Fumée",800,"Une fumée grise qui s’élargit."],["poussiere","Poussière",800,"Un nuage de poussière beige."],["petales","Pétales",1000,"Des pétales roses qui virevoltent."],["feuilles","Feuilles",1000,"Des feuilles d’automne."],["neige","Flocons",1000,"De petits flocons blancs."],["gouttes","Gouttes",1000,"Des gouttes d’eau qui retombent."],["pixels","Pixels",1150,"Des carrés façon jeu rétro."],["pieces","Pièces",1150,"Des pièces d’or qui rebondissent."],["coeurs","Cœurs",1150,"Des cœurs qui s’envolent."],["ondes","Ondes",1150,"Des cercles qui s’élargissent."],["notes","Notes de musique",1450,"Des notes qui dansent derrière la bille."],["trefles","Trèfles",1450,"Des trèfles à quatre feuilles."],["fleurs","Fleurs de cerisier",1600,"Des fleurs à cinq pétales."],["braises","Braises",1600,"Des braises qui montent lentement."],["foudre","Éclairs",1750,"De petits éclairs jaunes."],["peinture","Éclaboussures",1750,"Des gouttes de peinture multicolores."],["sable","Poudre d’or",1900,"Une poussière dorée qui brille."],["plumes","Plumes",1900,"De douces plumes blanches."],["cristal","Flocons de cristal",2200,"De vrais flocons à six branches."],["lucioles","Lucioles",2700,"Des lueurs vertes qui clignotent."],["galaxie","Galaxie",3400,"Des étoiles de toutes les couleurs dans un nuage violet."],["comete","Comète",4200,"De longues traînées lumineuses."],["flammebleue","Flammes bleues",4200,"Un feu bleu glacé."],["artifice","Feu d’artifice",5000,"Des gerbes d’étincelles qui éclatent."],["ames","Esprits",5000,"Des volutes bleutées qui montent."],["papillons","Papillons",5800,"Des papillons qui battent des ailes."],["serpentins","Serpentins",6500,"De longs rubans de fête."],["dragon","Souffle de dragon",8100,"Des flammes vertes et violettes."],["trounoir","Trou noir",11200,"Des particules sombres aspirées en spirale."],["aurore","Aurore",12700,"Des rubans verts et violets qui ondulent."],["supernova","Supernova",15800,"Une explosion d’étoiles blanches et dorées."],["bonbon","Nuages bonbon",2400,"Des nuages roses, bleus et verts tout doux."],["lanternes","Lanternes célestes",3800,"Des lueurs orange qui s’envolent lentement."],["paon","Plumes de paon",5400,"Des plumes bleues, vertes et violettes."],["lave","Gouttes de lave",7400,"De la lave qui éclabousse et rebondit."],["soie","Fils de soie",2000,"De longs fils blancs, bleus et rouges qui flottent."],["nuageninja","Nuage de ninja",3000,"Un nuage de fumée, et quelques feuilles qui tournent."],["shuriken","Shurikens",4400,"Des étoiles d’acier qui tournoient derrière la bille."],["pollen","Pollen",1000,"Une poussière jaune qui flotte."],["encre","Encre",1450,"De grosses gouttes d’encre noire."],["papierplie","Papier plié",1600,"Des morceaux de papier crème et rose."],["marguerites","Marguerites",2200,"De petites marguerites qui tombent derrière la bille."],["coquelicots","Coquelicots",2200,"Des fleurs rouges à quatre pétales."],["tournesols","Tournesols",2600,"De larges fleurs jaunes au cœur brun."],["lavandes","Lavandes",2200,"De petites fleurs mauves qui flottent."],["planetes","Planètes",3600,"Des planètes à anneau qui tournent dans le sillage."],["cubes","Cubes de jeu",3000,"De petits blocs en relief : herbe, terre, pierre, or."],["bauhaus","Triangles Bauhaus",3200,"Des triangles rouges, bleus, jaunes et noirs."],["losanges","Losanges art déco",3400,"Des losanges dorés, turquoise et nuit."],["croissants","Croissants de lune",3000,"De fins croissants pâles qui planent."],["bullesverre","Bulles de verre",2800,"Des bulles transparentes aux reflets pastel."],["poissons","Petits poissons",3000,"Un banc de poissons colorés."],["spirales","Spirales",2800,"Des spirales tracées qui tournoient."],["azulejos","Carreaux azulejo",3400,"Des carreaux de faïence peints."],["alveoles","Alvéoles de miel",2800,"Des hexagones couleur de miel."],["cartes","Cartes à jouer",3200,"Cœurs, carreaux, piques et trèfles."],["des","Dés",3000,"Des dés qui roulent et rebondissent."],["disques","Disques vinyle",3600,"De petits disques qui tournent sur eux-mêmes."]],
@@ -1449,7 +1452,7 @@ var BONS=[
  {id:"ghost",n:"Fantôme",p:1800,a:1,t:15,c:[132,134,192],d:"Tu traverses tous les obstacles pendant 15 s. Attention : les trous restent des trous.",f:"M12 3a7 7 0 0 0-7 7v11l3.5-2.4L12 21l3.5-2.4L19 21V10a7 7 0 0 0-7-7zM9.3 9.5a1.3 1.3 0 1 0 .001 0zM14.7 9.5a1.3 1.3 0 1 0 .001 0z"},
  {id:"ram",n:"Bélier",p:1500,a:1,t:20,c:[176,98,58],d:"Tu pulvérises les obstacles sur ton passage pendant 20 s.",f:"M12 2l2.2 5.4 5.8-.9-3.4 4.8 4.4 3.9-5.8.2-1.2 5.7L12 16.5l-4 4.6-1.2-5.7-5.8-.2 4.4-3.9L4 6.5l5.8.9z"},
  {id:"slow",n:"Ralenti",p:900,a:1,t:18,c:[88,142,184],d:"Le temps passe deux fois moins vite pendant 18 s : tout est plus facile à lire (les mètres aussi avancent moins vite).",s:"M12 3a9 9 0 1 0 .001 0zM12 7v5.2l3.6 2"},
- {id:"auto",n:"Pilote automatique",p:1400,a:1,t:35,c:[96,112,190],d:"La bille se pilote toute seule pendant 35 s : elle évite les obstacles, et le pilote rattrape ses rares erreurs.",f:"M12 2.5l8 18.5-8-4.2L4 21z"},
+ {id:"auto",n:"Pilote automatique",p:5000,a:1,t:35,c:[96,112,190],d:"La bille se pilote toute seule pendant 35 s : elle évite les obstacles, et le pilote rattrape ses rares erreurs.",f:"M12 2.5l8 18.5-8-4.2L4 21z"},
  {id:"moon",n:"Gravité lunaire",p:1000,a:1,t:30,c:[170,160,204],d:"Gravité divisée par 2,5 pendant 30 s : sauts bien plus hauts et plus longs. Utile pour franchir un gros trou, à lancer en l’air.",f:"M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"},
  {id:"coins",n:"Pièces ×2",p:2200,a:1,t:0,c:[212,166,44],d:"Double les pièces gagnées à la fin de cette partie.",f:"M12 3a9 9 0 1 0 .001 0zM12 6.5a5.5 5.5 0 1 0 .001 0z",s:"M12 9v6M9.8 10.6h3.2a1.4 1.4 0 0 1 0 2.8h-2a1.4 1.4 0 0 0 0 2.8h3.2"},
  {id:"jump",n:"Grand saut",p:800,a:1,t:0,c:[84,162,142],d:"Un énorme bond (jusqu’à 12 m de haut) : tu passes par-dessus les obstacles et les trous. À lancer juste avant l’obstacle.",f:"M12 2.5l7 8h-4.2V15H9.2v-4.5H5zM7 18.5h10v2H7z"},
@@ -1894,7 +1897,7 @@ function cntTick(h){
 var HST=(function(){try{var o=JSON.parse(sGet("story2")||"null");if(o&&typeof o==="object"&&o.done)return o;}catch(e){}return {ch:1,done:{},fail:0,seen:{},runs:0};})();
 if(!HST.seen)HST.seen={};if(!(HST.runs>0))HST.runs=0;if(!(HST.maxD>0))HST.maxD=0;
 function stSave(){sSet("story2",JSON.stringify(HST));}
-var NIMPL=10,PRIX_REV=10000,LAB=false;   /* LAB : version « laboratoire », tout est ouvert */
+var NIMPL=10,PRIX_REV=10000,PRIX_NOS=10000,LAB=false;   /* LAB : version « laboratoire », tout est ouvert */
 var CHAP=[null,
   {n:"Le Départ",q:"Chaque route commence par un simple pavé.",d:0,c:0,
    h:["Elle ne court pas plus vite que toi. Elle court avec toi.","Regarde où elle pose les pieds.","Mets tes pas dans les siens."],
@@ -1923,9 +1926,10 @@ function stBought(){
   return {o:o,u:u};
 }
 function stCur(){return HST.rp||HST.ch;}
-function stActive(){var n=stCur();return !par()&&n<=NIMPL&&(!HST.done[n]||HST.rp===n)&&!!HST.seen["in"+n];}
-function stDue(){var n=stCur();return !par()&&n<=NIMPL&&(!HST.done[n]||HST.rp===n)&&!HST.seen["in"+n]&&(HST.rp===n||stOpen(n));}
-function stNote(){return (stActive()&&HST.fail>=4)?"Elle te semble trop rapide ? Baisse le niveau de vitesse (curseur « Niveau » du menu).":"";}
+function stActive(){var n=stCur();return !HST.off&&!par()&&n<=NIMPL&&(!HST.done[n]||HST.rp===n)&&!!HST.seen["in"+n];}
+function stDue(){var n=stCur();return !HST.off&&!par()&&n<=NIMPL&&(!HST.done[n]||HST.rp===n)&&!HST.seen["in"+n]&&(HST.rp===n||stOpen(n));}
+function parOk(){return LAB||!!(HST.done&&HST.done[10]);}
+function stNote(){if(stActive()&&stCur()===8&&HST.fail>=3)return "Conseil : le bonus « Pilote automatique » (boutique, 5 000 pièces) conduit à ta place, même avec les commandes inversées.";return (stActive()&&HST.fail>=4)?"Elle te semble trop rapide ? Baisse le niveau de vitesse (curseur « Niveau » du menu).":"";}
 function stResume(){
   try{sndRun();}catch(e){}
   mode="play";setBody();speed=Math.min(speed,vNom(B.z)*0.4);RUN.rmp=1.8;RUN.inv=Math.max(RUN.inv,3);tx=B.x;
@@ -1977,16 +1981,18 @@ function stOverInit(){
 function stOverLine(){
   var n=HST.ch,c=CHAP[n];if(LAB)return HST.rp?"Chapitre en cours : "+HST.rp+" — "+CHAP[HST.rp].n:"Laboratoire · 10 chapitres";
   if(HST.rp)return "Tu rejoues le chapitre "+HST.rp+" — "+CHAP[HST.rp].n;
-  if(n>NIMPL)return "Les "+NIMPL+" chapitres sont résolus";
+  if(HST.off&&!LAB)return "Mode sans histoire : jeu de billes classique";
+  if(n>NIMPL)return "Les "+NIMPL+" chapitres sont résolus · pas de chapitre 11 : il ne reste que le Paradis";
   if(n===1&&!HST.seen.in1)return "Chapitre 1 après la 5e course : "+Math.min(HST.runs,5)+" sur 5";
   return "Chapitre "+n+" — "+c.n+(HST.seen["in"+n]?"":(stOpen(n)?" · arrive à ta prochaine course":" · verrouillé"));
 }
 function stMenu(){
   var el=$("hist");var oh=$("ovh");if(oh)oh.innerHTML=stOverLine();if(!el)return;
   var n=HST.ch,c=CHAP[n],h="";
-  if(LAB)h="<b>Laboratoire</b> · page « Chapitres » du tiroir du menu : « Entrée », « Jouer » et « Résolution » pour chacun des 10 chapitres"+(HST.rp?"<br>Chapitre en cours : "+HST.rp+" — "+CHAP[HST.rp].n+"<br><em>"+(CHAP[HST.rp].how||CHAP[HST.rp].obj)+"</em>":"");
+  if(HST.off&&!LAB)h="<b>Mode sans histoire</b> · jeu de billes classique (à réactiver dans « Chapitres »)";
+  else if(LAB)h="<b>Laboratoire</b> · page « Chapitres » du tiroir du menu : « Entrée », « Jouer » et « Résolution » pour chacun des 10 chapitres"+(HST.rp?"<br>Chapitre en cours : "+HST.rp+" — "+CHAP[HST.rp].n+"<br><em>"+(CHAP[HST.rp].how||CHAP[HST.rp].obj)+"</em>":"");
   else if(HST.rp)h="<b>Histoire</b> · tu rejoues le chapitre "+HST.rp+" — "+CHAP[HST.rp].n;
-  else if(n>NIMPL)h="<b>Histoire</b> · les "+NIMPL+" chapitres sont résolus";
+  else if(n>NIMPL)h="<b>Histoire</b> · les "+NIMPL+" chapitres sont résolus<br>Il n’y a pas de chapitre 11 : il ne reste que la fin du jeu, en atteignant le Paradis.";
   else if(!HST.seen["in"+n]){
     if(n===1)h="<b>Histoire</b> · le chapitre 1 arrive après la 5e course<br>Courses jouées : "+Math.min(HST.runs,5)+" sur 5";
     else if(stOpen(n))h="<b>Histoire</b> · le chapitre "+n+" — "+c.n+" arrive à ta prochaine course";
@@ -2012,7 +2018,7 @@ function stView(n){
   hcStart("out"+n,function(){hcStart("to"+n,bk);});
 }
 /* ---------- page « Chapitres » ---------- */
-function stCanLaunch(n){return LAB?n<=NIMPL:(n<=HST.ch&&n<=NIMPL&&(HST.done[n]||stOpen(n)));}
+function stCanLaunch(n){return LAB?n<=NIMPL:(!HST.off&&n<=HST.ch&&n<=NIMPL&&(HST.done[n]||stOpen(n)));}
 function stPage(){
   var h="<h2>Chapitres</h2><ol class=\"chl\">",n,c,cur=HST.ch,rev=HST.rev,g=stStatGet().g;
   for(n=1;n<=10;n++){c=CHAP[n];
@@ -2035,7 +2041,7 @@ function stPage(){
     }
     if(c.how&&!HST.done[n]){
       if(LAB||(HST.hw&&HST.hw[n]))h+="<div class=\"how\"><b>Pour gagner :</b> "+c.how+"</div>";
-      else if(n<=cur&&(HST.seen["in"+n]||stCanLaunch(n))){var okh=SD.coins>=PRIX_REV;h+="<div><button type=\"button\" class=\"chb\" data-h=\""+n+"\""+(okh?"":" disabled")+">"+(okh?"Savoir comment gagner · "+fmtN(PRIX_REV)+" pièces":"Savoir comment gagner · il te manque "+fmtN(PRIX_REV-SD.coins)+" pièces")+"</button></div>";}
+      else if(!HST.off&&n<=cur&&(HST.seen["in"+n]||stCanLaunch(n))){var okh=SD.coins>=PRIX_REV;h+="<div><button type=\"button\" class=\"chb\" data-h=\""+n+"\""+(okh?"":" disabled")+">"+(okh?"Savoir comment gagner · "+fmtN(PRIX_REV)+" pièces":"Savoir comment gagner · il te manque "+fmtN(PRIX_REV-SD.coins)+" pièces")+"</button></div>";}
     }
     else if(c.how&&HST.done[n])h+="<details class=\"how\"><summary>Comment on gagne</summary>"+c.how+"</details>";
     if(LAB)h+="<div><button type=\"button\" class=\"chb\" data-i=\""+n+"\">Entrée</button><button type=\"button\" class=\"chb\" data-l=\""+n+"\">Jouer</button><button type=\"button\" class=\"chb\" data-v=\""+n+"\">Résolution</button></div>";
@@ -2047,9 +2053,15 @@ function stPage(){
     var ok=SD.coins>=PRIX_REV;
     h+="<p>Les conditions des prochains chapitres sont cachées. Pour "+fmtN(PRIX_REV)+" pièces, tu peux voir ce qu’il te manque pour les débloquer.</p><p class=\"row\"><button class=\"pill\" id=\"hrv\" type=\"button\""+(ok?"":" disabled")+">"+(ok?"Voir ce qu’il me manque · "+fmtN(PRIX_REV)+" pièces":"Il te manque "+fmtN(PRIX_REV-SD.coins)+" pièces")+"</button></p>";
   }else h+="<p class=\"hint\" style=\"max-width:none;text-align:center\">Distance : le meilleur score d’une seule partie. Pièces : tout ce que tu as gagné depuis le début, même dépensé en boutique. Articles : ceux que tu as achetés (les offerts ne comptent pas).</p>";
+  if(HST.done[NIMPL])h+="<p class=\"hint\" style=\"max-width:none;text-align:center\">Il n’y a pas de chapitre 11 : il ne reste que la fin du jeu, en atteignant le Paradis (boutique : chapitre 10 résolu et "+fmtN(200000)+" pièces).</p>";
+  if(!LAB){
+    if(HST.nos)h+="<p class=\"row\"><button class=\"pill\" id=\"hns\" type=\"button\">"+(HST.off?"Réactiver l’histoire":"Jouer sans histoire")+"</button></p>"+(HST.off?"<p class=\"hint\" style=\"max-width:none;text-align:center\">Mode sans histoire activé : c’est le jeu de billes classique. Tes chapitres sont conservés.</p>":"");
+    else{var okn=SD.coins>=PRIX_NOS;h+="<p>Tu préfères le jeu de billes classique ? Pour "+fmtN(PRIX_NOS)+" pièces, tu peux désactiver l’histoire (et la réactiver quand tu veux). Tes chapitres sont conservés.</p><p class=\"row\"><button class=\"pill\" id=\"hns\" type=\"button\""+(okn?"":" disabled")+">"+(okn?"Jouer sans histoire · "+fmtN(PRIX_NOS)+" pièces":"Jouer sans histoire · il te manque "+fmtN(PRIX_NOS-SD.coins)+" pièces")+"</button></p>";}
+  }
   if(LAB)h+="<p class=\"row\"><button class=\"pill\" id=\"hrz\" type=\"button\">Tout remettre à zéro</button></p>";
   openPanel(h+CLOSE);
   var z=$("hrz");if(z)z.onclick=function(){HST.done={};HST.ch=1;HST.rp=0;HST.seen={};HST.fail=0;HST.pl=0;HST.fz=[];HST.sent="";HST.hw={};stSave();sSet("echo","");stPage();};
+  var nb=$("hns");if(nb&&!nb.disabled)nb.onclick=function(){if(HST.nos){HST.off=HST.off?0:1;}else{if(SD.coins<PRIX_NOS)return;SD.coins-=PRIX_NOS;saveShop();updCoinsUI();HST.nos=1;HST.off=1;}stSave();stMenu();stPage();sfx(420,760,0.2,"triangle",0.14);};
   var b=$("hrv");if(b&&!b.disabled)b.onclick=function(){
     if(SD.coins<PRIX_REV)return;SD.coins-=PRIX_REV;saveShop();updCoinsUI();HST.rev=1;stSave();stPage();sfx(420,760,0.2,"triangle",0.14);};
   var bs=document.querySelectorAll(".chb"),i;
@@ -2064,8 +2076,8 @@ function stHudInfo(s){
     return ["Elle t’attend",1,"Fonce droit sur elle, sans l’éviter"];}
   if(n===3)return ["Planches posées "+(HST.pl||0)+" / "+PL3,Math.min(1,(HST.pl||0)/PL3),"Les chutes sont parfois un nouveau départ."];
   if(n===4)return ["Chemin dans le brouillard",(B.z-s.z0)*0.5/700,"Une lueur guide, les autres trompent."];
-  if(n===5)return ["Chemin vers l’abri",(B.z-s.z0)/Math.max(1,s.goal-s.z0),"Sa main pointe le sens du vent. Avancez de concert pour éviter les bourrasques."];
-  if(n===6)return ["Au-delà de ton écho",B.z/Math.max(s.eEnd+3,6000),"Emprunte le chemin où ton écho a failli."];
+  if(n===5)return ["Chemin vers l’abri",(B.z-s.z0)/Math.max(1,s.goal-s.z0),"Elle se penche du côté du vent. Avancez de concert pour éviter les bourrasques."];
+  if(n===6)return ["Au-delà de ton écho",clamp((B.z-s.z0)/2014,0,1),"Un obstacle brisera l’écho à 1 000 m : évite-le."];
   if(n===7){if(!s.tz)return ["La voleuse arrive",Math.min(1,B.z/2000),"Elle apparaît vers 1 000 m"];
     return ["Rattraper la voleuse",clamp(1-(s.tz.z-B.z)/90,0,1),"Rattrape-la, puis dépasse-la. Évite les pièges dorés"];}
   if(n===8)return ["Traversée du miroir",(B.z-s.z0)/3000,"Plus aucun repère et tout doit être réappris."];
@@ -2620,12 +2632,12 @@ function hcOut2(dt){
    [4,"Une lueur suffit souvent à éclairer sa voie.","Suis la seule flamme qui ne ment pas.","Tu as marché dans le noir sans lâcher la lumière.",
     ["Une seule lumière te montrera la voie à suivre.","Chaque pièce prise lui coûte un peu de flamme.","Suis la lueur, pas les leurres."],
     "Suis la lueur, pas les leurres."],
-   [5,"Porter quelqu’un, c’est accepter de ralentir.","Elle monte. Tu ne roules plus seule.","Le vent n’a pas cessé, mais vous n’en avez plus peur.",
-    ["L’Ombre semble sentir les bourrasques de vent avant toi.","Sa main pointe le sens du vent.","Place-toi avant la rafale. Et laisse passer tout ce qui te ferait aller plus vite."],
+   [5,"Se laisser porter, c’est accepter de ralentir.","Elle te soulève. Tu ne roules plus seule.","Le vent n’a pas cessé, mais vous n’en avez plus peur.",
+    ["L’Ombre semble sentir les bourrasques de vent avant toi.","Elle se penche du côté d’où vient le vent.","Place-toi avant la rafale. Et laisse passer tout ce qui te ferait aller plus vite."],
     "Place-toi avant la rafale. Et laisse passer tout ce qui te ferait aller plus vite."],
    [6,"Nul ne court plus vite que son souvenir.","Ne suis pas ton écho.","Tu es passé là où tu n’étais jamais passé.",
     ["Tu connais déjà ce chemin. C’est bien le problème.","Ton écho tombe toujours au même endroit.","Ne le suis pas. Passe là où tu n’es jamais passé."],
-    "Dépasse ton écho et atteins 3 000 m. Les anciennes chutes sont devenues des pierres."],
+    "Une bille écho roule devant toi en pilote automatique : à 1 000 m pile, un obstacle la brise. Évite-le et dépasse les 1 000 m."],
    [7,"On ne vole que ce qui nous appartenait déjà.","Rattrape ce qu’on t’a pris.","Elle ne t’avait rien pris. Elle te l’avait gardé.",
     ["Elle roule sans jamais prendre de risque.","Ce qu’elle évite, toi, tu peux le tenter.","Coupe au plus court, reste dans son sillage, et ose la Folie."],
     "Dépasse la bille volée avant 3 000 m. Méfie-toi de ce qu’elle laisse derrière elle."],
@@ -2644,10 +2656,10 @@ function hcOut2(dt){
    2:"Ne fuis pas et ne zigzague pas. La silhouette se calme quand tu roules droit et tranquille.",
    3:"Vers 500 m, la route s’ouvre sur un vide : il faut 40 planches pour le combler. Tu ne peux pas le franchir tout de suite, alors tombe dedans ! Chaque chute pose 4 planches.",
    4:"Une brume épaisse cache la route. Une lanterne roule devant toi : reste près d’elle et suis-la pendant 700 m. Des lueurs dorées brillent çà et là dans la brume : ce sont des leurres, chacune mène à un bloc et fait faiblir la flamme",
-   5:"Tu portes la silhouette : la bille est plus lourde et répond moins vite. Une flèche (son bras) annonce le côté d’où vient chaque rafale : place-toi de l’autre côté avant qu’elle arrive. Évite absolument les plaques de vitesse, elles sont fatales. Mène-la jusqu’à l’abri, 2 000 m plus loin.",
-   6:"Ta course précédente est enregistrée : un écho (fantôme) la rejoue devant toi. Ne le suis pas : il tombe toujours là où tu étais tombé, et ces chutes sont devenues des pierres sur la route. Dépasse-le puis atteins 3 000 m, en passant là où tu n’es jamais passé.",
+   5:"La silhouette te porte sur son dos : tu es plus lourde à diriger et tu ne peux pas aller vite. Elle se penche du côté d’où vient chaque rafale : place-toi de l’autre côté avant qu’elle arrive. Évite absolument les plaques de vitesse, elles sont fatales. Mène-la jusqu’à l’abri, 2 000 m plus loin.",
+   6:"Un écho (une bille fantôme, à ton image) roule devant toi en pilote automatique et ne touche rien. À 1 000 m pile, un obstacle le brise. Évite-le et dépasse les 1 000 m pour gagner.",
    7:"Une bille translucide, la voleuse, démarre loin devant dès 1 000 m. Rattrape-la et dépasse-la avant 3 000 m pour gagner. Elle sème des pièges dorés : ne les touche pas. Prends les raccourcis et reste dans son sillage. La boutique est fermée tant que ce chapitre n’est pas résolu.",
-   8:"Les commandes sont inversées (gauche = droite) et le monde bascule peu à peu. La route est vide : seuls tes propres obstacles existent. Tiens 1 500 m en suivant le reflet de la silhouette, sans paniquer quand tout se retourne.",
+   8:"Les commandes sont inversées (gauche = droite) et le monde bascule peu à peu. La route est vide : seuls tes propres obstacles existent. Tiens 1 500 m en suivant le reflet de la silhouette, sans paniquer quand tout se retourne. Conseil : le bonus « Pilote automatique » (boutique, onglet Bonus, 5 000 pièces) conduit à ta place, même avec les commandes inversées.",
    9:"Cinq carrefours se présentent, chacun avec des mots sur ses branches : choisis la branche qui te ressemble, aucune n’est mauvaise. Franchis les 5 carrefours dans la même partie : les mots choisis écrivent ta phrase.",
    10:"Ne touche à rien pendant 20 secondes : ni écran, ni clavier, ni pavé. La bille roule seule. Si tu touches, des blocs apparaissent sur la route."
   };
@@ -2665,10 +2677,20 @@ var STF={};
 function stRoll(a){try{cv.style.transform=a?"rotate("+a.toFixed(2)+"deg)":"";}catch(e){}}
 /* boutique fermée pendant le chapitre 7 : on t’a pris la bille */
 function stShopLock(){
-  if(LAB||!(HST.ch===7&&!HST.done[7]&&HST.seen.in7))return false;
+  if(LAB||HST.off||!(HST.ch===7&&!HST.done[7]&&HST.seen.in7))return false;
   openPanel("<h2>Boutique fermée</h2><p>Quelqu’un t’a pris ta bille. La boutique n’ouvre pas pour qui n’a plus rien à poser sur le comptoir.</p><p class=\"hint\" style=\"max-width:none\">Reprends-la : dépasse la bille volée (chapitre 7).</p>"+CLOSE);
   return true;
 }
+/* un obstacle posé par l’histoire laisse toujours un passage libre pour la bille */
+function stLane(x,z,hw,zl){
+  var r=stCentre(z);if(!r)return false;
+  var lo=r.lo+0.35,hi=r.hi-0.35,iv=[[x-hw-0.55,x+hw+0.55]],i,cb,pos=lo;
+  for(i=0;i<cubes.length;i++){cb=cubes[i];if(cb.z0<z+zl+1.5&&cb.z0+(cb.zl||1.8)>z-1.5)iv.push([cb.cx-cb.hw-0.55,cb.cx+cb.hw+0.55]);}
+  iv.sort(function(p,q){return p[0]-q[0];});
+  for(i=0;i<iv.length;i++){if(iv[i][0]-pos>=0.5)return true;if(iv[i][1]>pos)pos=iv[i][1];}
+  return hi-pos>=0.5;
+}
+function stAdd(x,z,y,hw,o){if(!stLane(x,z,hw,o.zl||1.8))return false;addCube(x,z,y,hw,null,o);return true;}
 function stIn(){return !!(keys.l||keys.r||dragging||(joyOn&&Math.abs(joy)>0.05));}
 /* silhouette ou bille fantôme qui suit le meilleur chemin libre devant la bille */
 function stPath(o,dt){
@@ -2676,7 +2698,7 @@ function stPath(o,dt){
   t=(o.z-c.z0)/(c.z1-c.z0);lo=c.x0+(c.x0b-c.x0)*t;hi=c.x1+(c.x1b-c.x1)*t;gy=c.ya+(c.yb-c.ya)*t;
   des=clamp((lo+hi)/2+Math.sin(o.z*0.045)*Math.max(0,Math.min(1.1,(hi-lo)/2-0.7)),lo+0.5,hi-0.5);
   if(o.mim!==undefined)des=clamp(o.mim,lo+0.5,hi-0.5);
-  for(i=0;i<cubes.length;i++){cb=cubes[i];
+  for(i=0;i<cubes.length&&!o.ign;i++){cb=cubes[i];
     if(cb.z0<o.z+8&&cb.z0+cb.zl>o.z-1&&Math.abs(cb.cx-des)<cb.hw+0.6&&Math.abs((cb.y||0)-gy)<2.5){
       des=(cb.cx-lo>hi-cb.cx)?cb.cx-cb.hw-0.75:cb.cx+cb.hw+0.75;des=clamp(des,lo+0.4,hi-0.4);}}
   o.x+=clamp(des-o.x,-10*dt,10*dt);o.y+=(gy-o.y)*Math.min(1,dt*14);
@@ -2696,7 +2718,7 @@ function stChBegin(s){
   s.al=1;s.ns=0;s.scl=1;s.inv=0;s.hv=1;s.mim=undefined;s.z0=B.z;s.gx=[];s.fell=0;s.fcd=0;
   s.lan=1;s.out=0;s.outs=0;s.nout=14;s.dc=[];s.nd=B.z+60;s.warn=0;s.gt=5;s.gd=1;s.gw=0;s.sp={};s.rec=[];s.rt=0;s.tz=null;s.gone=0;s.dr=0;s.thx=0;s.thy=0;s.tho=0;
   s.k=0;s.words=[];s.cr=null;s.nz=B.z+420;s.cp=0;s.afr=0;s.atx=B.x;s.bk=-9;s.eEnd=0;s.ghost=null;s.cnt=0;
-  if(s.ch===6){var e=stEchoGet();s.eEnd=e.length>1?e[e.length-2]:0;s.ghost=e;}
+  s.g=null;s.blk=0;s.blx=0;s.lift=0;
 }
 function stEchoGet(){try{var a=JSON.parse(sGet("echo")||"[]");if(a&&a.length)return a;}catch(e){}return [];}
 function stChEnd(s){
@@ -2720,8 +2742,8 @@ STF[3]=function(dt,s){
     s.gx.push({z:GZ3+6,f:function(){
       var z0=GZ3-6,z1=GZ3+6,k=10,done=Math.round(f*k),zz,j;
       stGround([z0,z1],[r.lo-1.5,r.hi+1.5],r.y-0.02,function(q){stPoly(q,"rgba(4,6,12,.96)");});
-      for(j=0;j<k;j++){zz=z0+(z1-z0)*j/k;
-        stGround([zz,zz+(z1-z0)/k*0.82],[r.c-1.1,r.c+1.1],r.y+0.02,function(q){stPoly(q,j<done?"rgba(176,132,86,.98)":"rgba(176,132,86,.10)");});}
+      for(j=0;j<k;j++){zz=z0-0.4+(z1-z0+0.8)*j/k;
+        stGround([zz,zz+(z1-z0+0.8)/k*0.92],[r.lo-0.3,r.hi+0.3],r.y+0.02,function(q){stPoly(q,j<done?"rgba(176,132,86,.98)":"rgba(176,132,86,.10)");});}
     }});
   }
   if(mode==="play"&&B.z>GZ3-7){
@@ -2740,8 +2762,8 @@ STF[4]=function(dt,s,rd){
   if(B.z+95>s.nd){z=B.z+95;r=stCentre(z);
     if(r&&r.w>=4.6){var pa=Math.sin((z+7)*0.045),side=pa>0?-1:1,xd=r.c+side*Math.min(2.4,r.w/2-0.9),ok=1;
       for(i=0;i<8;i++)if(Math.abs(r.c+Math.sin((z+i*2.4)*0.045)*1.1-xd)<1.6)ok=0;
-      if(ok){var dd={cs:[],z:z};for(i=0;i<6;i++)dd.cs.push({x:xd,z:z+i*2.4,y:r.y,t:0});
-        s.dc.push(dd);addCube(xd,z+15,r.y,0.85,null,{col:BLK,h:1.3,zl:1.8,mine:1});}}
+      if(ok&&stAdd(xd,z+15,r.y,0.85,{col:BLK,h:1.3,zl:1.8,mine:1})){var dd={cs:[],z:z};for(i=0;i<6;i++)dd.cs.push({x:xd,z:z+i*2.4,y:r.y,t:0});
+        s.dc.push(dd);}}
     s.nd=z+42+Math.random()*26;}
   for(d=s.dc.length-1;d>=0;d--){var dc=s.dc[d];if(dc.z<B.z-30){s.dc.splice(d,1);continue;}
     for(i=0;i<dc.cs.length;i++){var c=dc.cs[i];
@@ -2765,7 +2787,7 @@ STF[4]=function(dt,s,rd){
 STF[5]=function(dt,s,rd){
   var vn=vNom(B.z),r,i;
   s.hv=0.5;s.ns=1;s.al=1;s.ph+=dt;
-  s.scl=0.55;s.x=B.x;s.z=B.z-0.03;s.y=B.y+R*0.78;
+  s.scl=1;s.x=B.x;s.z=B.z+0.47+speed*dt;s.y=B.y-R;s.lift=1.2;
   if(speed>vn*0.8)speed=vn*0.8;
   s.gt-=rd;
   if(s.warn===0&&s.gt<=0){s.warn=1;s.gd=Math.random()<0.5?-1:1;s.gw=0;}
@@ -2788,17 +2810,23 @@ STF[5]=function(dt,s,rd){
 };
 /* ----- chapitre 6 : l’Écho ----- */
 STF[6]=function(dt,s,rd){
-  var i,fz,r,e=s.ghost,idx,j,pz,px;
-  stLead(dt,16,B.x);
+  var g=s.g,zE=s.z0+2000,r;
+  stLead(dt,34,B.x);
   s.rt+=rd;if(s.rt>=0.15){s.rt-=0.15;s.rec.push(Math.round(B.z*10)/10,Math.round(B.x*10)/10);}
-  if(HST.fz)for(i=0;i<HST.fz.length;i++){fz=HST.fz[i];if(s.sp[fz]||B.z<fz-130||B.z>fz+5||fz<120)continue;
-    r=stCentre(fz);if(r&&r.w>=3.8&&!B.air){s.sp[fz]=1;addCube(r.c,fz,r.y,0.95,null,{col:BLK,h:1.5,zl:2,mine:1});}}
+  /* l’écho : une bille fantôme, à l’image de la tienne, roule devant toi en pilote automatique sur 1 000 m */
+  if(!g)g=s.g={z:B.z+18,x:B.x,y:B.y-R,ok:1,ign:1,dead:0,dt:0};
+  /* l’obstacle fatal, à 1 000 m pile (posé dès que la route existe) */
+  if(!s.blk&&(B.z+110>zE||g.z+70>zE)){r=stCentre(zE);if(r&&r.w>=3.4){s.blk=1;s.blx=r.c;for(i=cubes.length-1;i>=0;i--)if(!cubes[i].mine&&cubes[i].z0>zE-8&&cubes[i].z0<zE+8)cubes.splice(i,1);addCube(r.c,zE,r.y,0.95,null,{col:BLK,h:1.5,zl:2,mine:1});}}
+  if(!g.dead){
+    g.z+=vNom(g.z)*clamp(1+(18-(g.z-B.z))*0.04,0.7,1.3)*dt;g.mim=(s.blk&&g.z>zE-70)?s.blx:undefined;stPath(g,dt);
+    if(g.z>=zE-0.5){g.dead=1;g.dt=0;say("L’écho s’est brisé");try{sndHit("vanish");}catch(er){}}
+  }else g.dt+=dt;
   s.gx=[];
-  if(e&&e.length>3){idx=Math.floor(s.clock/0.15);
-    if(idx*2<e.length-2){j=idx*2;var u=(s.clock/0.15)-idx;pz=e[j]+(e[j+2]-e[j])*u;px=e[j+1]+(e[j+3]-e[j+1])*u;
-      s.gx.push({z:pz,f:function(){var p=P(px,B.y*0+gyAt(pz,px)+R,pz);if(!p)return;ctx.save();ctx.globalAlpha=0.45;
-        try{paintBall(ctx,p[0],p[1],R*p[2],{col:BC.c,ink:BC.ink,pat:PATT,metal:BC.m,fin:BC.f,c2:BC.c2,ph:pz*0.9,tilt:0,lean:0,q:"low"});}catch(er){}ctx.restore();}});}}
-  if(B.z>Math.max(s.eEnd+3,6000))stFinish(6);
+  if(g.ok&&g.dt<1.4){var al=g.dead?Math.max(0,1-g.dt/1.2):1,jx=g.dead?(Math.random()-0.5)*0.18:0;
+    s.gx.push({z:g.z,f:function(){var p=P(g.x+jx,g.y+R,g.z);if(!p||!isFinite(p[0])||!isFinite(p[1]))return;var rr=R*p[2];
+      ctx.save();var hg=ctx.createRadialGradient(p[0],p[1],rr*0.6,p[0],p[1],rr*2.4);hg.addColorStop(0,"rgba(196,214,244,"+(0.4*al).toFixed(3)+")");hg.addColorStop(1,"rgba(190,210,240,0)");ctx.fillStyle=hg;ctx.fillRect(p[0]-rr*2.4,p[1]-rr*2.4,rr*4.8,rr*4.8);
+      ctx.globalAlpha=0.62*al;try{paintBall(ctx,p[0],p[1],rr,{col:BC.c,ink:BC.ink,pat:PATT,metal:BC.m,fin:BC.f,c2:BC.c2,ph:g.z*0.9,tilt:0,lean:0,q:"low"});}catch(er){}ctx.restore();}});}
+  if(B.z>zE+14)stFinish(6);
 };
 function gyAt(z,x){var c=axInfo(z,x,0);if(!c)return 0;var t=(z-c.z0)/(c.z1-c.z0);return c.ya+(c.yb-c.ya)*t;}
 /* ----- chapitre 7 : le Voleur ----- */
@@ -2809,7 +2837,7 @@ STF[7]=function(dt,s,rd){
     for(k=0;k<46;k++){x=((k*83+tm*SW*0.15)%(SW+60));y=((k*47+tm*SH*2.2)%(SH+40))-20;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-SW*0.012,y+SH*0.035);ctx.stroke();}}});
   if(!s.tz&&!s.gone&&B.z>=2000){s.tz={z:B.z+16,x:B.x,y:B.y-R,ok:1};s.dr=s.tz.z;}
   if(s.tz){o=s.tz;o.z+=vNom(o.z)*0.97*dt;stPath(o,dt);
-    if(o.z>s.dr+55&&o.ok){s.dr=o.z;addCube(o.x,o.z-3,o.y,0.8,null,{col:[212,168,58],h:1.0,zl:1.4,mine:1});}
+    if(o.z>s.dr+55&&o.ok){s.dr=o.z;stAdd(o.x,o.z-3,o.y,0.8,{col:[212,168,58],h:1.0,zl:1.4,mine:1});}
     a=0.3+0.55*clamp(1-(o.z-B.z)/18,0,1);
     s.gx.push({z:o.z,f:function(){if(!o.ok)return;var p=P(o.x,o.y+R,o.z);if(!p)return;ctx.save();ctx.globalAlpha=a;
       try{paintBall(ctx,p[0],p[1],R*p[2],{col:BC.c,ink:BC.ink,pat:PATT,metal:BC.m,fin:BC.f,c2:BC.c2,ph:o.z*0.9,tilt:0,lean:0,q:"low"});}catch(er){}ctx.restore();}});
@@ -2823,7 +2851,7 @@ STF[8]=function(dt,s,rd){
   s.inv=1;stLead(dt,22);
   var rl=clamp((B.z-s.z0-300)/1800,0,1);stRoll(180*rl*rl*(3-2*rl));
   stClear();
-  if(B.z+110>s.nz){r=stCentre(B.z+110);if(r&&r.w>=3.8){addCube(r.c,B.z+110,r.gy,0.9,null,{col:BLK,h:1.3,zl:1.8,mine:1});s.nz=B.z+110+30+Math.random()*10;}else s.nz=B.z+112;}
+  if(B.z+110>s.nz){r=stCentre(B.z+110);if(r&&r.w>=3.8&&stAdd(r.c,B.z+110,r.gy,0.9,{col:BLK,h:1.3,zl:1.8,mine:1})){s.nz=B.z+110+30+Math.random()*10;}else s.nz=B.z+112;}
   if((B.z-s.z0)>=3000)stFinish(8);
 };
 /* ----- chapitre 9 : les Lettres ----- */
@@ -2832,7 +2860,7 @@ STF[9]=function(dt,s,rd){
   var r,cr=s.cr,w;
   stLead(dt,24);
   if(!cr&&s.k<5&&s.nz<B.z+170){r=stCentre(s.nz);
-    if(r&&r.w>=4.2){s.cr={z:s.nz,cx:r.c,y:r.gy,k:s.k};cr=s.cr;addCube(r.c,s.nz,r.gy,0.7,null,{col:[236,232,248],h:2.2,zl:2,mine:1});}
+    if(r&&r.w>=4.2&&stAdd(r.c,s.nz,r.gy,0.7,{col:[236,232,248],h:2.2,zl:2,mine:1})){s.cr={z:s.nz,cx:r.c,y:r.gy,k:s.k};cr=s.cr;}
     else s.nz+=25;}
   s.gx=[];
   if(cr){s.gx.push({z:cr.z,f:function(){var wd=W9[cr.k],i,p,fs;ctx.save();ctx.textAlign="center";ctx.textBaseline="middle";
@@ -2850,7 +2878,7 @@ STF[10]=function(dt,s,rd){
   if(!inp){s.afr-=dt;if(s.afr<=0){s.afr=0.0667;s.atx=autoPilot();}tx=clamp(s.atx,B.x-(B.air?10:7),B.x+(B.air?10:7));s.cp=Math.min(1,s.cp+rd/20);}
   else{s.cp=Math.max(0,s.cp-rd*1.5);
     if(tm-s.bk>1.2){s.bk=tm;dx=B.x+(tx-B.x)*0.8;r=stCentre(B.z+speed*1.35+5);
-      if(r){addCube(clamp(dx,r.lo+1,r.hi-1),B.z+speed*1.35+5,r.gy,0.9,null,{col:BLK,h:1.3,zl:1.8,mine:1});speed*=1.04;say("Chaque geste resserre la route.");sndHit("thud");}}}
+      if(r&&stAdd(clamp(dx,r.lo+1,r.hi-1),B.z+speed*1.35+5,r.gy,0.9,{col:BLK,h:1.3,zl:1.8,mine:1})){speed*=1.04;say("Chaque geste resserre la route.");sndHit("thud");}}}
   s.z=B.z+lerp(70,7,s.cp*s.cp*(3-2*s.cp));r=stCentre(s.z);
   if(r){s.x=r.c;s.y=r.gy;s.al=1;}else s.al=0;
   if(s.cp>=1)stFinish(10);
@@ -2860,13 +2888,13 @@ function stPoseN(s){
   var n=s.ch,p,t=s.clock,PI=Math.PI,a;
   if(n===3){p=SIL.idleP(t,PI);var u=0.5+0.5*Math.sin(t*1.3);a=[5,16+u*10,3];p.hr=a;p.ht+=1.2*Math.sin(t*0.5);return p;}
   if(n===4){p=SIL.runP(s.ph,0);p.hr=[15,27,1.2];p.head+=0.05*Math.sin(t*1.4);return p;}
-  if(n===5){p=SIL.idleP(t,0);p.hip=24;p.fl=[13,5,0.5];p.fr=[13,5,0.5];p.lean=0.12;a=[2,-3,21];
-    if(s.warn){if(s.gd>0)p.hl=a;else p.hr=a;p.ht+=1.5;}return p;}
+  if(n===5){p=SIL.runP(s.ph,0);p.hl=[-13,28,4];p.hr=[-13,28,4];p.lean=0.12;
+    if(s.warn){p.sway=-s.gd*5;p.ht=-s.gd*2.5;}return p;}
   if(n===10){p=SIL.idleP(t,PI);p.hl=[2,6,13];p.hr=[2,6,13];return p;}
   return SIL.runP(s.ph,0);
 }
 function stChTick(dt){
-  var s=STO,rd=dt/(s.ts||1);s.clock+=rd;s.gx=[];s.ns=0;s.scl=1;s.inv=0;s.hv=1;
+  var s=STO,rd=dt/(s.ts||1);s.clock+=rd;s.gx=[];s.ns=0;s.scl=1;s.lift=0;s.inv=0;s.hv=1;
   var f=STF[s.ch];if(f)f(dt,s,rd);
 }
 
@@ -2945,9 +2973,10 @@ function hcSil(k,lat,pose,al){return {k:k,lat:lat,pose:pose,al:al};}
 /* la bille qui roule au centre, avec une profondeur k (ba = opacité) */
 function hcDepth(o,c,k,al){var r=19*c.S*(k/0.79);o.by=hcYK(c,k);o.br=r;o.ba=al===undefined?1:al;}
 function hcPlankBridge(g,c,k1,k2,f){
-  var n=10,i,a,b,ka,kb;
+  var n=12,i,a,b,ka,kb,e=0.045;
   hcBand(g,c,k1-0.04,k2+0.04,1.0,"rgba(3,5,10,.97)");
-  for(i=0;i<n;i++){ka=lerp(k1,k2,i/n);kb=lerp(k1,k2,(i+0.86)/n);if(i/n>f)continue;hcBand(g,c,ka,kb,0.5,"rgba(176,132,86,.98)");hcBand(g,c,ka,lerp(ka,kb,0.15),0.5,"rgba(224,186,138,.9)");}
+  /* les planches couvrent tout le gouffre, d’un bord à l’autre, sur toute sa largeur */
+  for(i=0;i<n;i++){ka=lerp(k1-e,k2+e,i/n);kb=lerp(k1-e,k2+e,(i+0.94)/n);if((i+1)/n>f+0.0001)continue;hcBand(g,c,ka,kb,0.98,"rgba(176,132,86,.98)");hcBand(g,c,ka,lerp(ka,kb,0.16),0.98,"rgba(224,186,138,.9)");}
 }
 /* ---- 3 : le Pont ---- */
 HCG.in3={dur:17.5,tx:[[0.9,4.6,"Un jour, la route s’arrêta."],[5.4,8.6,"Devant elle, rien. Et de l’autre côté, quelqu’un."],[9.6,12.8,"Quelqu’un posait des planches, une à une, comme pour recréer la passerelle."],[13.4,16.6,"Pourquoi continuer sans cesse de chuter ?",1]],
@@ -3005,19 +3034,18 @@ HCG.in5={dur:18,tx:[[0.9,4.2,"Elle roulait sur des routes aussi fines que le fil
   if(t<6.6){p=SIL.runP(HC.ph,0);HC.ph+=dt*1.5;k=0.2;o.sil=hcSil(k,0,p,hcE(1.4,2.8));}
   else if(t<13){p=SIL.idleP(HC.st.clock,Math.PI);p.hip=L(43,20,fall*(1-rise));p.lean=L(0,0.7,fall*(1-rise));p.fl=[L(0,12,fall*(1-rise)),L(0,2,fall*(1-rise)),0.5];p.fr=p.fl.slice();
     if(t>8.4)p.lean+=0.14*Math.sin(t*4.4)*walk;
-    o.sil=hcSil(L(0.2,0.46,walk),L(-10,0,walk),p,1);}
-  else{p=SIL.idleP(HC.st.clock,0);p.hip=24;p.fl=[13,5,0.5];p.fr=p.fl.slice();p.lean=0.12;
-    var sy=L(hcYK(c,0.5)-6*c.S,c.by-23*c.S,climb);
-    o.sil={after:1,pose:p,x:L(c.CX-26*c.S,c.CX,climb),y:sy,sc:0.5*c.S,al:1};}
+    o.sil=hcSil(L(0.2,0.7,walk),L(-10,0,walk),p,1);}
+  else{p=SIL.idleP(HC.st.clock,0);p.hl=[L(0,-13,climb),L(33,28,climb),4];p.hr=p.hl.slice();p.lean=0.12*climb;
+    o.sil=hcSil(0.7,0,p,1);o.by=c.by-34*c.S*climb;}
   o.post=function(g,cc){if(wind>0.01)hcWindLines(g,cc,t,wind,1);};
  }};
-HCG.out5={dur:17,tx:[[0.9,4.2,"Une pierre creuse. Un abri."],[5,8.8,"Elle posa la main à plat sur la bille. Pour la première fois."],[9.6,12.4,"Merci. Je peux descendre.",1],[13,16,"La bille repartit seule. Plus légère."]],
+HCG.out5={dur:17,tx:[[0.9,4.2,"Une pierre creuse. Un abri."],[5,8.8,"Elle posa la bille à terre, la main à plat sur elle. Pour la première fois."],[9.6,12.4,"Merci de m’avoir laissée te porter. Roule, maintenant.",1],[13,16,"La bille repartit seule. Plus légère."]],
  f:function(t,dt,o,c){
   var L=lerp;o.roll=t<3.4?60*(1-hcE(1.8,3.4)):(t>12.6?70*hcE(12.6,14):0);o.tint=[40,34,30,0.12*hcE(0,3)];
-  var down=hcE(5,7),p=SIL.idleP(HC.st.clock,0),x,y;p.hip=L(24,43,down);p.fl=[L(13,0,down),L(5,0,down),0.5];p.fr=p.fl.slice();p.lean=L(0.12,0.02,down);
+  var down=hcE(5,7),p=SIL.idleP(HC.st.clock,0),ar=hcE(5,6.4);
+  p.lean=L(0.12,0.02,down);p.hl=[L(-13,0,ar),L(28,33,ar),L(4,1.6,ar)];p.hr=p.hl.slice();
   if(t>7.6){p.yaw=Math.PI*0.5;p.hr=[2,L(3,24,hcE(7.6,9)),L(8,26,hcE(7.6,9))];}
-  x=L(c.CX,c.CX-40*c.S,down);y=L(c.by-23*c.S,c.by+4*c.S,down);
-  if(t<5)o.sil={after:1,pose:p,x:c.CX,y:c.by-23*c.S,sc:0.5*c.S,al:1};else o.sil={after:1,pose:p,x:x,y:y,sc:L(0.5,0.72,down)*c.S,al:1};
+  o.sil=hcSil(L(0.7,0.62,down),L(0,-16,down),p,1);o.by=c.by-34*c.S*(1-down);
   var go=hcE(12.6,16);if(go>0){o.by=lerp(c.H*0.79,hcYK(c,0.3),go);o.br=19*c.S*lerp(1,0.4,go);}
   o.pre=function(g,cc){var a=hcE(0,3),W=cc.W,H=cc.H,x0=cc.CX,y1=hcYK(cc,0.32),y0=hcYK(cc,0.07);g.fillStyle="rgba(104,98,114,"+(0.97*a).toFixed(3)+")";
     g.beginPath();g.moveTo(x0-W*0.42,y1+H*0.34);g.lineTo(x0-W*0.42,y0+H*0.1);g.quadraticCurveTo(x0-W*0.42,y0-H*0.04,x0,y0-H*0.06);g.quadraticCurveTo(x0+W*0.42,y0-H*0.04,x0+W*0.42,y0+H*0.1);g.lineTo(x0+W*0.42,y1+H*0.34);
@@ -3103,7 +3131,7 @@ HCG.in10={dur:16,tx:[[0.9,4.6,"Il n’y avait plus rien à fuir."],[5.2,8.6,"Plu
   o.roll=lerp(60,16,hcE(4,10));var p=SIL.idleP(HC.st.clock,Math.PI);p.hl=[2,6,13];p.hr=[2,6,13];
   o.sil=hcSil(0.09,0,p,hcE(2,4));o.ba=hcE(0.4,1.6);
  }};
-HCG.out10={dur:30,tx:[[0.9,4.4,"La bille s’arrêta d’elle-même."],[5.2,9,"Aux pieds de celle qu’elle avait tant cherchée."],[10,14,"Elle la prit dans ses mains. Même couleur. Même lumière."],[15.4,19,"Ce n’était pas une poursuite."],[19.4,26.0,"C’était une quête : en la cherchant, je me suis trouvée. Je suis elle, elle est moi… mon chemin doit maintenant trouver sa fin."]],
+HCG.out10={dur:36,tx:[[0.9,4.4,"La bille s’arrêta d’elle-même."],[5.2,9,"Aux pieds de celle qu’elle avait tant cherchée."],[10,14,"Elle la prit dans ses mains. Même couleur. Même lumière."],[15.4,19,"Ce n’était pas une poursuite."],[19.4,26.0,"C’était une quête : en la cherchant, je me suis trouvée. Je suis elle, elle est moi… mon chemin doit maintenant trouver sa fin."],[27,33.4,"Il n’y a pas de chapitre 11. Il ne reste que la fin du jeu : atteindre le Paradis."]],
  f:function(t,dt,o,c){
   var L=lerp,go=hcE(1,6.4),kn=hcE(6.6,9.4),lift=hcE(10,13);
   o.roll=t<5?70*(1-hcE(3,6)):0;
@@ -3114,7 +3142,7 @@ HCG.out10={dur:30,tx:[[0.9,4.4,"La bille s’arrêta d’elle-même."],[5.2,9,"A
   if(back<=0.001){o.sil=hcSil(0.49,0,p,1);}
   else{var q2=SIL.idleP(HC.st.clock,0);q2.hl=[L(16,10,back),L(22,18,back),5];q2.hr=q2.hl.slice();o.sil=hcSil(L(0.49,0.8,back),0,q2,1);}
   if(lift>0){o.by=L(hcYK(c,0.5)-6*c.S,hcYK(c,0.49)-27*c.S,lift);o.br=19*c.S*(0.62-0.1*back);if(back>0){o.by=L(o.by,c.H*0.58,back);o.bx=c.CX+L(0,0,back);o.br=19*c.S*L(0.62,0.7,back);}}
-  o.white=hcE(26.4,29.4);
+  o.white=hcE(33.6,35.4);
   o.pre=function(g,cc){var a=hcE(13.5,22)*(1);var i;for(i=0;i<6;i++){var xx=cc.CX+(i-2.5)*cc.W*0.13,yy=hcYK(cc,0.12+0.03*(i%2));if(a<0.99)hcBlock(g,xx,yy,(5+(i%3)*2)*cc.S,1-a);}
     if(a>0.01&&a<0.99&&Math.random()<0.6)hcDustAdd(2,cc.CX+(Math.random()-0.5)*cc.W*0.7,hcYK(cc,0.14),cc.S,18*cc.S);};
  }};
@@ -4025,7 +4053,7 @@ function drawNacre(c,cx,cy,rad,tm){
   c.restore();
 }
 function drawBall(){
-  var p=P(B.x,B.y,B.z);if(!p)return;
+  var p=P(B.x,B.y+((STO.on&&STO.lift)?STO.lift:0),B.z);if(!p)return;
   var rad=R*p[2]*FIN.bs,cx=p[0],cy=p[1],lean=Math.min(1,speed/42);FIN.sx=cx;FIN.sy=cy;FIN.sr=rad;
   bonAura(cx,cy,rad);
   if(WORLD.nacre){
@@ -6333,6 +6361,7 @@ function updShopBar(){
   if(eq){btn.textContent="Équipé";btn.disabled=true;btn.classList.add("ok");}
   else if(own){btn.textContent="Équiper";btn.disabled=false;btn.classList.remove("ok");}
   else if(gw){btn.textContent="Offerte avec « "+gw.n+" »";btn.disabled=true;btn.classList.remove("ok");}
+  else if(k==="w"&&it.id==="paradis"&&!parOk()){btn.textContent="Résous d’abord le chapitre 10";btn.disabled=true;btn.classList.remove("ok");}
   else if(SD.coins>=it.p){btn.innerHTML="Acheter "+coinHTML()+fmtN(it.p);btn.disabled=false;btn.classList.remove("ok");}
   else{btn.textContent="Il manque "+fmtN(it.p-SD.coins);btn.disabled=true;btn.classList.remove("ok");}
   Array.prototype.forEach.call($("shgrid").children,function(b){var bk=b.getAttribute("data-k");b.classList.toggle("sel",b.getAttribute("data-id")===it.id&&(!bk||bk===k));});
@@ -6353,7 +6382,7 @@ function buySel(){
   if(shopQ&&!shopSel)return;
   if(bk==="x"){bonBuy((shopSel&&shopSel.k==="x")?shopSel.id:CATS.x[0].id);return;}
   var k=bk,bb=$("shbuy"),id=(bb.getAttribute("data-k")===k&&findItem(k,bb.getAttribute("data-id")))?bb.getAttribute("data-id"):((shopSel&&shopSel.k===k)?shopSel.id:SD.eq[k]),it=findItem(k,id);if(!it||SD.eq[k]===id||(SD.eq.w==="paradis"&&k!=="w"&&SD.pk&&SD.pk[k]===id))return;
-  if(!isOwn(k,id)){if(SD.coins<it.p)return;SD.coins-=it.p;SD.own[k+":"+id]=1;sfx(500,1500,0.35,"triangle",0.16);sfx(900,1800,0.25,"sine",0.1);if(k==="w"&&id==="paradis")setTimeout(muPrefetch,800);}
+  if(!isOwn(k,id)){if(SD.coins<it.p||(k==="w"&&id==="paradis"&&!parOk()))return;SD.coins-=it.p;SD.own[k+":"+id]=1;sfx(500,1500,0.35,"triangle",0.16);sfx(900,1800,0.25,"sine",0.1);if(k==="w"&&id==="paradis")setTimeout(muPrefetch,800);}
   else sfx(420,760,0.12,"triangle",0.14);
   if(k==="w")setWorld(id);else if(SD.eq.w==="paradis"){SD.pk=SD.pk||{};SD.pk[k]=id;}else SD.eq[k]=id;
   saveShop();PV=null;shopSel={k:k,id:id};applyCosm();renderShop();updCoinsUI();
@@ -7225,7 +7254,7 @@ function frame(now){
   acc+=dt;var n=0,h=1/60;
   while(acc>=h&&n<6){
     if(mode==="play"){bonTick(h);if(FIN.ph)RUN.ts=finTs();else if(par())RUN.ts=PTS;updatePlay(h*RUN.ts*(STO.on?STO.ts:1));}
-    else if(mode==="crash"||mode==="fall")updateEnd(h);
+    else if(mode==="crash"||mode==="fall")updateEnd(h*((mode==="fall"&&STO.on&&STO.ch===3)?0.28:1));
     else if(mode==="count")cntTick(h);
     else if(mode==="menu"||mode==="intro"||mode==="shop"){if(started)updateDemo(h);}
     updFx(h);acc-=h;n++;
