@@ -1,7 +1,11 @@
 # ball
 
-Version 3.53 : scores (tuiles) qui tiennent dans le cadre ; chapitre 3 : pont complet et chute au ralenti ; chapitre 6 : bille fantôme (course auto de 1 000 m) ; histoire : la silhouette porte la bille ; fin du chapitre 10 (pas de chapitre 11, seul le Paradis reste) ; Paradis à 200 000 pièces et après le chapitre 10 ; pilote automatique à 5 000 pièces + conseil au chapitre 8 ; « mode sans histoire » à 10 000 pièces ; obstacles de la silhouette : un passage reste toujours libre.
+<<<<<<< HEAD
+Version 3.54 : scores (tuiles) qui tiennent dans le cadre ; chapitre 3 : pont complet et chute au ralenti ; chapitre 6 : bille fantôme (course auto de 1 000 m) ; histoire : la silhouette porte la bille ; fin du chapitre 10 (pas de chapitre 11, seul le Paradis reste) ; Paradis à 200 000 pièces et après le chapitre 10 ; pilote automatique à 5 000 pièces + conseil au chapitre 8 ; « mode sans histoire » à 10 000 pièces ; obstacles de la silhouette : un passage reste toujours libre.
 
+=======
+Version 3.53 : chapitre 3 — la route ralentit nettement avant le vide (on peut presque compter les planches), la bille tombe à pic dans le trou, un petit message à chaque chute (+4 planches) et les 40 planches du pont sont toutes dessinées ; chapitre 4 — nouvelle lanterne (anse, verre, flamme) ; chapitre 5 — 500 m au lieu de 2 000 m, les plaques de vitesse ne sont plus mortelles, la silhouette lève le bras plus tôt et plus progressivement ; objectifs allégés : chapitre 6 à 1 000 m, chapitre 7 (voleuse dès 250 m, jusqu’à 1 250 m), chapitre 8 à 600 m, carrefours du chapitre 9 plus rapprochés.
+>>>>>>> origin/HEAD
 Version 3.52 : chapitre 4 — les lueurs dorées (leurres) s’affichent enfin (bug de hauteur corrigé, aussi pour les chapitres 2, 6, 8 et 9), lanterne visible à la main de la silhouette, 700 m au lieu de 1 000 m, moins de leurres, flamme qui se rallume plus vite.
 Version 3.51 : boutique — l’achat porte toujours sur l’objet nommé dans la barre du bas ; en Paradis, un objet acheté est désormais mémorisé (il apparaît en quittant Paradis) au lieu de s’afficher « équipé » puis de disparaître au rechargement.
 Version 3.50 : plus aucune superposition au début d’une partie (carte du chapitre, puis consigne) ; écran de fin : ligne « chapitre en cours » et bouton Chapitres, bandeau d’installation masqué pour laisser voir Chapitres et Boutique ; la touche Entrée ou Espace ne relance plus une cinématique.

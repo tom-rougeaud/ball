@@ -535,7 +535,7 @@ body.pnl #brand{opacity:0!important;pointer-events:none}
 <div id="joy" aria-hidden="true"><i></i></div>
 
 <script type="application/json" id="cfg">
-{"version":"LAB-1.11","prefix":"abelrun_lab_","ballR":0.5,"gravity":13,"keySpeed":13,
+{"version":"LAB-1.12","prefix":"abelrun_lab_","ballR":0.5,"gravity":13,"keySpeed":13,
  "levels":[{"n":"Détente","v":32},{"n":"Balade","v":43},{"n":"Course","v":56},{"n":"Vertige","v":73},{"n":"Folie","v":94}],
 "shop":{"coinEvery":15,"levelBonus":[2.5,3.5,5,7,10],
  "worlds":[["route66","Route 66",0,"Désert, asphalte et cactus : l’univers de départ."],["classic","Classique",0,"L’ancien décor bleu, comme avant."],["neon","Néon",3100,"Grille lumineuse, néons et nuit permanente."],["forest","Forêt",4500,"Pins, clairières et lucioles."],["snow","Neige",6400,"Sapins enneigés, bonhommes de neige, aurore polaire."],["city","Ville la nuit",8100,"Gratte-ciel et lampadaires, de l’heure bleue à minuit."],["ocean","Océan",10500,"Plages, palmiers et eau turquoise."],["lava","Lave",12500,"Volcans et braises : les obstacles restent bien visibles."],["space","Espace",14600,"Planète à anneaux, astéroïdes et cristaux."],["rainbow","Route arc-en-ciel",20000,"Le Graal des univers : un arc-en-ciel géant, le plus rare et le plus cher."],["prairie","Prairie",1500,"Collines vertes, fleurs et moulins."],["montagne","Montagne",1600,"Pics de granit, sapins et neiges lointaines."],["automne","Automne",1600,"Arbres roux et feuilles qui tombent."],["savane","Savane",2000,"Acacias, rochers et ciel de fin de journée."],["canyon","Canyon",2000,"Falaises rouges, mesas et arches de pierre."],["marais","Marais",2000,"Brume, roseaux et arbres tordus."],["toundra","Toundra",2000,"Plaine grise et froide, bruyères et vent."],["bambou","Bambouseraie",3100,"Bambous, lanternes et brume matinale."],["sakura","Cerisiers en fleurs",3800,"Pétales roses et lanternes."],["village","Village",3800,"Chaumières, clôtures et meules de foin."],["jungle","Jungle",4500,"Feuilles géantes, lianes et fleurs."],["banquise","Banquise",4500,"Icebergs, igloos et lumière polaire."],["recif","Récif",6000,"Sous l’eau : coraux, bulles et poissons."],["chateau","Château",6400,"Tours, bannières et torches."],["desertantique","Désert antique",7300,"Pyramides et obélisques dans les dunes."],["mars","Planète rouge",8100,"Poussière rouge, dômes et rochers."],["blocs","Pays des blocs",8100,"Cubes colorés empilés comme des jouets."],["temple","Temple perdu",10000,"Pyramides à degrés dans la jungle."],["lune","Colonie lunaire",10500,"Cratères, dômes et antennes."],["bonbons","Confiserie",10500,"Sucettes, cupcakes et nuages de sucre."],["halloween","Nuit des citrouilles",10500,"Citrouilles, chauves-souris et pleine lune."],["noel","Village de Noël",12500,"Sapins illuminés, cadeaux et bonshommes de neige."],["fete","Fête foraine",12500,"Chapiteaux, ballons et grande roue."],["cosmos","Cosmos violet",14000,"Planètes, étoiles et nuages cosmiques."],["usine","Usine à vapeur",14600,"Cheminées, engrenages et vapeur de cuivre."],["cristal","Grotte de cristal",16200,"Cristaux géants qui brillent dans le noir."],["eclipse","Éclipse",16700,"Un soleil noir couronné de feu."],["nuages","Royaume des nuages",17300,"Colonnes dorées au-dessus des nuages."],["abysses","Abysses lumineux",17900,"Méduses et lueurs au fond de l’océan."],["galaxie","Galaxie spirale",19000,"Traverser une galaxie, d’étoile en étoile."],["salar","Salar miroir",7700,"Une plaine de sel qui reflète le ciel, avec des cairns et des flamants roses."],["prehisto","Préhistoire",9500,"Fougères géantes, volcans, œufs de dinosaure et ptérodactyles dans le ciel."],["fungi","Forêt de champignons",15600,"Des champignons géants qui luisent doucement, et des spores qui flottent dans la nuit."],["papier","Pays de papier",5600,"Montagnes en origami, grues et bateaux de papier sur fond crème."],["atlantide","Atlantide",18400,"Ruines englouties, colonnes de marbre, coquillages géants et rayons de lumière."],["paradis","Paradis",200000,"Tout est blanc. Une piste, rien d’autre : plus aucun obstacle. À 33 333 points, un portail t’attend."],["pirates","Mer des pirates",4600,"Galions, pavillons à tête de mort, tonneaux et palmiers sur les flots."],["tresor","Île au trésor",5800,"Coffres pleins d’or, rochers-crânes, canons et ancres sur le sable chaud."],["ninja","Village de ninjas",6900,"Maisons aux toits recourbés, tours, cibles d’entraînement et feuilles qui tourbillonnent."],["bauhaus","Atelier Bauhaus",8400,"Cercles, triangles et carrés en couleurs primaires, sur fond de papier crème."],["sumi","Encre de Chine",9200,"Montagnes au lavis, pins d’encre et un soleil rouge comme un sceau."],["pixel","Monde de pixels",8800,"Un paysage tout carré : arbres, maisons et nuages en gros pixels."],["azulejo","Ville d’azulejos",9600,"Façades blanches, carreaux de faïence bleus et orangers."],["blueprint","Plan bleu",10400,"Tout est dessiné au trait blanc sur du papier calque bleu."],["vitrail","Cathédrale de vitraux",12000,"Verrières colorées, bougies et une immense rosace."],["deco","Art déco doré",11200,"Gratte-ciel à gradins, éventails et or sur nuit profonde."],["opart","Op art",10000,"Noir et blanc hypnotiques : cercles, ondes et damiers qui vibrent."]],
@@ -2078,9 +2078,9 @@ function stHudInfo(s){
   if(n===4)return ["Chemin dans le brouillard",(B.z-s.z0)*0.5/700,"Une lueur guide, les autres trompent."];
   if(n===5)return ["Chemin vers l’abri",(B.z-s.z0)/Math.max(1,s.goal-s.z0),"Elle se penche du côté du vent. Avancez de concert pour éviter les bourrasques."];
   if(n===6)return ["Au-delà de ton écho",clamp((B.z-s.z0)/2014,0,1),"Un obstacle brisera l’écho à 1 000 m : évite-le."];
-  if(n===7){if(!s.tz)return ["La voleuse arrive",Math.min(1,B.z/2000),"Elle apparaît vers 1 000 m"];
+  if(n===7){if(!s.tz)return ["La voleuse arrive",Math.min(1,B.z/500),"Elle apparaît vers 250 m"];
     return ["Rattraper la voleuse",clamp(1-(s.tz.z-B.z)/90,0,1),"Rattrape-la, puis dépasse-la. Évite les pièges dorés"];}
-  if(n===8)return ["Traversée du miroir",(B.z-s.z0)/3000,"Plus aucun repère et tout doit être réappris."];
+  if(n===8)return ["Traversée du miroir",(B.z-s.z0)/1200,"Plus aucun repère et tout doit être réappris."];
   if(n===9)return ["Carrefours "+s.k+" / 5",s.k/5,"Chaque carrefour est un choix lourd de sens."];
   if(n===10)return ["Lâcher prise",s.cp,"Il faut parfois savoir lâcher prise. Même si c’est dur."];
   return null;
@@ -2640,10 +2640,10 @@ function hcOut2(dt){
     "Une bille écho roule devant toi en pilote automatique : à 1 000 m pile, un obstacle la brise. Évite-le et dépasse les 1 000 m."],
    [7,"On ne vole que ce qui nous appartenait déjà.","Rattrape ce qu’on t’a pris.","Elle ne t’avait rien pris. Elle te l’avait gardé.",
     ["Elle roule sans jamais prendre de risque.","Ce qu’elle évite, toi, tu peux le tenter.","Coupe au plus court, reste dans son sillage, et ose la Folie."],
-    "Dépasse la bille volée avant 3 000 m. Méfie-toi de ce qu’elle laisse derrière elle."],
+    "Dépasse la bille volée avant 1 250 m. Méfie-toi de ce qu’elle laisse derrière elle."],
    [8,"Plus aucun repère et tout doit être réappris.","Tout est à l’envers. Même toi.","Le reflet n’a jamais menti. Il montrait seulement l’autre côté.",
     ["Ta route est vide. Regarde plus bas.","Ce n’est pas toi que tes gestes déplacent.","Oublie la bille. C’est l’Ombre qui a besoin de tes mains."],
-    "Les commandes sont inversées, et le monde bascule peu à peu. Tiens 1 500 m en suivant son reflet."],
+    "Les commandes sont inversées, et le monde bascule peu à peu. Tiens 600 m en suivant son reflet."],
    [9,"Chaque carrefour est un choix lourd de sens.","Écris ta phrase. Aucun mot n’est faux.","Tu viens d’écrire ce que tu étais déjà en train de dire.",
     ["Elle ne te tend pas un piège. Elle te pose une question.","Aucune branche n’est la mauvaise.","Choisis les mots qui te ressemblent, et va au bout de ta phrase."],
     "Franchis les 5 carrefours dans la même partie. Un mot par branche."],
@@ -2656,10 +2656,10 @@ function hcOut2(dt){
    2:"Ne fuis pas et ne zigzague pas. La silhouette se calme quand tu roules droit et tranquille.",
    3:"Vers 500 m, la route s’ouvre sur un vide : il faut 40 planches pour le combler. Tu ne peux pas le franchir tout de suite, alors tombe dedans ! Chaque chute pose 4 planches.",
    4:"Une brume épaisse cache la route. Une lanterne roule devant toi : reste près d’elle et suis-la pendant 700 m. Des lueurs dorées brillent çà et là dans la brume : ce sont des leurres, chacune mène à un bloc et fait faiblir la flamme",
-   5:"La silhouette te porte sur son dos : tu es plus lourde à diriger et tu ne peux pas aller vite. Elle se penche du côté d’où vient chaque rafale : place-toi de l’autre côté avant qu’elle arrive. Évite absolument les plaques de vitesse, elles sont fatales. Mène-la jusqu’à l’abri, 2 000 m plus loin.",
+   5:"La silhouette te porte sur son dos : tu es plus lourde à diriger et tu ne peux pas aller vite. Elle se penche du côté d’où vient chaque rafale : place-toi de l’autre côté avant qu’elle arrive. Mène-la jusqu’à l’abri, 500 m plus loin.",
    6:"Un écho (une bille fantôme, à ton image) roule devant toi en pilote automatique et ne touche rien. À 1 000 m pile, un obstacle le brise. Évite-le et dépasse les 1 000 m pour gagner.",
-   7:"Une bille translucide, la voleuse, démarre loin devant dès 1 000 m. Rattrape-la et dépasse-la avant 3 000 m pour gagner. Elle sème des pièges dorés : ne les touche pas. Prends les raccourcis et reste dans son sillage. La boutique est fermée tant que ce chapitre n’est pas résolu.",
-   8:"Les commandes sont inversées (gauche = droite) et le monde bascule peu à peu. La route est vide : seuls tes propres obstacles existent. Tiens 1 500 m en suivant le reflet de la silhouette, sans paniquer quand tout se retourne. Conseil : le bonus « Pilote automatique » (boutique, onglet Bonus, 5 000 pièces) conduit à ta place, même avec les commandes inversées.",
+   7:"Une bille translucide, la voleuse, démarre loin devant dès 250 m. Rattrape-la et dépasse-la avant 1 250 m pour gagner. Elle sème des pièges dorés : ne les touche pas. Prends les raccourcis et reste dans son sillage. La boutique est fermée tant que ce chapitre n’est pas résolu.",
+   8:"Les commandes sont inversées (gauche = droite) et le monde bascule peu à peu. La route est vide : seuls tes propres obstacles existent. Tiens 600 m en suivant le reflet de la silhouette, sans paniquer quand tout se retourne. Conseil : le bonus « Pilote automatique » (boutique, onglet Bonus, 5 000 pièces) conduit à ta place, même avec les commandes inversées.",
    9:"Cinq carrefours se présentent, chacun avec des mots sur ses branches : choisis la branche qui te ressemble, aucune n’est mauvaise. Franchis les 5 carrefours dans la même partie : les mots choisis écrivent ta phrase.",
    10:"Ne touche à rien pendant 20 secondes : ni écran, ni clavier, ni pavé. La bille roule seule. Si tu touches, des blocs apparaissent sur la route."
   };
@@ -2717,7 +2717,7 @@ function stPoly(q,col){ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(q[0][0],q[0]
 function stChBegin(s){
   s.al=1;s.ns=0;s.scl=1;s.inv=0;s.hv=1;s.mim=undefined;s.z0=B.z;s.gx=[];s.fell=0;s.fcd=0;
   s.lan=1;s.out=0;s.outs=0;s.nout=14;s.dc=[];s.nd=B.z+60;s.warn=0;s.gt=5;s.gd=1;s.gw=0;s.sp={};s.rec=[];s.rt=0;s.tz=null;s.gone=0;s.dr=0;s.thx=0;s.thy=0;s.tho=0;
-  s.k=0;s.words=[];s.cr=null;s.nz=B.z+420;s.cp=0;s.afr=0;s.atx=B.x;s.bk=-9;s.eEnd=0;s.ghost=null;s.cnt=0;
+  s.k=0;s.words=[];s.cr=null;s.nz=B.z+200;s.cp=0;s.afr=0;s.atx=B.x;s.bk=-9;s.eEnd=0;s.ghost=null;s.cnt=0;
   s.g=null;s.blk=0;s.blx=0;s.lift=0;
 }
 function stEchoGet(){try{var a=JSON.parse(sGet("echo")||"[]");if(a&&a.length)return a;}catch(e){}return [];}
@@ -2732,23 +2732,26 @@ function stChEnd(s){
 }
 /* ----- chapitre 3 : le Pont ----- */
 var GZ3=1000,PL3=40;
+var PL3C3=["Une première planche, c’est déjà un début.","Le vide garde le compte.","Tu tombes, le pont monte.","Encore un peu de bois.","Écoute comme il craque moins.","Chaque chute compte.","Presque la moitié.","Regarde l’autre rive.","Plus que quelques planches.","La dernière chute."];
 STF[3]=function(dt,s){
-  var r=stCentre(GZ3-8),r1=stCentre(GZ3+9),pl=HST.pl||0,f=Math.min(1,pl/PL3),i,c;
+  var r=stCentre(GZ3-8),r1=stCentre(GZ3+9),pl=HST.pl||0,f=Math.min(1,pl/PL3),i,c,dz,fk,cap;
   s.ph+=dt;s.z=GZ3+9;
   if(r1){s.x=r1.c;s.y=r1.gy;s.al=1;}else s.al=0;
   if(pl<PL3){for(i=0;i<chunks.length;i++){c=chunks[i];if(!c.deco&&c.z0>=GZ3-6&&c.z1<=GZ3+6)c.dead=true;}
     for(i=cubes.length-1;i>=0;i--)if(cubes[i].z0>GZ3-8&&cubes[i].z0<GZ3+8)cubes.splice(i,1);}
   if(r){
     s.gx.push({z:GZ3+6,f:function(){
-      var z0=GZ3-6,z1=GZ3+6,k=10,done=Math.round(f*k),zz,j;
+      var z0=GZ3-6,z1=GZ3+6,k=PL3,done=Math.round(f*k),zz,j;
       stGround([z0,z1],[r.lo-1.5,r.hi+1.5],r.y-0.02,function(q){stPoly(q,"rgba(4,6,12,.96)");});
       for(j=0;j<k;j++){zz=z0-0.4+(z1-z0+0.8)*j/k;
         stGround([zz,zz+(z1-z0+0.8)/k*0.92],[r.lo-0.3,r.hi+0.3],r.y+0.02,function(q){stPoly(q,j<done?"rgba(176,132,86,.98)":"rgba(176,132,86,.10)");});}
     }});
   }
+  if(mode==="play"&&pl<PL3){dz=GZ3-6.3-B.z;if(dz<110){fk=Math.max(0,Math.min(1,dz/110));cap=vNom(B.z)*(0.09+0.91*fk*fk);if(speed>cap)speed=cap;}}
   if(mode==="play"&&B.z>GZ3-7){
     if(pl>=PL3){if(B.z>GZ3+10)stFinish(3);}
-    else if(tm-s.fcd>2.5&&B.z>GZ3-6.3){s.fcd=tm;HST.pl=Math.min(PL3,pl+4);stSave();sndHit("plank");stFall("Le vide");}
+    else if(tm-s.fcd>2.5&&B.z>GZ3-6.3){s.fcd=tm;var np=Math.min(PL3,pl+4),ms=PL3C3[Math.min(PL3C3.length-1,(np/4)-1)];HST.pl=np;stSave();sndHit("plank");
+      stFall("+4 planches · "+np+" sur "+PL3+(np>=PL3?" · le pont est complet":" · "+ms));}
   }
 };
 /* ----- chapitre 4 : le Brouillard ----- */
@@ -2778,8 +2781,17 @@ STF[4]=function(dt,s,rd){
   s.gx.push({z:-1e8-1,f:function(){if(L<=0.01||!s.ok)return;var p=P(s.x+0.4,s.y+1.15,s.z);if(!p||!isFinite(p[0])||!isFinite(p[1]))return;var rr=(4.2+1.4*Math.sin(tm*13))*p[2]*0.5*L+3,
     g=ctx.createRadialGradient(p[0],p[1],0,p[0],p[1],rr*4);g.addColorStop(0,"rgba(255,196,84,"+(0.9*L).toFixed(3)+")");g.addColorStop(0.35,"rgba(255,176,60,"+(0.35*L).toFixed(3)+")");g.addColorStop(1,"rgba(255,160,50,0)");
     ctx.fillStyle=g;ctx.fillRect(p[0]-rr*4,p[1]-rr*4,rr*8,rr*8);
-    var u=Math.max(5,p[2]*0.16);ctx.fillStyle="rgba(52,36,24,.92)";ctx.fillRect(p[0]-u*0.9,p[1]-u*1.3,u*1.8,u*2.6);ctx.fillStyle="rgba(255,236,170,"+(0.55+0.45*L).toFixed(3)+")";
-    ctx.beginPath();ctx.moveTo(p[0],p[1]-u*1.05);ctx.quadraticCurveTo(p[0]+u*0.8,p[1]+u*0.2,p[0],p[1]+u*0.95);ctx.quadraticCurveTo(p[0]-u*0.8,p[1]+u*0.2,p[0],p[1]-u*1.05);ctx.fill();}});
+    var u=Math.max(5,p[2]*0.14),x0=p[0]+Math.sin(tm*2.3)*u*0.07,y0=p[1],w=u*1.05,h=u*1.55,fl=0.55+0.45*L,fk=0.9+0.1*Math.sin(tm*17),PI2=Math.PI,gg;
+    ctx.save();ctx.lineJoin="round";ctx.lineCap="round";
+    ctx.strokeStyle="rgba(62,44,28,.95)";ctx.lineWidth=Math.max(1.2,u*0.14);ctx.beginPath();ctx.arc(x0,y0-h-u*0.12,u*0.62,PI2,2*PI2);ctx.stroke();
+    ctx.fillStyle="rgba(70,50,32,.97)";ctx.beginPath();ctx.moveTo(x0-w*0.95,y0-h);ctx.lineTo(x0-w*0.5,y0-h-u*0.5);ctx.lineTo(x0+w*0.5,y0-h-u*0.5);ctx.lineTo(x0+w*0.95,y0-h);ctx.closePath();ctx.fill();
+    gg=ctx.createLinearGradient(0,y0-h,0,y0+h);gg.addColorStop(0,"rgba(255,232,170,"+(0.30+0.45*fl).toFixed(3)+")");gg.addColorStop(0.55,"rgba(255,196,96,"+(0.38+0.45*fl).toFixed(3)+")");gg.addColorStop(1,"rgba(232,140,52,"+(0.35+0.4*fl).toFixed(3)+")");
+    ctx.fillStyle=gg;ctx.beginPath();ctx.moveTo(x0-w*0.85,y0-h);ctx.quadraticCurveTo(x0-w*1.35,y0,x0-w*0.85,y0+h);ctx.lineTo(x0+w*0.85,y0+h);ctx.quadraticCurveTo(x0+w*1.35,y0,x0+w*0.85,y0-h);ctx.closePath();ctx.fill();
+    ctx.fillStyle="rgba(255,246,214,"+(0.95*fl*fk).toFixed(3)+")";ctx.beginPath();ctx.moveTo(x0,y0-h*0.62);ctx.quadraticCurveTo(x0+w*0.55,y0+h*0.05,x0,y0+h*0.58);ctx.quadraticCurveTo(x0-w*0.55,y0+h*0.05,x0,y0-h*0.62);ctx.fill();
+    ctx.strokeStyle="rgba(62,44,28,.9)";ctx.lineWidth=Math.max(1,u*0.1);ctx.beginPath();ctx.moveTo(x0-w*0.85,y0-h);ctx.quadraticCurveTo(x0-w*1.35,y0,x0-w*0.85,y0+h);ctx.moveTo(x0+w*0.85,y0-h);ctx.quadraticCurveTo(x0+w*1.35,y0,x0+w*0.85,y0+h);
+    ctx.moveTo(x0-w*0.42,y0-h);ctx.quadraticCurveTo(x0-w*0.62,y0,x0-w*0.42,y0+h);ctx.moveTo(x0+w*0.42,y0-h);ctx.quadraticCurveTo(x0+w*0.62,y0,x0+w*0.42,y0+h);ctx.stroke();
+    ctx.fillStyle="rgba(70,50,32,.97)";ctx.beginPath();ctx.moveTo(x0-w*0.95,y0+h);ctx.lineTo(x0+w*0.95,y0+h);ctx.lineTo(x0+w*0.6,y0+h+u*0.45);ctx.lineTo(x0-w*0.6,y0+h+u*0.45);ctx.closePath();ctx.fill();
+    ctx.restore();}});
   if(s.lan<=0&&mode==="play"){stCrash("La flamme s’est éteinte");return;}
   if((B.z-s.z0)*0.5>=700)stFinish(4);
 };
@@ -2791,14 +2803,13 @@ STF[5]=function(dt,s,rd){
   if(speed>vn*0.8)speed=vn*0.8;
   s.gt-=rd;
   if(s.warn===0&&s.gt<=0){s.warn=1;s.gd=Math.random()<0.5?-1:1;s.gw=0;}
-  if(s.warn===1){s.gw+=rd;if(s.gw>=1.0){s.warn=2;s.gw=0;sndHit("gust");}}
-  else if(s.warn===2){s.gw+=rd;tx+=s.gd*6.2*dt;if(s.gw>=1.3){s.warn=0;s.gt=4+Math.random()*4;}}
-  if(boostT>0&&mode==="play"){stCrash("Elle est tombée");return;}
+  if(s.warn===1){s.gw+=rd;if(s.gw>=1.9){s.warn=2;s.gw=0;sndHit("gust");}}
+  else if(s.warn===2){s.gw+=rd;tx+=s.gd*6.2*dt;if(s.gw>=1.3){s.warn=0;s.gt=3.5+Math.random()*3;}}
   s.gx=[];
   if(s.warn===2){s.gx.push({z:-1e8,f:function(){var k,x,y,l;ctx.strokeStyle="rgba(240,244,250,.55)";ctx.lineWidth=Math.max(1,SW*0.003);
     for(k=0;k<26;k++){x=((k*131+tm*SW*1.6*s.gd*-1)%(SW+200)+SW+200)%(SW+200)-100;y=SH*(0.12+0.76*((k*53)%97)/97);l=SW*0.12;
       ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+l*s.gd*-1,y+SH*0.01);ctx.stroke();}}});}
-  s.goal=s.z0+4000;
+  s.goal=s.z0+1000;
   r=stCentre(s.goal);
   if(r){s.gx.push({z:s.goal,f:function(){var hw=r.w/2+0.4,col="rgba(76,70,84,.97)";
     stGround([s.goal-1,s.goal+1],[r.c-hw-1,r.c-hw+0.6],r.y,function(q){stPoly(q,col);});
@@ -2810,7 +2821,7 @@ STF[5]=function(dt,s,rd){
 };
 /* ----- chapitre 6 : l’Écho ----- */
 STF[6]=function(dt,s,rd){
-  var g=s.g,zE=s.z0+2000,r;
+  var g=s.g,zE=s.z0+2000,r,i;
   stLead(dt,34,B.x);
   s.rt+=rd;if(s.rt>=0.15){s.rt-=0.15;s.rec.push(Math.round(B.z*10)/10,Math.round(B.x*10)/10);}
   /* l’écho : une bille fantôme, à l’image de la tienne, roule devant toi en pilote automatique sur 1 000 m */
@@ -2835,24 +2846,24 @@ STF[7]=function(dt,s,rd){
   s.al=0;s.gx=[];
   s.gx.push({z:-1e8,f:function(){var k,x,y;ctx.fillStyle="rgba(8,12,30,.28)";ctx.fillRect(0,0,SW,SH);ctx.strokeStyle="rgba(190,206,230,.35)";ctx.lineWidth=Math.max(1,SW*0.0022);
     for(k=0;k<46;k++){x=((k*83+tm*SW*0.15)%(SW+60));y=((k*47+tm*SH*2.2)%(SH+40))-20;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-SW*0.012,y+SH*0.035);ctx.stroke();}}});
-  if(!s.tz&&!s.gone&&B.z>=2000){s.tz={z:B.z+16,x:B.x,y:B.y-R,ok:1};s.dr=s.tz.z;}
-  if(s.tz){o=s.tz;o.z+=vNom(o.z)*0.97*dt;stPath(o,dt);
+  if(!s.tz&&!s.gone&&B.z>=500){s.tz={z:B.z+16,x:B.x,y:B.y-R,ok:1};s.dr=s.tz.z;}
+  if(s.tz){o=s.tz;o.z+=vNom(o.z)*0.9*dt;stPath(o,dt);
     if(o.z>s.dr+55&&o.ok){s.dr=o.z;stAdd(o.x,o.z-3,o.y,0.8,{col:[212,168,58],h:1.0,zl:1.4,mine:1});}
     a=0.3+0.55*clamp(1-(o.z-B.z)/18,0,1);
     s.gx.push({z:o.z,f:function(){if(!o.ok)return;var p=P(o.x,o.y+R,o.z);if(!p)return;ctx.save();ctx.globalAlpha=a;
       try{paintBall(ctx,p[0],p[1],R*p[2],{col:BC.c,ink:BC.ink,pat:PATT,metal:BC.m,fin:BC.f,c2:BC.c2,ph:o.z*0.9,tilt:0,lean:0,q:"low"});}catch(er){}ctx.restore();}});
     if(B.z>o.z){s.tz=null;stFinish(7);}
-    else if(o.z>6000){s.tz=null;s.gone=1;say("Elle disparaît sous la pluie");sndHit("vanish");}
+    else if(o.z>2500){s.tz=null;s.gone=1;say("Elle disparaît sous la pluie");sndHit("vanish");}
   }
 };
 /* ----- chapitre 8 : le Miroir ----- */
 STF[8]=function(dt,s,rd){
   var i,r;
   s.inv=1;stLead(dt,22);
-  var rl=clamp((B.z-s.z0-300)/1800,0,1);stRoll(180*rl*rl*(3-2*rl));
+  var rl=clamp((B.z-s.z0-120)/720,0,1);stRoll(180*rl*rl*(3-2*rl));
   stClear();
   if(B.z+110>s.nz){r=stCentre(B.z+110);if(r&&r.w>=3.8&&stAdd(r.c,B.z+110,r.gy,0.9,{col:BLK,h:1.3,zl:1.8,mine:1})){s.nz=B.z+110+30+Math.random()*10;}else s.nz=B.z+112;}
-  if((B.z-s.z0)>=3000)stFinish(8);
+  if((B.z-s.z0)>=1200)stFinish(8);
 };
 /* ----- chapitre 9 : les Lettres ----- */
 var W9=[["J’avance","Je tombe"],["parce que","même si"],["j’ai peur,","je doute,"],["alors","et pourtant"],["je continue.","je recommence."]];
@@ -2867,7 +2878,7 @@ STF[9]=function(dt,s,rd){
     for(i=0;i<2;i++){p=P(cr.cx+(i?1:-1)*2.3,cr.y+1.1,cr.z-1);if(!p)continue;fs=Math.max(8,0.85*p[2]);
       ctx.font="italic "+fs+"px Georgia,serif";ctx.fillStyle="rgba(8,12,24,.5)";ctx.fillText(wd[i],p[0]+fs*0.05,p[1]+fs*0.07);ctx.fillStyle="rgba(255,250,236,.96)";ctx.fillText(wd[i],p[0],p[1]);}
     ctx.restore();}});
-    if(B.z>cr.z+1.5){w=B.x<cr.cx?0:1;s.words.push(W9[cr.k][w]);say(s.words.join(" "));sfx(420+90*s.k,640+90*s.k,0.3,"triangle",0.12);s.k++;s.cr=null;s.nz=B.z+250+Math.random()*60;
+    if(B.z>cr.z+1.5){w=B.x<cr.cx?0:1;s.words.push(W9[cr.k][w]);say(s.words.join(" "));sfx(420+90*s.k,640+90*s.k,0.3,"triangle",0.12);s.k++;s.cr=null;s.nz=B.z+120+Math.random()*30;
       if(s.k>=5){var t=s.words.join(" ");HST.sent=t.charAt(0).toUpperCase()+t.slice(1);stSave();stFinish(9);}}}
 };
 /* ----- chapitre 10 : la Rencontre ----- */
@@ -3482,7 +3493,7 @@ function updateEnd(dt){
   if(shake>0)shake=Math.max(0,shake-dt*2.2);
   for(i=0;i<parts.length;i++){var q=parts[i];q.x+=q.vx*dt;q.y+=q.vy*dt;q.vy+=SH*1.2*dt;q.life-=dt;}
   if(mode==="crash"){speed*=Math.exp(-dt*6);B.z+=speed*dt;crashT-=dt;if(crashT<=0)finish();}
-  else{fallT+=dt;B.vy-=gr()*dt;B.y+=B.vy*dt;B.z+=speed*dt;if(fallT>0.9)finish();}
+  else{if(STO.on&&STO.ch===3)speed*=Math.exp(-dt*12);fallT+=dt;B.vy-=gr()*dt;B.y+=B.vy*dt;B.z+=speed*dt;if(fallT>0.9)finish();}
 }
 
 /* ---------- rendu ---------- */
