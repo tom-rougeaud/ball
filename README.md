@@ -1,5 +1,7 @@
 # ball
 
+Version 3.55 : bouton « Tout réinitialiser… » dans le menu (case à cocher + confirmation, efface pièces, boutique, scores, chapitres, réglages) ; le menu défile sur les écrans bas.
+
 <<<<<<< HEAD
 Version 3.54 : scores (tuiles) qui tiennent dans le cadre ; chapitre 3 : pont complet et chute au ralenti ; chapitre 6 : bille fantôme (course auto de 1 000 m) ; histoire : la silhouette porte la bille ; fin du chapitre 10 (pas de chapitre 11, seul le Paradis reste) ; Paradis à 200 000 pièces et après le chapitre 10 ; pilote automatique à 5 000 pièces + conseil au chapitre 8 ; « mode sans histoire » à 10 000 pièces ; obstacles de la silhouette : un passage reste toujours libre.
 
