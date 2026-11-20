@@ -1,5 +1,6 @@
 # ball
 
+Version 3.56 : chapitre 3 « La Passerelle » reconstruit — vrai gouffre de 12 m sur une route simple et droite (plus de double voie juste avant, plus de trou décentré), planches posées depuis l’autre rive qui comblent peu à peu le vide, et la bille tombe pile au bord du gouffre (ni avant, ni après, jamais au niveau des planches).
 Version 3.55 : bouton « Tout réinitialiser… » dans le menu (case à cocher + confirmation, efface pièces, boutique, scores, chapitres, réglages) ; le menu défile sur les écrans bas.
 
 Version 3.54 : scores (tuiles) qui tiennent dans le cadre ; chapitre 3 : pont complet et chute au ralenti ; chapitre 6 : bille fantôme (course auto de 1 000 m) ; histoire : la silhouette porte la bille ; fin du chapitre 10 (pas de chapitre 11, seul le Paradis reste) ; Paradis à 200 000 pièces et après le chapitre 10 ; pilote automatique à 5 000 pièces + conseil au chapitre 8 ; « mode sans histoire » à 10 000 pièces ; obstacles de la silhouette : un passage reste toujours libre.
